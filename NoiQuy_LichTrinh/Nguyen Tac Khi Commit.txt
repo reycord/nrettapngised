@@ -1,0 +1,9 @@
+﻿Lưu ý khi commit (Mọi người phải thực hiện chặc chẽ các nguyên tác commit, KHÔNG đc bỏ qua các nguyên tắc này):
+1. Không commit các thư mục bin, obj.
+2. Không commit những file mình không thay đổi.
+3. Không commit file .suo
+4. Khi có thay đổi trong add reference, load or unload project thì commit thêm file .sln và các file .csproj
+5. Luôn để lại comment cho biết mình commit những gì, đã làm những gì, đã thay đổi những gì trong các file.
+6. Trước khi commit, phải chắc chắn working copy đã có revision mới nhất (phải thực hiện thao tác update trc khi commit).
+7. Không commit file cấu hình ( App.config )
+

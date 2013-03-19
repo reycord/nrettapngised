@@ -17,18 +17,30 @@ namespace DaoHamV1._3
         // TÍNH GIÁ TRỊ + ĐẠO HÀM         
         public override double TinhGiaTri()
         {
-            throw new NotImplementedException();
+            return u.TinhGiaTri() / v.TinhGiaTri();
         }
 
         public override BieuThuc TinhDaoHam()
         {
-            throw new NotImplementedException();
+            // (u/v)' = (u'v - uv') / v^2
+            // u'v và uv' là 2 DaThucTich
+            // (u'v - uv') là 1 DaThucTong
+            // v^2 = v * v là 1 DaThucTich
+            // (u'v - uv') / v^2 là 1 DaThucThuong
+            return new DaThucThuong(
+                        new DaThucTong(
+                            new DaThucTich(u.TinhDaoHam(), v),
+                            new DaThucTich(u, v.TinhDaoHam()),
+                            false
+                            ),
+                        new DaThucTich(v, v)
+                        );  
         }
 
         // BIỂU DIỄN BIỂU THỨC
         public override string ToString()
         {
-            return ("(" + u.ToString() + " / " + v.ToString() + ")");
+            return (" (" + u.ToString() + " / " + v.ToString() + ") ");
         }
     }
 }

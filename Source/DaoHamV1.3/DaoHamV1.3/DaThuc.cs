@@ -9,5 +9,10 @@ namespace DaoHamV1._3
     {
         protected BieuThuc u;
         protected BieuThuc v;
+
+        public override string ToString()
+        {
+            return (u.ToString() + v.ToString());
+        }
     }
 }

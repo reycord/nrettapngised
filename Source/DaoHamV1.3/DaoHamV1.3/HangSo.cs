@@ -23,12 +23,12 @@ namespace DaoHamV1._3
         // TÍNH GIÁ TRỊ + ĐẠO HÀM
         public override double TinhGiaTri()
         {
-            throw new NotImplementedException();
+            return c;
         }
 
         public override BieuThuc TinhDaoHam()
         {
-            throw new NotImplementedException();
+            return new HangSo(0);
         }
 
         // BIỂU DIỄN BIỂU THỨC

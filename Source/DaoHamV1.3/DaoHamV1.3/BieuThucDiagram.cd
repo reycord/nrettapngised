@@ -39,21 +39,21 @@
     </TypeIdentifier>
   </Class>
   <Class Name="DaoHamV1._3.DaThucTong">
-    <Position X="2" Y="5.75" Width="1.5" />
+    <Position X="3" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAACAAAAAAAAAAEAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>DaThucTong.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="DaoHamV1._3.DaThucThuong">
-    <Position X="5.5" Y="5.75" Width="1.5" />
+    <Position X="6.5" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAACAAAAAAAAAAEAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>DaThucThuong.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="DaoHamV1._3.DaThucTich">
-    <Position X="3.75" Y="5.75" Width="1.5" />
+    <Position X="4.75" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAACAAAAAAAAAAEAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>DaThucTich.cs</FileName>

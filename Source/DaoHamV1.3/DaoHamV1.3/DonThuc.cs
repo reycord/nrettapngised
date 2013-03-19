@@ -14,7 +14,6 @@ namespace DaoHamV1._3
         // CONSTRUCTORS
         public DonThuc()
         {
-            x = 1;
             heSo = 1;
             soMu = 1;
         }
@@ -29,12 +28,12 @@ namespace DaoHamV1._3
         // TÍNH ĐẠO HÀM + GIÁ TRỊ
         public override double TinhGiaTri()
         {
-            throw new NotImplementedException();
+            return (heSo * Math.Pow(x, soMu));
         }
 
         public override BieuThuc TinhDaoHam()
         {
-            throw new NotImplementedException();
+            return new DonThuc(x, this.heSo * this.soMu, this.soMu - 1);
         }
 
         // BIỂU DIỄN BIỂU THỨC

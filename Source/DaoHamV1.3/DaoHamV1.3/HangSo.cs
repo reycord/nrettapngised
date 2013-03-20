@@ -15,7 +15,7 @@ namespace DaoHamV1._3
             c = 0;
         }
 
-        public HangSo(int _value)
+        public HangSo(double _value)
         {
             c = _value;
         }

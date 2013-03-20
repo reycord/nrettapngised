@@ -9,7 +9,7 @@ namespace DaoHamV1._3
     {
         private double x;
         private double heSo;
-        private int soMu;
+        private double soMu;
 
         // CONSTRUCTORS
         public DonThuc()
@@ -18,7 +18,7 @@ namespace DaoHamV1._3
             soMu = 1;
         }
 
-        public DonThuc(double _x, double _heSo, int _soMu)
+        public DonThuc(double _x, double _heSo, double _soMu)
         {
             x = _x;
             heSo = _heSo;

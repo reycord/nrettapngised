@@ -8,6 +8,7 @@ namespace DaoHamV1._3
 {
     class Program
     {
+        
         static void Main(string[] args)
         {
             //double x = 2;
@@ -17,8 +18,13 @@ namespace DaoHamV1._3
             //System.Console.WriteLine(bt.ToString());
             //System.Console.WriteLine(bt.TinhDaoHam().ToString());
             //System.Console.WriteLine(bt.TinhGiaTri());
-            //System.Console.ReadLine();
-
+            //System.Console.ReadLine();   
+            Program bt = new Program();
+            bt.NhapXuat();
+            
+        }
+        public void NhapXuat()
+        {
             try
             {
                 // 0: Hang So
@@ -26,7 +32,7 @@ namespace DaoHamV1._3
                 // 2: BT Tong
                 // 3: BT Tich
                 // 4: BT Thuong
-                string input;                
+                string input;
                 List<Double> Array = new List<Double>();
                 List<BieuThuc> list = new List<BieuThuc>();
                 StreamReader Re = File.OpenText("../../Note.txt");
@@ -41,7 +47,7 @@ namespace DaoHamV1._3
                 {
                     if (Array[index] == 1)
                     {
-                        temp = new DonThuc(Array[Array.Count-1],Array[index+1],Array[index+2]);
+                        temp = new DonThuc(Array[Array.Count - 1], Array[index + 1], Array[index + 2]);
                         Array[index] = -100;
                         Array[index + 1] = -100;
                         Array[index + 2] = -100;
@@ -58,20 +64,20 @@ namespace DaoHamV1._3
                     }
                     index = index + 1;
                 }
-                double chan=list.Count % 2 ;
+                double chan = list.Count % 2;
                 if (true)
                 {
                     int sobieuthuc;
                     while (list.Count != 1)
                     {
                         sobieuthuc = 0;
-                        for (int i = 0; i < Array.Count-1; i++)
+                        for (int i = 0; i < Array.Count - 1; i++)
                         {
-                            if (Array[i + 1] == -100 && Array[i]!=-100)
+                            if (Array[i + 1] == -100 && Array[i] != -100)
                             {
                                 if (Array[i] == 4)
                                 {
-                                    temp = new DaThucTich(list[sobieuthuc * 2], list[sobieuthuc * 2 + 1]);
+                                    temp = new DaThucThuong(list[sobieuthuc * 2], list[sobieuthuc * 2 + 1]);
                                     list[sobieuthuc] = temp;
                                     Array[i] = -100;
                                 }
@@ -88,7 +94,7 @@ namespace DaoHamV1._3
                                     Array[i] = -100;
                                 }
                                 sobieuthuc = sobieuthuc + 1;
-                                
+
                             }
                         }
                         chan = list.Count % 2;
@@ -106,14 +112,27 @@ namespace DaoHamV1._3
                         }
                     }
                 }
-                Console.WriteLine(list[0].ToString());
-                Console.WriteLine(list[0].TinhDaoHam().ToString());
-                Console.WriteLine(list[0].TinhGiaTri().ToString());
-                Console.ReadKey();
+                if (Array[Array.Count - 1] == -100)
+                {
+                    Console.WriteLine("\n\nInvalid Input");
+                    Console.ReadKey();
+                    return;
+                }
+                //Console.WriteLine(list[0].ToString());
+                //Console.WriteLine(list[0].TinhDaoHam().ToString());
+                //Console.WriteLine(list[0].TinhGiaTri().ToString());
+                StreamWriter ghiFile = new StreamWriter("KetQua.txt");
+                string giatri = list[0].TinhGiaTri().ToString();
+                string daoham = list[0].TinhDaoHam().ToString();
+                ghiFile.WriteLine(giatri);
+                ghiFile.WriteLine(daoham);
+                ghiFile.Close();
+                ghiFile.Dispose();
+                //Console.ReadKey();
             }
             catch (Exception ex)
             {
-                Console.WriteLine("/n/nInvalid Input");
+                Console.WriteLine("\n\nInvalid Input");
                 Console.ReadKey();
             }
         }

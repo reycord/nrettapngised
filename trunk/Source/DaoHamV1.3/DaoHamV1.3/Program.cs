@@ -58,7 +58,8 @@ namespace DaoHamV1._3
                     }
                     index = index + 1;
                 }
-                if (list.Count % 2 == 0)
+                double chan=list.Count % 2 ;
+                if (true)
                 {
                     int sobieuthuc;
                     while (list.Count != 1)
@@ -87,12 +88,22 @@ namespace DaoHamV1._3
                                     Array[i] = -100;
                                 }
                                 sobieuthuc = sobieuthuc + 1;
+                                
                             }
                         }
-                        int number = list.Count / 2;
-                       // int CountPrev = list.Count;
-                        for (int i = list.Count-1; i >= number; i--)
-                            list.RemoveAt(i);
+                        chan = list.Count % 2;
+                        if (chan != 0)
+                        {
+                            list[sobieuthuc] = list[list.Count - 1];
+                            for (int j = list.Count - 1; j > sobieuthuc; j--)
+                                list.RemoveAt(j);
+                        }
+                        if (chan == 0)
+                        {
+                            int number = list.Count / 2;
+                            for (int i = list.Count - 1; i >= number; i--)
+                                list.RemoveAt(i);
+                        }
                     }
                 }
                 Console.WriteLine(list[0].ToString());

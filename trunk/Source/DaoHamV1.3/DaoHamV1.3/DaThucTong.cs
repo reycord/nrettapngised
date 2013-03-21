@@ -25,7 +25,9 @@ namespace DaoHamV1._3
 
         public override double TinhGiaTri()
         {
-            return u.TinhGiaTri() + v.TinhGiaTri();
+            if (isDaThucTong)
+                return u.TinhGiaTri() + v.TinhGiaTri();
+            return u.TinhGiaTri() - v.TinhGiaTri();
         }
 
         public override BieuThuc TinhDaoHam()

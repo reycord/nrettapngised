@@ -11,20 +11,14 @@ namespace DaoHamV1._3
         
         static void Main(string[] args)
         {
-            //double x = 2;
-            //BieuThuc bt = new DaThucThuong(
-            //                    new DonThuc(x, 5, 4),
-            //                    new DonThuc(x, 2, 3));
-            //System.Console.WriteLine(bt.ToString());
-            //System.Console.WriteLine(bt.TinhDaoHam().ToString());
-            //System.Console.WriteLine(bt.TinhGiaTri());
-            //System.Console.ReadLine();   
-
             Program bt = new Program();
             bt.NhapXuat();
+           
            // NhapXuatConsole console = new NhapXuatConsole() ;
-            
+           // NhapXuatFile file = new NhapXuatFile();
         }
+
+
         public void NhapXuat()
         {
             try
@@ -37,7 +31,7 @@ namespace DaoHamV1._3
                 string input;
                 List<Double> Array = new List<Double>();
                 List<BieuThuc> list = new List<BieuThuc>();
-                StreamReader Re = File.OpenText("../../Note.txt");
+                StreamReader Re = File.OpenText("../../input.txt");
                 while ((input = Re.ReadLine()) != null)
                 {
                     if(input!="")
@@ -157,7 +151,7 @@ namespace DaoHamV1._3
                 //Console.WriteLine(list[0].ToString());
                 //Console.WriteLine(list[0].TinhDaoHam().ToString());
                 //Console.WriteLine(list[0].TinhGiaTri().ToString());
-                StreamWriter ghiFile = new StreamWriter("KetQua.txt");
+                StreamWriter ghiFile = new StreamWriter("../../output.txt");
                 string giatri = list[0].TinhGiaTri().ToString();
                 string daoham = list[0].TinhDaoHam().ToString();
                 ghiFile.WriteLine(giatri);

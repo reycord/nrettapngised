@@ -40,7 +40,7 @@ namespace DaoHamV1._3
         // BIỂU DIỄN BIỂU THỨC
         public override string ToString()
         {
-            return (" (" + u.ToString() + " / " + v.ToString() + ") ");
+            return ("(" + u.ToString() + " / " + v.ToString() + ")");
         }
     }
 }

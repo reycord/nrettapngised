@@ -50,6 +50,7 @@
     <Compile Include="DaThucTong.cs" />
     <Compile Include="DonThuc.cs" />
     <Compile Include="HangSo.cs" />
+    <Compile Include="NhapXuatConsole.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

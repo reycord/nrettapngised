@@ -51,11 +51,16 @@
     <Compile Include="DonThuc.cs" />
     <Compile Include="HangSo.cs" />
     <Compile Include="NhapXuatConsole.cs" />
+    <Compile Include="NhapXuatFile.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="BieuThucDiagram.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="input.txt" />
+    <Content Include="output.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

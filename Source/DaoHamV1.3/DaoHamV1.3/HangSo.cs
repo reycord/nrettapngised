@@ -34,7 +34,7 @@ namespace DaoHamV1._3
         // BIỂU DIỄN BIỂU THỨC
         public override string ToString()
         {
-            return c + " ";   
+            return c.ToString();   
         }
     }
 }

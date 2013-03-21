@@ -20,9 +20,9 @@ namespace DaoHamV1._3
             //System.Console.WriteLine(bt.TinhGiaTri());
             //System.Console.ReadLine();   
 
-            //Program bt = new Program();
-            //bt.NhapXuat();
-            NhapXuatConsole console = new NhapXuatConsole() ;
+            Program bt = new Program();
+            bt.NhapXuat();
+           // NhapXuatConsole console = new NhapXuatConsole() ;
             
         }
         public void NhapXuat()
@@ -67,10 +67,16 @@ namespace DaoHamV1._3
                     }
                     index = index + 1;
                 }
-                for (int i = 0; i < Array.Count; i++)
+                
+                for(int i=0;i<Array.Count;i++)
+                {
                     if (Array[i] == -100)
+                    {
                         Array.RemoveAt(i);
-                double chan = list.Count % 2;
+                        i = 0;
+                    }
+                }
+               // double chan = list.Count % 2;
                 int IndexOfList=0;
                 if (true)
                 {
@@ -81,38 +87,52 @@ namespace DaoHamV1._3
                         {
                             if (Array[i] != 0 && Array[i]!=1 )
                             {
-                                if(Array[i+1]==1 &&Array[i+2]==2)
+                                if(Array[i+1]==1 &&Array[i+2]==1)
                                 {
                                     if (Array[i] == 4)
                                     {
-                                        temp = new DaThucThuong(list[IndexOfList * 2], list[IndexOfList * 2 + 1]);
+                                        temp = new DaThucThuong(list[IndexOfList], list[IndexOfList + 1]);
                                         list[IndexOfList] = temp;
+                                        list[IndexOfList + 1]=null;
                                         Array.RemoveAt(i+1);
-                                        Array.RemoveAt(i+2);
+                                        Array.RemoveAt(i+1);
                                         Array[i] =1;
+                                        IndexOfList = IndexOfList + 2;
                                     }
                                     if (Array[i] == 3)
                                     {
-                                        temp = new DaThucTich(list[IndexOfList * 2], list[IndexOfList * 2 + 1]);
+                                        temp = new DaThucTich(list[IndexOfList], list[IndexOfList + 1]);
                                         list[IndexOfList] = temp;
+                                        list[IndexOfList + 1] = null;
                                         Array[i] = 1;
                                         Array.RemoveAt(i+1);
-                                        Array.RemoveAt(i+2);
+                                        Array.RemoveAt(i+1);
+                                        IndexOfList = IndexOfList + 2;
                                     }
                                     if (Array[i] == 2)
                                     {
-                                        temp = new DaThucTong(list[IndexOfList * 2], list[IndexOfList * 2 + 1], true);
+                                        temp = new DaThucTong(list[IndexOfList], list[IndexOfList + 1], true);
                                         list[IndexOfList] = temp;
+                                        list[IndexOfList + 1] = null;
                                         Array[i] = 1;
                                         Array.RemoveAt(i+1);
-                                        Array.RemoveAt(i+2);
+                                        Array.RemoveAt(i+1);
+                                        IndexOfList = IndexOfList + 2;
                                     }
+                                }
+                                if (Array[i + 1] == 1)
+                                {
+                                    IndexOfList += 1;
                                 }
                             }
                                 //IndexOfList = IndexOfList + 1;
-
+                            
                             
                         }
+                        for (int i = 0; i < list.Count; i++)
+                            if (list[i] == null)
+                                list.RemoveAt(i);
+                        IndexOfList = 0;
                         //chan = list.Count % 2;
                         //if (chan != 0)
                         //{

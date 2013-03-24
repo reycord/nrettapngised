@@ -32,7 +32,10 @@ namespace DaoHamV1._3
 
         public override BieuThuc TinhDaoHam()
         {
-            return new DaThucTong(u.TinhDaoHam(), v.TinhDaoHam(), isDaThucTong);
+            if(daoHam == null)
+                daoHam = new DaThucTong(u.TinhDaoHam(), v.TinhDaoHam(), isDaThucTong);
+
+            return daoHam;
         }
 
         // BIỂU DIỄN BIỂU THỨC

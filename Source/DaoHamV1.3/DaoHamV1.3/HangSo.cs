@@ -8,6 +8,7 @@ namespace DaoHamV1._3
     public class HangSo : BieuThuc
     {
         private double c;
+        private BieuThuc daoHam = null;
 
         // CONSTRUCTORS
         public HangSo()
@@ -28,7 +29,10 @@ namespace DaoHamV1._3
 
         public override BieuThuc TinhDaoHam()
         {
-            return new HangSo(0);
+            if (daoHam == null)
+                daoHam = new HangSo(0);
+
+            return daoHam;
         }
 
         // BIỂU DIỄN BIỂU THỨC

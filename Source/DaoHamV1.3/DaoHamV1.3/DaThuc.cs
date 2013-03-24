@@ -9,6 +9,7 @@ namespace DaoHamV1._3
     {
         protected BieuThuc u;
         protected BieuThuc v;
+        protected BieuThuc daoHam = null;
 
         public override string ToString()
         {

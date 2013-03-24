@@ -25,9 +25,12 @@ namespace DaoHamV1._3
             // (u.v)' = u'v + uv'
             // u'v , uv' là 2 DaThucTich
             // (u'v + uv') là 1 DaThucTong
-            return new DaThucTong(new DaThucTich(u.TinhDaoHam(), v), 
+            if(daoHam ==null)
+                daoHam = new DaThucTong(new DaThucTich(u.TinhDaoHam(), v), 
                                   new DaThucTich(v.TinhDaoHam(), u),
                                   true);
+
+            return daoHam;
         }
 
         // BIỂU DIỄN BIỂU THỨC

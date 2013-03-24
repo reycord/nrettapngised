@@ -27,14 +27,17 @@ namespace DaoHamV1._3
             // (u'v - uv') là 1 DaThucTong
             // v^2 = v * v là 1 DaThucTich
             // (u'v - uv') / v^2 là 1 DaThucThuong
-            return new DaThucThuong(
+            if(daoHam ==null)
+                daoHam = new DaThucThuong(
                         new DaThucTong(
                             new DaThucTich(u.TinhDaoHam(), v),
                             new DaThucTich(u, v.TinhDaoHam()),
                             false
                             ),
                         new DaThucTich(v, v)
-                        );  
+                        );
+
+            return daoHam;
         }
 
         // BIỂU DIỄN BIỂU THỨC

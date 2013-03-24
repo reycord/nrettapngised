@@ -10,6 +10,7 @@ namespace DaoHamV1._3
         private double x;
         private double heSo;
         private double soMu;
+        private BieuThuc daoHam = null;
 
         // CONSTRUCTORS
         public DonThuc()
@@ -33,7 +34,10 @@ namespace DaoHamV1._3
 
         public override BieuThuc TinhDaoHam()
         {
-            return new DonThuc(x, this.heSo * this.soMu, this.soMu - 1);
+            if(daoHam==null)
+                daoHam = new DonThuc(x, this.heSo * this.soMu, this.soMu - 1);
+
+            return daoHam;
         }
 
         // BIỂU DIỄN BIỂU THỨC

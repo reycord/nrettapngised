@@ -8,18 +8,41 @@ namespace DaoHamV1._3
 {
     class Program
     {
-        
+
         static void Main(string[] args)
         {
-            Program bt = new Program();
-            bt.NhapXuat();
-           
-           // NhapXuatConsole console = new NhapXuatConsole() ;
-           // NhapXuatFile file = new NhapXuatFile();
+            #region Mô Tả
+            Console.WriteLine("=============v1.3=============");
+            Console.WriteLine("Chuong Trinh Tinh Dao Ham");
+            Console.WriteLine("Vui Long Chon Thong Tin :");
+            Console.WriteLine("   A. Console");
+            Console.WriteLine("   B. File");
+            Console.Write("Ban Chon : ");
+            #endregion
+            int key = Console.Read();
+            DHManager dhManager = null;
+            switch (key)
+            {
+                case 'a':
+                case 'A':
+                    //Xu ly Nhap Console
+                    dhManager = new DHConsoleManager();
+                    break;
+                case 'b':
+                case 'B':
+                    //Xu Ly Nhap File      
+                    dhManager = new DHFileManager();
+                    break;
+                default: Console.Write("Error : Khong Dung Ki Tu");
+                    break;
+            }
+            if (dhManager != null)
+            {
+                dhManager.XuLy();
+            }
         }
 
-
-        public void NhapXuat()
+        public static void NhapXuat()
         {
             try
             {
@@ -44,7 +67,7 @@ namespace DaoHamV1._3
                 {
                     if (Array[index] == 1)
                     {
-                        temp = new DonThuc(Array[Array.Count - 1], Array[index + 1], Array[index + 2]);
+                        temp = DonThuc.Create(Array[Array.Count - 1], Array[index + 1], Array[index + 2]);
                         //Array[index] = -100;
                         Array[index + 1] = -100;
                         Array[index + 2] = -100;

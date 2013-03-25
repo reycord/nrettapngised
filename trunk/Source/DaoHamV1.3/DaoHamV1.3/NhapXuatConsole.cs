@@ -152,7 +152,7 @@ namespace DaoHamV1._3
                 heSo = double.Parse(Console.ReadLine());
                 Console.WriteLine("Nhap so mu: ");
                 soMu = double.Parse(Console.ReadLine());
-                return new DonThuc(x, heSo, soMu);
+                return DonThuc.Create(x, heSo, soMu);
             }
             catch (Exception ex)
             {

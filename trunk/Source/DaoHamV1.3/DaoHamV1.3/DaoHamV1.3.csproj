@@ -44,10 +44,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BieuThuc.cs" />
+    <Compile Include="DHManager.cs" />
     <Compile Include="DaThuc.cs" />
     <Compile Include="DaThucThuong.cs" />
     <Compile Include="DaThucTich.cs" />
     <Compile Include="DaThucTong.cs" />
+    <Compile Include="DHConsoleManager.cs" />
+    <Compile Include="DHFileManager.cs" />
     <Compile Include="DonThuc.cs" />
     <Compile Include="HangSo.cs" />
     <Compile Include="NhapXuatConsole.cs" />

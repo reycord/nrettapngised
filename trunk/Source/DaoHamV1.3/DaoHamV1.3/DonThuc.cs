@@ -18,8 +18,15 @@ namespace DaoHamV1._3
             heSo = 1;
             soMu = 1;
         }
-
-        public DonThuc(double _x, double _heSo, double _soMu)
+        //Cau 3.A
+        public static BieuThuc Create(double _x, double _heSo, double _soMu)
+        {
+            if (_heSo == 0||_soMu==0)
+                return new HangSo(_heSo);
+            else
+                return new DonThuc(_x, _heSo, _soMu);
+        }
+        private DonThuc(double _x, double _heSo, double _soMu)
         {
             x = _x;
             heSo = _heSo;

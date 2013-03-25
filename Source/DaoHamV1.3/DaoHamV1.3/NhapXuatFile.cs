@@ -91,7 +91,7 @@ namespace DaoHamV1._3
 
             ptrIndex++;
             double soMu = double.Parse(buffer[ptrIndex]);     // số mũ
-            DonThuc donThuc = new DonThuc(x, heSo, soMu);
+            DonThuc donThuc = (DonThuc)DonThuc.Create(x, heSo, soMu);
 
             ptrIndex++;     // Di chuyển đến giá trị biểu diễn loại biểu thức tiếp theo (0 - 4)
 

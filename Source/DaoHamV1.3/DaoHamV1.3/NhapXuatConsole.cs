@@ -14,7 +14,7 @@ namespace DaoHamV1._3
             Console.WriteLine("0: HangSo\t1: DonThuc\t2: DaThucTong");
             Console.WriteLine("3: DaThucHieu \t4: DaThucTich\t5: DaThucThuong");
 
-            Console.WriteLine("Nhap Gia tri cua X: ");
+            Console.WriteLine("Nhap Gia tri cua bien X: ");
             x = double.Parse(Console.ReadLine());
 
             List<BieuThuc> bt = new List<BieuThuc>();

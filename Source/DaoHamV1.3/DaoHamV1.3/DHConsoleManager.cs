@@ -20,7 +20,7 @@ namespace DaoHamV1._3
             x = double.Parse(Console.ReadLine());
 
             List<BieuThuc> bt = new List<BieuThuc>();
-            Console.WriteLine("Loai bieu thuc: ");
+            Console.Write("Loai bieu thuc: ");
             int type = int.Parse(Console.ReadLine());
             switch (type)
             {
@@ -139,9 +139,9 @@ namespace DaoHamV1._3
             try
             {
                 double heSo, soMu;
-                Console.WriteLine("Nhap he so: ");
+                Console.Write("Nhap he so: ");
                 heSo = double.Parse(Console.ReadLine());
-                Console.WriteLine("Nhap so mu: ");
+                Console.Write("Nhap so mu: ");
                 soMu = double.Parse(Console.ReadLine());
                 return DonThuc.Create(x, heSo, soMu);
             }

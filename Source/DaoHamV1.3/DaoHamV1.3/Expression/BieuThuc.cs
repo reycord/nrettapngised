@@ -9,7 +9,7 @@ namespace DaoHamV1._3
     {
         protected static List<String> ExprToString = new List<string>();
         private static OutputSupport _opSupport;
-        public static OutputSupport OSupport
+        public OutputSupport OSupport
         {
             get {
                     if (_opSupport == null)

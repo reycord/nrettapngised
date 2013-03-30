@@ -21,8 +21,8 @@ namespace DaoHamV1._3
         //Cau 3.A
         public static BieuThuc Create(double _x, double _heSo, double _soMu)
         {
-            if (_heSo == 0||_soMu==0)
-                return new HangSo(_heSo);
+            if (_heSo == 0 || _soMu == 0)
+                return HangSo.CreateHangSo(_heSo);
             else
                 return new DonThuc(_x, _heSo, _soMu);
         }

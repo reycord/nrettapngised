@@ -166,7 +166,8 @@ namespace DaoHamV1._3
             try
             {
                 Console.Write("Nhap gia tri hang so: ");
-                return new HangSo(double.Parse(Console.ReadLine()));
+                //return new HangSo(double.Parse(Console.ReadLine()));
+                return HangSo.CreateHangSo(double.Parse(Console.ReadLine()));
             }
             catch (Exception ex)
             {

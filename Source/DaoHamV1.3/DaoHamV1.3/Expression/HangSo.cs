@@ -9,6 +9,7 @@ namespace DaoHamV1._3
     {
         private double c;
         private BieuThuc daoHam = null;
+        static HangSo soKhong = null;
 
         // CONSTRUCTORS
         public HangSo()
@@ -16,9 +17,22 @@ namespace DaoHamV1._3
             c = 0;
         }
 
-        public HangSo(double _value)
+        private HangSo(double _value)
         {
             c = _value;
+        }
+        //Câu 3.B
+        public static HangSo CreateHangSo(double _value)
+        {
+            if (_value == 0)
+            {
+                if (soKhong == null)
+                {
+                    soKhong = new HangSo(0);
+                }
+                return soKhong;
+            }
+            return new HangSo(_value);
         }
 
         // TÍNH GIÁ TRỊ + ĐẠO HÀM

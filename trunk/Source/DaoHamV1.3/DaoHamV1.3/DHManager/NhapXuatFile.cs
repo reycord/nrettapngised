@@ -76,8 +76,8 @@ namespace DaoHamV1._3
         private BieuThuc DocHangSo(List<string> buffer, ref int ptrIndex)
         {
             ptrIndex++;     // Di chuyển đến vị trí của giá trị hằng số
-            HangSo hangSo = new HangSo(double.Parse(buffer[ptrIndex]));
-
+            //HangSo hangSo = new HangSo(double.Parse(buffer[ptrIndex]));
+            HangSo hangSo = HangSo.CreateHangSo(double.Parse(buffer[ptrIndex]));
             ptrIndex++;
             return hangSo;
         }

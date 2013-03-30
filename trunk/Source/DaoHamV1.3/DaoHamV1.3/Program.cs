@@ -39,6 +39,7 @@ namespace DaoHamV1._3
             {
                 dhManager.XuLy();
             }
+            Console.Read();
         }
     }
 }

@@ -1,84 +1,115 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Comment CommentText="1. HÀM TOSTRING() DÙNG ĐỂ BIỂU DIỄN CÁC LOẠI BIỂU THỨC RA MÀN HÌNH&#xD;&#xA;">
-    <Position X="7.107" Y="0.74" Height="3.438" Width="4.033" />
+    <Position X="1.948" Y="9.5" Height="0.573" Width="4.033" />
   </Comment>
   <Class Name="DaoHamV1._3.Program" Collapsed="true">
     <Position X="0.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="DaoHamV1._3.BieuThuc">
-    <Position X="3.25" Y="0.5" Width="1.5" />
+    <Position X="4.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAACAAAAAAAAAAEAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>BieuThuc.cs</FileName>
+      <HashCode>AAAACAAAAAAAAAAEgAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Expression\BieuThuc.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="DaoHamV1._3.HangSo">
-    <Position X="0.75" Y="2.75" Width="1.5" />
+    <Position X="6.25" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAACAAAAAAEAAAEAAAAAAAAEAAAAACAAAAAAAAAAAA=</HashCode>
-      <FileName>HangSo.cs</FileName>
+      <FileName>Expression\HangSo.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="DaoHamV1._3.DonThuc">
-    <Position X="2.75" Y="2.75" Width="1.5" />
+    <Position X="4.25" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAACAAAAEAEAAAEAAAAAAAAMAAAAEAAAABAAAAAAAA=</HashCode>
-      <FileName>DonThuc.cs</FileName>
+      <FileName>Expression\DonThuc.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="DaoHamV1._3.DaThuc">
-    <Position X="5.25" Y="2.75" Width="1.5" />
+    <Position X="2.25" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAEAAAEAAAAAAAAAAAAAAAAABIAAAAAAAA=</HashCode>
-      <FileName>DaThuc.cs</FileName>
+      <FileName>Expression\DaThuc.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="DaoHamV1._3.DaThucTong">
-    <Position X="3.25" Y="6.5" Width="1.5" />
+    <Position X="0.5" Y="7.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAACAAAAAAAAAAEAAAAAAAAEAAAAAAAAAAAQAAAAAA=</HashCode>
-      <FileName>DaThucTong.cs</FileName>
+      <FileName>Expression\DaThucTong.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="DaoHamV1._3.DaThucThuong">
-    <Position X="6.75" Y="6.5" Width="1.5" />
+    <Position X="4" Y="7.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAACAAAAAAAAAAEAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>DaThucThuong.cs</FileName>
+      <FileName>Expression\DaThucThuong.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="DaoHamV1._3.DaThucTich">
-    <Position X="5" Y="6.5" Width="1.5" />
+    <Position X="2.25" Y="7.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAACAAAAAAAAAAEAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>DaThucTich.cs</FileName>
+      <FileName>Expression\DaThucTich.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="DaoHamV1._3.DHConsoleManager" Collapsed="true">
-    <Position X="9.5" Y="6.5" Width="1.5" />
+  <Class Name="DaoHamV1._3.DHConsoleManager">
+    <Position X="10" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>DHConsoleManager.cs</FileName>
+      <HashCode>EAAAAAAAAAABAAAAAABAAAJACAABAAAAAABAABAAAAA=</HashCode>
+      <FileName>DHManager\DHConsoleManager.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="DaoHamV1._3.DHManager" Collapsed="true">
-    <Position X="10.75" Y="5.25" Width="1.5" />
+  <Class Name="DaoHamV1._3.DHManager">
+    <Position X="11.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ADAACAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAABAAAA=</HashCode>
-      <FileName>DHManager.cs</FileName>
+      <HashCode>ADAACAAAAAAAAAAAAAAAAABACAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>DHManager\DHManager.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="DaoHamV1._3.DHFileManager" Collapsed="true">
-    <Position X="11.75" Y="6.5" Width="1.5" />
+  <Class Name="DaoHamV1._3.DHFileManager">
+    <Position X="12.25" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>DHFileManager.cs</FileName>
+      <HashCode>QAAAAAAAAAAAIAAAAAAEAABACAAAAAAAgAAAAAAAABA=</HashCode>
+      <FileName>DHManager\DHFileManager.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="DaoHamV1._3.OPInfix">
+    <Position X="9.75" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>OutputSupport\OPInfix.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DaoHamV1._3.OPPrefix">
+    <Position X="12" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>OutputSupport\OPPrefix.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DaoHamV1._3.OPSuffix">
+    <Position X="14.25" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>OutputSupport\OPSuffix.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="DaoHamV1._3.OutputSupport">
+    <Position X="11.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>OutputSupport\OutputSupport.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

@@ -43,18 +43,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BieuThuc.cs" />
-    <Compile Include="DHManager.cs" />
-    <Compile Include="DaThuc.cs" />
-    <Compile Include="DaThucThuong.cs" />
-    <Compile Include="DaThucTich.cs" />
-    <Compile Include="DaThucTong.cs" />
-    <Compile Include="DHConsoleManager.cs" />
-    <Compile Include="DHFileManager.cs" />
-    <Compile Include="DonThuc.cs" />
-    <Compile Include="HangSo.cs" />
-    <Compile Include="NhapXuatConsole.cs" />
-    <Compile Include="NhapXuatFile.cs" />
+    <Compile Include="Expression\BieuThuc.cs" />
+    <Compile Include="DHManager\DHManager.cs" />
+    <Compile Include="Expression\DaThuc.cs" />
+    <Compile Include="Expression\DaThucThuong.cs" />
+    <Compile Include="Expression\DaThucTich.cs" />
+    <Compile Include="Expression\DaThucTong.cs" />
+    <Compile Include="DHManager\DHConsoleManager.cs" />
+    <Compile Include="DHManager\DHFileManager.cs" />
+    <Compile Include="Expression\DonThuc.cs" />
+    <Compile Include="Expression\HangSo.cs" />
+    <Compile Include="DHManager\NhapXuatConsole.cs" />
+    <Compile Include="DHManager\NhapXuatFile.cs" />
+    <Compile Include="OutputSupport\OPInfix.cs" />
+    <Compile Include="OutputSupport\OPPrefix.cs" />
+    <Compile Include="OutputSupport\OPSuffix.cs" />
+    <Compile Include="OutputSupport\OutputSupport.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -50,7 +50,18 @@ namespace DaoHamV1._3
         // BIỂU DIỄN BIỂU THỨC
         public override string ToString()
         {
-            return (heSo + "X ^ " + soMu);
+            if (OSupport != null)
+            {
+                return OSupport.XuLy(ExprToString);
+            }
+            return null;
+        }
+        public override void AddtoList()
+        {
+            ExprToString.Add(heSo.ToString());
+            ExprToString.Add("X");
+            ExprToString.Add("^");
+            ExprToString.Add(soMu.ToString());
         }
     }
 }

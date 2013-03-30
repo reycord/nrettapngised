@@ -41,9 +41,30 @@ namespace DaoHamV1._3
         // BIỂU DIỄN BIỂU THỨC
         public override string ToString()
         {
-            if (isDaThucTong)   //Tổng
-                return ("(" + u.ToString() + " + " + v.ToString() + ")");
-            return ("(" + u.ToString() + " - " + v.ToString() + ")");   //Hiệu
+            if (OSupport != null)
+            {
+                return OSupport.XuLy(ExprToString);
+            }
+            return null;
+        }
+        public override void AddtoList()
+        {
+            if (isDaThucTong)
+            {
+                ExprToString.Add("(");
+                u.AddtoList();
+                ExprToString.Add("+");
+                v.AddtoList();
+                ExprToString.Add(")");
+            }
+            else
+            {
+                ExprToString.Add("(");
+                u.AddtoList();
+                ExprToString.Add("-");
+                v.AddtoList();
+                ExprToString.Add(")");
+            }
         }
     }
 }

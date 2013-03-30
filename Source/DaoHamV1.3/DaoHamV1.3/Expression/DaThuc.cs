@@ -15,5 +15,9 @@ namespace DaoHamV1._3
         {
             return (u.ToString() + v.ToString());
         }
+        public override void AddtoList()
+        {
+            Console.WriteLine("oc oc");
+        }
     }
 }

@@ -18,6 +18,7 @@ namespace DaoHamV1._3
         {
             BieuThuc kq = bieuThuc.TinhDaoHam();
             kq.AddtoList();
+            kq.OSupport = new OPSuffix();
             return bieuThuc.TinhDaoHam();
         }
 

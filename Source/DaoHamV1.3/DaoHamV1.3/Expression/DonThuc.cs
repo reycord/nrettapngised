@@ -60,8 +60,11 @@ namespace DaoHamV1._3
         {
             ExprToString.Add(heSo.ToString());
             ExprToString.Add("X");
-            ExprToString.Add("^");
-            ExprToString.Add(soMu.ToString());
+            if (soMu != 1)
+            {
+                ExprToString.Add("^");
+                ExprToString.Add(soMu.ToString());
+            }
         }
     }
 }

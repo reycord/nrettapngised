@@ -38,7 +38,15 @@ namespace DaoHamV1._3
         // BIỂU DIỄN BIỂU THỨC
         public override string ToString()
         {
-            return c.ToString();   
+            if (OSupport != null)
+            {
+                return OSupport.XuLy(ExprToString);
+            }
+            return null;
+        }
+        public override void AddtoList()
+        {
+            ExprToString.Add(c.ToString());
         }
     }
 }

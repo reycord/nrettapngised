@@ -16,6 +16,8 @@ namespace DaoHamV1._3
 
         public BieuThuc TinhDaoHam()
         {
+            BieuThuc kq = bieuThuc.TinhDaoHam();
+            kq.AddtoList();
             return bieuThuc.TinhDaoHam();
         }
 
@@ -24,7 +26,6 @@ namespace DaoHamV1._3
         public void XuLy()  // Skeleton methods
         {
             KhoiTaoDaoHam();
-            //2 hàm Tính giá trị + Tính đạo hàm gọi trong hàm XuatKetQua()
             XuatKetQua();
             Console.WriteLine("=================== END ======================");
             Console.WriteLine("                  Nhom 20 ");

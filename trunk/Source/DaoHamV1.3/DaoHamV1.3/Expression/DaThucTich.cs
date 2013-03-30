@@ -36,7 +36,19 @@ namespace DaoHamV1._3
         // BIỂU DIỄN BIỂU THỨC
         public override string ToString()
         {
-            return ("(" + u.ToString() + " * " + v.ToString() + ")");
+            if (OSupport != null)
+            {
+                return OSupport.XuLy(ExprToString);
+            }
+            return null;
+        }
+        public override void AddtoList()
+        {
+            ExprToString.Add("(");
+            u.AddtoList();
+            ExprToString.Add("*");
+            v.AddtoList();
+            ExprToString.Add(")");
         }
     }
 }

@@ -14,14 +14,6 @@ namespace DaoHamV1._3
             return bieuThuc.TinhGiaTri();
         }
 
-        public BieuThuc TinhDaoHam()
-        {
-            BieuThuc kq = bieuThuc.TinhDaoHam();
-            kq.AddtoList();
-            kq.OSupport = new OPSuffix();
-            return bieuThuc.TinhDaoHam();
-        }
-
         public abstract void XuatKetQua();
         
         public void XuLy()  // Skeleton methods

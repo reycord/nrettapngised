@@ -170,8 +170,13 @@ namespace DaoHamV1._3
 
         public override void XuatKetQua()
         {
-            Console.WriteLine("Ket Qua Dao Ham : {0}", TinhDaoHam());
-            Console.WriteLine("Ket Qua Bieu Thuc : {0}", TinhGiaTriBieuThuc());
+            BieuThuc kq = bieuThuc.TinhDaoHam();
+            kq.AddtoList();
+            Console.WriteLine("Ket Qua Dao Ham Infix: {0}", kq);
+            kq.OSupport = new OPSuffix();
+            Console.WriteLine("Ket Qua Dao Ham Sufix: {0}", kq);
+            kq.OSupport = new OPPrefix();
+            Console.WriteLine("Ket Qua Dao Ham Prefix: {0}", kq);
         }
     }
 }

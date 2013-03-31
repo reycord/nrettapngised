@@ -10,17 +10,17 @@ namespace DaoHamV1._3
     {
         static void Main(string[] args)
         {
-            //Program bt = new Program();
-            //bt.NhapXuat();
+            Program bt = new Program();
+            bt.NhapXuat();
            
-            NhapXuatConsole console = new NhapXuatConsole() ;
+            //NhapXuatConsole console = new NhapXuatConsole() ;
            // NhapXuatFile file = new NhapXuatFile();
         }
 
 
         public void NhapXuat()
         {
-            try
+            
             #region Mô Tả
             Console.WriteLine("=============v1.3=============");
             Console.WriteLine("Chuong Trinh Tinh Dao Ham");

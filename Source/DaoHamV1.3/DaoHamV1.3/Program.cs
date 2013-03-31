@@ -20,7 +20,6 @@ namespace DaoHamV1._3
 
         public void NhapXuat()
         {
-            
             #region Mô Tả
             Console.WriteLine("=============v1.3=============");
             Console.WriteLine("Chuong Trinh Tinh Dao Ham");

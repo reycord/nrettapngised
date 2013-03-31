@@ -189,6 +189,7 @@ namespace DaoHamV1._3
         {
             BieuThuc kq = bieuThuc.TinhDaoHam();
             kq.AddtoList();
+            Console.WriteLine("Gia Tri Bieu Thuc : {0}", TinhGiaTriBieuThuc());
             Console.WriteLine("Ket Qua Dao Ham Infix: {0}", kq);
             kq.OSupport = new OPSuffix();
             Console.WriteLine("Ket Qua Dao Ham Sufix: {0}", kq);

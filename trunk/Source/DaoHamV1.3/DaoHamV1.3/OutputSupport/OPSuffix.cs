@@ -46,7 +46,7 @@ namespace DaoHamV1._3
                 {
                     if (a[i] != "+" && a[i] != "-" && a[i] != "*" && a[i] != "/" && a[i] != ")" && a[i] != "(" && a[i] != "^")
                     {
-                        chuoidaxuly = chuoidaxuly + a[i]+"";
+                        chuoidaxuly = chuoidaxuly + a[i]+" ";
                     }
                     if (a[i] == "(")
                     {
@@ -61,9 +61,9 @@ namespace DaoHamV1._3
                             temp = stack.Pop();
                             if (temp != "(")
                             { 
-                                chuoidaxuly = chuoidaxuly + temp + "";
+                                chuoidaxuly = chuoidaxuly + temp + " ";
                                 if (temp == "^")
-                                    chuoidaxuly = chuoidaxuly + "*" + "";
+                                    chuoidaxuly = chuoidaxuly + "*" + " ";
                             }                     
                         }
                        // chuoidaxuly = chuoidaxuly + a[i] + " ";
@@ -79,9 +79,9 @@ namespace DaoHamV1._3
                             if (temp1 >= ai)
                             {
                                 temp = stack.Pop();
-                                chuoidaxuly = chuoidaxuly + temp + "";
+                                chuoidaxuly = chuoidaxuly + temp + " ";
                                 if(temp=="^")
-                                    chuoidaxuly = chuoidaxuly + "*" + "";
+                                    chuoidaxuly = chuoidaxuly + "*" + " ";
                             }
                             stack.Push(a[i]);
                         }
@@ -91,9 +91,9 @@ namespace DaoHamV1._3
                 while (stack.Count != 0)
                 {
                     string temp = stack.Pop();
-                    chuoidaxuly = chuoidaxuly + temp + "";
+                    chuoidaxuly = chuoidaxuly + temp + " ";
                     if (temp == "^")
-                        chuoidaxuly = chuoidaxuly + "*" + "";
+                        chuoidaxuly = chuoidaxuly + "*" + " ";
                 }
 
                 return chuoidaxuly;

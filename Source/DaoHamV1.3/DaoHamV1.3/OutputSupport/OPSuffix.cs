@@ -15,21 +15,23 @@ namespace DaoHamV1._3
                 return 2;
             if (op == "+" || op == "-")
                 return 1;
+            if (op == "^")
+                return 3;
             return 0;
         }
         // co cau list<string> input
-        //string a = "22 * ( ( 33 + 44 ) / 55 )";
+        //string a = " ( 2x^5 + 5x^7 )";
             //List<string> input = new List<string>();
-            //input.Add("22");
-            //input.Add("*");
             //input.Add("(");
-            //input.Add("(");
-            //input.Add("33");
+            //input.Add("2");
+            //input.Add("x");
+            //input.Add("^");
+            //input.Add("5");
             //input.Add("+");
-            //input.Add("44");
-            //input.Add(")");
-            //input.Add("/");
-            //input.Add("55");
+            //input.Add("%");
+            //input.Add("X");
+            //input.Add("^");
+            //input.Add("7");
             //input.Add(")");
         // co the chuyen string cung dc ko can list<string>
         public string XuLy(List<string> a)
@@ -37,20 +39,19 @@ namespace DaoHamV1._3
             // DOi trung to sang hau to
             try
             {
-                //string a = "22 * ( ( 33 + 44 ) / 55 )";
-                stack = new Stack<string>();
-                
+                stack = new Stack<string>();              
                 string chuoidaxuly = "";
                 //a = a.Replace(" ", "");
                 for (int i = 0; i < a.Count; i++)
                 {
-                    if (a[i] != "+" && a[i] != "-" && a[i] != "*" && a[i] != "/" && a[i] != ")")
+                    if (a[i] != "+" && a[i] != "-" && a[i] != "*" && a[i] != "/" && a[i] != ")" && a[i] != "(" && a[i] != "^")
                     {
                         chuoidaxuly = chuoidaxuly + a[i]+" ";
                     }
                     if (a[i] == "(")
                     {
                         stack.Push(a[i]);
+                        chuoidaxuly = chuoidaxuly + a[i] + " ";
                     }
                     if (a[i] == ")")
                     {
@@ -59,11 +60,16 @@ namespace DaoHamV1._3
                         {
                             temp = stack.Pop();
                             if (temp != "(")
-                                chuoidaxuly = chuoidaxuly + temp + " ";                          
+                            { 
+                                chuoidaxuly = chuoidaxuly + temp + " ";
+                                if (temp == "^")
+                                    chuoidaxuly = chuoidaxuly + "*" + " ";
+                            }                     
                         }
                         chuoidaxuly = chuoidaxuly + a[i] + " ";
                     }
-                        if (a[i] == "+" || a[i] == "-" || a[i] == "*" || a[i] == "/")
+                    
+                    if (a[i] == "+" || a[i] == "-" || a[i] == "*" || a[i] == "/" || a[i] == "^")
                         {
                             string temp="no";
                             if(stack.Count!=0)
@@ -74,6 +80,8 @@ namespace DaoHamV1._3
                             {
                                 temp = stack.Pop();
                                 chuoidaxuly = chuoidaxuly + temp + " ";
+                                if(temp=="^")
+                                    chuoidaxuly = chuoidaxuly + "*" + " ";
                             }
                             stack.Push(a[i]);
                         }

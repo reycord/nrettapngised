@@ -16,8 +16,7 @@ namespace DaoHamV1._3
             Console.WriteLine("0: HangSo\t1: DonThuc\t2: DaThucTong");
             Console.WriteLine("3: DaThucHieu \t4: DaThucTich\t5: DaThucThuong");
 
-            Console.Write("Nhap Gia tri cua bien X: ");
-            x = double.Parse(Console.ReadLine());
+            NhapBien();
 
             List<BieuThuc> bt = new List<BieuThuc>();
             Console.Write("Loai bieu thuc: ");
@@ -48,6 +47,20 @@ namespace DaoHamV1._3
             }
         }
 
+        private void NhapBien()
+        {
+            try
+            {
+                Console.Write("Nhap Gia tri cua bien X: ");
+                x = double.Parse(Console.ReadLine());
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Nhap so khong nhap ky tu khac!!!");
+                NhapBien();
+            }
+        }
+
         #region Các hàm phụ trợ việc tạo biểu thức nhập từ Console
         private DaThucTich NhapDaThucTich()
         {
@@ -64,7 +77,8 @@ namespace DaoHamV1._3
             catch (Exception ex)
             {
                 Console.WriteLine("Invalid input!");
-                return null;
+                //return null;
+                return NhapDaThucTich();
             }
         }
 
@@ -83,7 +97,8 @@ namespace DaoHamV1._3
             catch (Exception ex)
             {
                 Console.WriteLine("Invalid input!");
-                return null;
+                //return null;
+                return NhapDaThucThuong();
             }
         }
 
@@ -102,7 +117,8 @@ namespace DaoHamV1._3
             catch (Exception ex)
             {
                 Console.WriteLine("Invalid input!");
-                return null;
+                return NhapDaThucTong(isTong);
+                //return null;
             }
         }
 
@@ -148,7 +164,8 @@ namespace DaoHamV1._3
             catch (Exception ex)
             {
                 Console.WriteLine("Invalid Exception!");
-                return null;
+                return NhapDonThuc(x);
+                //return null;
             }
         }
 
@@ -163,7 +180,7 @@ namespace DaoHamV1._3
             catch (Exception ex)
             {
                 Console.WriteLine("Invalid Input!");
-                return null;
+                return NhapHangSo();
             }
         }
         #endregion

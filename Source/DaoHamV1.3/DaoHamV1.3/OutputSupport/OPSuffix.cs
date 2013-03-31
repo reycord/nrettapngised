@@ -51,7 +51,7 @@ namespace DaoHamV1._3
                     if (a[i] == "(")
                     {
                         stack.Push(a[i]);
-                        chuoidaxuly = chuoidaxuly + a[i] + " ";
+                       // chuoidaxuly = chuoidaxuly + a[i] + " ";
                     }
                     if (a[i] == ")")
                     {
@@ -66,7 +66,7 @@ namespace DaoHamV1._3
                                     chuoidaxuly = chuoidaxuly + "*" + " ";
                             }                     
                         }
-                        chuoidaxuly = chuoidaxuly + a[i] + " ";
+                       // chuoidaxuly = chuoidaxuly + a[i] + " ";
                     }
                     
                     if (a[i] == "+" || a[i] == "-" || a[i] == "*" || a[i] == "/" || a[i] == "^")
@@ -92,6 +92,8 @@ namespace DaoHamV1._3
                 {
                     string temp = stack.Pop();
                     chuoidaxuly = chuoidaxuly + temp + " ";
+                    if (temp == "^")
+                        chuoidaxuly = chuoidaxuly + "*" + " ";
                 }
 
                 return chuoidaxuly;

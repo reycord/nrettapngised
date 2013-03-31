@@ -121,9 +121,11 @@ namespace DaoHamV1._3
             Console.WriteLine("Nhap file : input.txt, Ket qua: output.txt");
             try
             {
+                BieuThuc kq = bieuThuc.TinhDaoHam();
+                kq.AddtoList();
                 StreamWriter ghiFile = new StreamWriter("../../output.txt");
                 ghiFile.WriteLine(TinhGiaTriBieuThuc());
-                ghiFile.WriteLine(TinhDaoHam());
+                ghiFile.WriteLine(kq);
                 ghiFile.Close();
             }
             catch (Exception ex)

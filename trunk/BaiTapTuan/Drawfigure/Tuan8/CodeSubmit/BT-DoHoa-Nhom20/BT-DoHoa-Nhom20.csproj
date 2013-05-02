@@ -56,9 +56,9 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="LibExtent\CairoExt.cs" />
-    <Compile Include="LibExtent\GdiPlusExt.cs" />
-    <Compile Include="LibExtent\GraphicLibExt.cs" />
+    <Compile Include="LibExtend\CairoExt.cs" />
+    <Compile Include="LibExtend\GdiPlusExt.cs" />
+    <Compile Include="LibExtend\GraphicLibExt.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">

@@ -14,27 +14,6 @@
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="BT_DoHoa_Nhom20.LibExtent.CairoExt" Collapsed="true">
-    <Position X="4.75" Y="2.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>LibExtent\CairoExt.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="BT_DoHoa_Nhom20.LibExtent.GdiPlusExt" Collapsed="true">
-    <Position X="6.75" Y="2.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>LibExtent\GdiPlusExt.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="BT_DoHoa_Nhom20.LibExtent.GraphicLibExt" Collapsed="true">
-    <Position X="5.75" Y="1.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>LibExtent\GraphicLibExt.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="BT_DoHoa_Nhom20.Properties.Resources" Collapsed="true">
     <Position X="0.5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
@@ -45,6 +24,27 @@
     <Position X="0.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BT_DoHoa_Nhom20.GraphicLibExt">
+    <Position X="4.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAAAAAAAAgAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>LibExtend\GraphicLibExt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BT_DoHoa_Nhom20.LibExtend.GdiPlusExt">
+    <Position X="5.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAAAAAAAAgAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>LibExtend\GdiPlusExt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BT_DoHoa_Nhom20.LibExtend.CairoExt">
+    <Position X="3.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAAAAAAAAgAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>LibExtend\CairoExt.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

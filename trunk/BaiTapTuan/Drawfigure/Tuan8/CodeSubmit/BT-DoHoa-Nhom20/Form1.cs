@@ -83,7 +83,7 @@ namespace BT_DoHoa_Nhom20
         {
             endX = e.X;
             endY = e.Y;
-            glip.DrawLine(beginX, beginY, endX, endY);
+            glip.DrawLine(beginX, beginY, endX, endY);            
         }
 
         private void pnMainDraw_MouseMove(object sender, MouseEventArgs e)

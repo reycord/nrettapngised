@@ -22,13 +22,14 @@ namespace BT_DoHoa_Nhom20.LibExtend
 
         public override void DrawEclipse(double x, double y, double width, double height)
         {
-            //c.Save();
-            //c.LineWidth = 1;
+            c.Save();
             c.Color = new Color(1,1,1);
             c.Scale(width, height);
-            c.Arc(2, 2, 0.02, 0, 2 * Math.PI);
-            //c.Restore();
+            c.Arc(2, 2, 0.02, 0, 2 * Math.PI);           
             c.Stroke();
+            c.ClosePath();
+            c.Restore();
+           
         }
 
         public override void DrawRectangle(double x, double y, double width, double height)

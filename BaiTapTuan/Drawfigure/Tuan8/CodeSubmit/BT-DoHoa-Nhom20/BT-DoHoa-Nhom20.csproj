@@ -67,6 +67,7 @@
     <Compile Include="Shape\LineEx.cs" />
     <Compile Include="Shape\MyShape.cs" />
     <Compile Include="Shape\RectangleEx.cs" />
+    <Compile Include="Utils\Utils.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

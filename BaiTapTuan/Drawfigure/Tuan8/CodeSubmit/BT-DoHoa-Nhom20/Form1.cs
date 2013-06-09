@@ -15,19 +15,20 @@ namespace BT_DoHoa_Nhom20
     {
         GraphicLibExt glip;
         PaintEventArgs pe;
-        bool isDraw = false;
-
+      
         double beginX = 0;
         double beginY = 0;
         double endX = 0;
         double endY = 0;
 
         List<MyShape> myShape;
+        int typeofShape = 0;// 0 : line; 1 : Rectangle; 2 : eclipse
+
         public FigureDraw()
         {
             InitializeComponent();
-            //khởi tạo là gdi
-            glip = new GdiPlusExt(pnMainDraw.CreateGraphics());
+
+            glip = new GdiPlusExt(pnMainDraw.CreateGraphics()); //khởi tạo là gdi
             myShape = new List<MyShape>();
         }
 
@@ -36,30 +37,26 @@ namespace BT_DoHoa_Nhom20
             pe = new PaintEventArgs(pnMainDraw.CreateGraphics(), this.DisplayRectangle);
             glip = new CairoExt(pe.Graphics.GetHdc()); 
         }
+
+        #region Chọn Các Loại hình để vẽ
         private void btnLine_Click(object sender, EventArgs e)
         {
-            isDraw = true;
-            PaintEventArgs paintEventArgs = new PaintEventArgs(CreateGraphics(), this.DisplayRectangle);
-            OnPaint(paintEventArgs);
+            typeofShape = 0;
         }
 
         private void btnEclipse_Click(object sender, EventArgs e)
         {
-            glip.DrawEclipse(30, 50, 65, 86);
-            this.Invalidate();
-            this.Update();
+            typeofShape = 2;
         }
 
         private void btnRectangle_Click(object sender, EventArgs e)
         {
-            glip.DrawRectangle(80, 80, 65, 86);
+            typeofShape = 1;
         }
 
-        private void pnMainDraw_Paint(object sender, PaintEventArgs e)
-        {
-         
-        }
+        #endregion
 
+        #region xử lý menu
         private void cairoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //check trên menu là cairo
@@ -75,7 +72,9 @@ namespace BT_DoHoa_Nhom20
             gDIPlusToolStripMenuItem.Checked = true;
             glip = new GdiPlusExt(pnMainDraw.CreateGraphics());
         }
+        #endregion
 
+        #region xử lý chuột
         private void pnMainDraw_MouseDown(object sender, MouseEventArgs e)
         {
             beginX = e.X;
@@ -86,20 +85,38 @@ namespace BT_DoHoa_Nhom20
         {
             endX = e.X;
             endY = e.Y;
-            glip.DrawLine(beginX, beginY, endX, endY);            
+
+            MyShape Temp = null;
+            switch (typeofShape)
+            { 
+                case 0:
+                    Temp = new LineEx(beginX, endX, beginY, endY);
+                    break;
+                case 1 :
+                    Temp = new RectangleEx(beginX, endX, beginY, endY);
+                    break;
+                case 2:
+                    Temp = new EclipseEx(beginX, endX, beginY, endY);
+                    break;
+                default: break;
+            }
+
+            if(Temp !=null)
+                myShape.Add(Temp);
         }
 
         private void pnMainDraw_MouseMove(object sender, MouseEventArgs e)
         {
-
+            foreach (MyShape shap in myShape)
+            {
+                shap.Draw();
+            }
         }
+        #endregion
 
         protected override void OnPaint(PaintEventArgs e)
         {
-            if (isDraw)
-            {
-                glip.DrawLine(20, 20, 100, 100);
-            }
+          
         }
     }
 }

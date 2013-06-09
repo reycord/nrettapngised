@@ -101,8 +101,11 @@ namespace BT_DoHoa_Nhom20
                 default: break;
             }
 
-            if(Temp !=null)
+            if (Temp != null)
+            {
+                Temp.MyGraphic = glip;
                 myShape.Add(Temp);
+            }
         }
 
         private void pnMainDraw_MouseMove(object sender, MouseEventArgs e)

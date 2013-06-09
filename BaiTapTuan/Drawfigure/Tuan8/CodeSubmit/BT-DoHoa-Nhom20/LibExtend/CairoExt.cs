@@ -14,6 +14,7 @@ namespace BT_DoHoa_Nhom20.LibExtend
         }
         public override void DrawLine(double x1, double y1, double x2, double y2)
         {
+            c.Color = new Color(0, 1, 0);
             c.MoveTo(x1, y1);
             c.LineTo(x2, y2);
             c.Stroke();
@@ -21,8 +22,12 @@ namespace BT_DoHoa_Nhom20.LibExtend
 
         public override void DrawEclipse(double x, double y, double width, double height)
         {
+            c.Save();
+            c.LineWidth = 3;
+            c.Color = new Color(1, 1, 1);
             c.Scale(width, height);
-            c.Arc(0, 0, 0.2, 0, 2 * Math.PI);
+            c.Arc(2, 2, 0.02, 0, 2 * Math.PI);
+            //c.Restore();
             c.Stroke();
         }
 

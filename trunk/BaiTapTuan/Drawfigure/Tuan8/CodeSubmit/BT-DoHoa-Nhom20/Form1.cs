@@ -18,19 +18,17 @@ namespace BT_DoHoa_Nhom20
         public FigureDraw()
         {
             InitializeComponent();
-            //glip = new GdiPlusExt(pnMainDraw.CreateGraphics());
-            //glip = new CairoExt(pnMainDraw.CreateGraphics().GetHdc());
+            glip = new GdiPlusExt(pnMainDraw.CreateGraphics());
             //initCairo();
         }
 
         private void initCairo()
         {
-            pe = new PaintEventArgs(pnMainDraw.CreateGraphics(), new Rectangle(10, 10, 10, 10));
-            glip = new CairoExt(pe.Graphics.GetHdc());
+            pe = new PaintEventArgs(pnMainDraw.CreateGraphics(), new Rectangle(0, 0, 10, 10));
+            glip = new CairoExt(pe.Graphics.GetHdc()); 
         }
         private void btnLine_Click(object sender, EventArgs e)
         {
-            initCairo();
             glip.DrawLine(20, 20, 100, 100);
         }
 
@@ -47,6 +45,16 @@ namespace BT_DoHoa_Nhom20
         private void pnMainDraw_Paint(object sender, PaintEventArgs e)
         {
             //glip = new CairoExt(e.Graphics.GetHdc());
+        }
+
+        private void cairoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            initCairo();
+        }
+
+        private void gDIPlusToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            glip = new GdiPlusExt(pnMainDraw.CreateGraphics());
         }
     }
 }

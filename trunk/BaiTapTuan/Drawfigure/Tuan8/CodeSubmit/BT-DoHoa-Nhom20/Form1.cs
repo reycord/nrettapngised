@@ -26,8 +26,7 @@ namespace BT_DoHoa_Nhom20
 
         public FigureDraw()
         {
-            InitializeComponent();
-
+            InitializeComponent();            
             glip = new GdiPlusExt(pnMainDraw.CreateGraphics()); //khởi tạo là gdi
             myShape = new List<MyShape>();
         }
@@ -90,13 +89,13 @@ namespace BT_DoHoa_Nhom20
             switch (typeofShape)
             { 
                 case 0:
-                    Temp = new LineEx(beginX, endX, beginY, endY);
+                    Temp = new LineEx(beginX, beginY, endX, endY);
                     break;
                 case 1 :
-                    Temp = new RectangleEx(beginX, endX, beginY, endY);
+                    Temp = new RectangleEx(beginX, beginY,endX , endY);
                     break;
                 case 2:
-                    Temp = new EclipseEx(beginX, endX, beginY, endY);
+                    Temp = new EclipseEx(beginX, beginY, endX, endY);
                     break;
                 default: break;
             }

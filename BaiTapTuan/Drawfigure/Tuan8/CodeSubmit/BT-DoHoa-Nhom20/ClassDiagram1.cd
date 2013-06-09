@@ -3,7 +3,7 @@
   <Class Name="BT_DoHoa_Nhom20.FigureDraw" Collapsed="true">
     <Position X="0.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>BQCAAgAAACAAAAAAAACAgAECAAACAAAAAkQAAAAAAAA=</HashCode>
+      <HashCode>BQCAIkgAACACAQgABAiBgAECCAECAhAAAmAAAQCgAAA=</HashCode>
       <FileName>Form1.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -36,15 +36,43 @@
   <Class Name="BT_DoHoa_Nhom20.LibExtend.GdiPlusExt">
     <Position X="5.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAQAAAAAAAAAAAAgAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAQAAAAAAAAAAAAgAAAAAAAAAAIAEAAAAAAAAA=</HashCode>
       <FileName>LibExtend\GdiPlusExt.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="BT_DoHoa_Nhom20.LibExtend.CairoExt">
     <Position X="3.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAQAAAAAAAAAAAAgAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAQAAAAAAAAAAAAgAAAAAAAAACAAMAAAAAAAAA=</HashCode>
       <FileName>LibExtend\CairoExt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BT_DoHoa_Nhom20.Shape.EclipseEx">
+    <Position X="8" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Shape\EclipseEx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BT_DoHoa_Nhom20.Shape.RectangleEx">
+    <Position X="10.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Shape\RectangleEx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BT_DoHoa_Nhom20.Shape.MyShape" Collapsed="true">
+    <Position X="10.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Shape\MyShape.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BT_DoHoa_Nhom20.Shape.LineEx">
+    <Position X="12.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Shape\LineEx.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

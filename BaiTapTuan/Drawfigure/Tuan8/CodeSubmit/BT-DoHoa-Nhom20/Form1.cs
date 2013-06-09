@@ -53,12 +53,12 @@ namespace BT_DoHoa_Nhom20
 
         private void pnMainDraw_Paint(object sender, PaintEventArgs e)
         {
-            //glip = new CairoExt(e.Graphics.GetHdc());
-            //glip.DrawEclipse(30, 50, 65, 86);
+         
         }
 
         private void cairoToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //check trên menu là cairo
             cairoToolStripMenuItem.Checked = true;
             gDIPlusToolStripMenuItem.Checked = false;
             initCairo();
@@ -66,6 +66,7 @@ namespace BT_DoHoa_Nhom20
 
         private void gDIPlusToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //check trên menu là gdi
             cairoToolStripMenuItem.Checked = false;
             gDIPlusToolStripMenuItem.Checked = true;
             glip = new GdiPlusExt(pnMainDraw.CreateGraphics());

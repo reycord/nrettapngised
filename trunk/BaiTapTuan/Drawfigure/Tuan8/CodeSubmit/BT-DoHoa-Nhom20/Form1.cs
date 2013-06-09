@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using BT_DoHoa_Nhom20.LibExtend;
+using BT_DoHoa_Nhom20.Shape;
 
 namespace BT_DoHoa_Nhom20
 {
@@ -21,11 +22,13 @@ namespace BT_DoHoa_Nhom20
         double endX = 0;
         double endY = 0;
 
+        List<MyShape> myShape;
         public FigureDraw()
         {
             InitializeComponent();
+            //khởi tạo là gdi
             glip = new GdiPlusExt(pnMainDraw.CreateGraphics());
-            //initCairo();
+            myShape = new List<MyShape>();
         }
 
         private void initCairo()

@@ -133,8 +133,10 @@
             // 
             // gDIPlusToolStripMenuItem
             // 
+            this.gDIPlusToolStripMenuItem.Checked = true;
+            this.gDIPlusToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.gDIPlusToolStripMenuItem.Name = "gDIPlusToolStripMenuItem";
-            this.gDIPlusToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.gDIPlusToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.gDIPlusToolStripMenuItem.Text = "GDI Plus";
             this.gDIPlusToolStripMenuItem.Click += new System.EventHandler(this.gDIPlusToolStripMenuItem_Click);
             // 

@@ -22,7 +22,7 @@ namespace BT_DoHoa_Nhom20.LibExtend
         public override void DrawEclipse(double x, double y, double width, double height)
         {
             c.Scale(width, height);
-            c.Arc(x, y, 50, 30, 40);
+            c.Arc(0, 0, 0.2, 0, 2 * Math.PI);
             c.Stroke();
         }
 

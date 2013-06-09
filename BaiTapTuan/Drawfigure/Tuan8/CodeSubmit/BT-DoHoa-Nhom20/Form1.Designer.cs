@@ -127,14 +127,16 @@
             // cairoToolStripMenuItem
             // 
             this.cairoToolStripMenuItem.Name = "cairoToolStripMenuItem";
-            this.cairoToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.cairoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.cairoToolStripMenuItem.Text = "Cairo";
+            this.cairoToolStripMenuItem.Click += new System.EventHandler(this.cairoToolStripMenuItem_Click);
             // 
             // gDIPlusToolStripMenuItem
             // 
             this.gDIPlusToolStripMenuItem.Name = "gDIPlusToolStripMenuItem";
-            this.gDIPlusToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.gDIPlusToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.gDIPlusToolStripMenuItem.Text = "GDI Plus";
+            this.gDIPlusToolStripMenuItem.Click += new System.EventHandler(this.gDIPlusToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 

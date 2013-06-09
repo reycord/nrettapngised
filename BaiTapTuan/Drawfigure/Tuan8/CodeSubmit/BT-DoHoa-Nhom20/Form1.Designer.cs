@@ -127,14 +127,14 @@
             // cairoToolStripMenuItem
             // 
             this.cairoToolStripMenuItem.Name = "cairoToolStripMenuItem";
-            this.cairoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cairoToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.cairoToolStripMenuItem.Text = "Cairo";
             this.cairoToolStripMenuItem.Click += new System.EventHandler(this.cairoToolStripMenuItem_Click);
             // 
             // gDIPlusToolStripMenuItem
             // 
             this.gDIPlusToolStripMenuItem.Name = "gDIPlusToolStripMenuItem";
-            this.gDIPlusToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.gDIPlusToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.gDIPlusToolStripMenuItem.Text = "GDI Plus";
             this.gDIPlusToolStripMenuItem.Click += new System.EventHandler(this.gDIPlusToolStripMenuItem_Click);
             // 
@@ -171,6 +171,9 @@
             this.pnMainDraw.Size = new System.Drawing.Size(638, 401);
             this.pnMainDraw.TabIndex = 1;
             this.pnMainDraw.Paint += new System.Windows.Forms.PaintEventHandler(this.pnMainDraw_Paint);
+            this.pnMainDraw.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnMainDraw_MouseDown);
+            this.pnMainDraw.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnMainDraw_MouseMove);
+            this.pnMainDraw.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pnMainDraw_MouseUp);
             // 
             // panel2
             // 

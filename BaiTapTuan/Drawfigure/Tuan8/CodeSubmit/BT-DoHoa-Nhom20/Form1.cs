@@ -15,6 +15,11 @@ namespace BT_DoHoa_Nhom20
         GraphicLibExt glip;
         PaintEventArgs pe;
 
+        double beginX = 0;
+        double beginY = 0;
+        double endX = 0;
+        double endY = 0;
+
         public FigureDraw()
         {
             InitializeComponent();
@@ -60,6 +65,24 @@ namespace BT_DoHoa_Nhom20
         private void gDIPlusToolStripMenuItem_Click(object sender, EventArgs e)
         {
             glip = new GdiPlusExt(pnMainDraw.CreateGraphics());
+        }
+
+        private void pnMainDraw_MouseDown(object sender, MouseEventArgs e)
+        {
+            beginX = e.X;
+            beginY = e.Y;
+        }
+
+        private void pnMainDraw_MouseUp(object sender, MouseEventArgs e)
+        {
+            endX = e.X;
+            endY = e.Y;
+            glip.DrawLine(beginX, beginY, endX, endY);
+        }
+
+        private void pnMainDraw_MouseMove(object sender, MouseEventArgs e)
+        {
+
         }
     }
 }

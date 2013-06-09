@@ -34,9 +34,8 @@ namespace BT_DoHoa_Nhom20
         }
         private void btnLine_Click(object sender, EventArgs e)
         {
-            glip.DrawLine(20, 20, 100, 100);
-            this.Invalidate();
-            this.Update();
+            PaintEventArgs paintEventArgs = new PaintEventArgs(CreateGraphics(), this.DisplayRectangle);
+            OnPaint(paintEventArgs);
         }
 
         private void btnEclipse_Click(object sender, EventArgs e)
@@ -88,6 +87,11 @@ namespace BT_DoHoa_Nhom20
         private void pnMainDraw_MouseMove(object sender, MouseEventArgs e)
         {
 
+        }
+
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            glip.DrawLine(20, 20, 100, 100);
         }
     }
 }

@@ -49,6 +49,7 @@ namespace BT_DoHoa_Nhom20
         private void pnMainDraw_Paint(object sender, PaintEventArgs e)
         {
             //glip = new CairoExt(e.Graphics.GetHdc());
+            //glip.DrawEclipse(30, 50, 65, 86);
         }
 
         private void cairoToolStripMenuItem_Click(object sender, EventArgs e)

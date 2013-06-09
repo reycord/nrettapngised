@@ -59,11 +59,15 @@ namespace BT_DoHoa_Nhom20
 
         private void cairoToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            cairoToolStripMenuItem.Checked = true;
+            gDIPlusToolStripMenuItem.Checked = false;
             initCairo();
         }
 
         private void gDIPlusToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            cairoToolStripMenuItem.Checked = false;
+            gDIPlusToolStripMenuItem.Checked = true;
             glip = new GdiPlusExt(pnMainDraw.CreateGraphics());
         }
 

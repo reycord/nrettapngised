@@ -172,7 +172,6 @@
             this.pnMainDraw.Name = "pnMainDraw";
             this.pnMainDraw.Size = new System.Drawing.Size(638, 401);
             this.pnMainDraw.TabIndex = 1;
-            this.pnMainDraw.Paint += new System.Windows.Forms.PaintEventHandler(this.pnMainDraw_Paint);
             this.pnMainDraw.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnMainDraw_MouseDown);
             this.pnMainDraw.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnMainDraw_MouseMove);
             this.pnMainDraw.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pnMainDraw_MouseUp);

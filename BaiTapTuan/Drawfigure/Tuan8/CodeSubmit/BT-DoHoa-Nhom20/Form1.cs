@@ -39,7 +39,7 @@ namespace BT_DoHoa_Nhom20
 
         private void btnRectangle_Click(object sender, EventArgs e)
         {
-            glip.DrawRectangle(30, 50, 65, 86);
+            glip.DrawRectangle(80, 80, 65, 86);
         }
 
         private void pnMainDraw_Paint(object sender, PaintEventArgs e)

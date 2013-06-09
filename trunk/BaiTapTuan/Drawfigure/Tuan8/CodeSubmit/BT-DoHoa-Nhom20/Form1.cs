@@ -14,6 +14,7 @@ namespace BT_DoHoa_Nhom20
     {
         GraphicLibExt glip;
         PaintEventArgs pe;
+        bool isDraw = false;
 
         double beginX = 0;
         double beginY = 0;
@@ -34,6 +35,7 @@ namespace BT_DoHoa_Nhom20
         }
         private void btnLine_Click(object sender, EventArgs e)
         {
+            isDraw = true;
             PaintEventArgs paintEventArgs = new PaintEventArgs(CreateGraphics(), this.DisplayRectangle);
             OnPaint(paintEventArgs);
         }
@@ -91,7 +93,10 @@ namespace BT_DoHoa_Nhom20
 
         protected override void OnPaint(PaintEventArgs e)
         {
-            glip.DrawLine(20, 20, 100, 100);
+            if (isDraw)
+            {
+                glip.DrawLine(20, 20, 100, 100);
+            }
         }
     }
 }

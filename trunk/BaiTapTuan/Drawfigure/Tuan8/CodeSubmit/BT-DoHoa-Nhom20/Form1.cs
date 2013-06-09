@@ -24,17 +24,21 @@ namespace BT_DoHoa_Nhom20
 
         private void initCairo()
         {
-            pe = new PaintEventArgs(pnMainDraw.CreateGraphics(), new Rectangle(0, 0, 10, 10));
+            pe = new PaintEventArgs(pnMainDraw.CreateGraphics(), this.DisplayRectangle);
             glip = new CairoExt(pe.Graphics.GetHdc()); 
         }
         private void btnLine_Click(object sender, EventArgs e)
         {
             glip.DrawLine(20, 20, 100, 100);
+            this.Invalidate();
+            this.Update();
         }
 
         private void btnEclipse_Click(object sender, EventArgs e)
         {
             glip.DrawEclipse(30, 50, 65, 86);
+            this.Invalidate();
+            this.Update();
         }
 
         private void btnRectangle_Click(object sender, EventArgs e)

@@ -37,6 +37,9 @@
             this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.libSupportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cairoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gDIPlusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.informationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -45,9 +48,6 @@
             this.btnRectangle = new System.Windows.Forms.Button();
             this.btnEclipse = new System.Windows.Forms.Button();
             this.btnLine = new System.Windows.Forms.Button();
-            this.libSupportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cairoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gDIPlusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -82,38 +82,59 @@
             // newToolStripMenuItem
             // 
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.newToolStripMenuItem.Text = "New";
             // 
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.openToolStripMenuItem.Text = "Open";
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.saveToolStripMenuItem.Text = "Save";
             // 
             // saveAsToolStripMenuItem
             // 
             this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.saveAsToolStripMenuItem.Text = "Save as";
             // 
             // exportToolStripMenuItem
             // 
             this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
-            this.exportToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exportToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.exportToolStripMenuItem.Text = "Export";
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.exitToolStripMenuItem.Text = "Exit";
+            // 
+            // libSupportToolStripMenuItem
+            // 
+            this.libSupportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cairoToolStripMenuItem,
+            this.gDIPlusToolStripMenuItem});
+            this.libSupportToolStripMenuItem.Name = "libSupportToolStripMenuItem";
+            this.libSupportToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
+            this.libSupportToolStripMenuItem.Text = "Lib support";
+            // 
+            // cairoToolStripMenuItem
+            // 
+            this.cairoToolStripMenuItem.Name = "cairoToolStripMenuItem";
+            this.cairoToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.cairoToolStripMenuItem.Text = "Cairo";
+            // 
+            // gDIPlusToolStripMenuItem
+            // 
+            this.gDIPlusToolStripMenuItem.Name = "gDIPlusToolStripMenuItem";
+            this.gDIPlusToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.gDIPlusToolStripMenuItem.Text = "GDI Plus";
             // 
             // helpToolStripMenuItem
             // 
@@ -147,6 +168,7 @@
             this.pnMainDraw.Name = "pnMainDraw";
             this.pnMainDraw.Size = new System.Drawing.Size(638, 401);
             this.pnMainDraw.TabIndex = 1;
+            this.pnMainDraw.Paint += new System.Windows.Forms.PaintEventHandler(this.pnMainDraw_Paint);
             // 
             // panel2
             // 
@@ -188,27 +210,6 @@
             this.btnLine.Text = "Line";
             this.btnLine.UseVisualStyleBackColor = true;
             this.btnLine.Click += new System.EventHandler(this.btnLine_Click);
-            // 
-            // libSupportToolStripMenuItem
-            // 
-            this.libSupportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cairoToolStripMenuItem,
-            this.gDIPlusToolStripMenuItem});
-            this.libSupportToolStripMenuItem.Name = "libSupportToolStripMenuItem";
-            this.libSupportToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
-            this.libSupportToolStripMenuItem.Text = "Lib support";
-            // 
-            // cairoToolStripMenuItem
-            // 
-            this.cairoToolStripMenuItem.Name = "cairoToolStripMenuItem";
-            this.cairoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.cairoToolStripMenuItem.Text = "Cairo";
-            // 
-            // gDIPlusToolStripMenuItem
-            // 
-            this.gDIPlusToolStripMenuItem.Name = "gDIPlusToolStripMenuItem";
-            this.gDIPlusToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.gDIPlusToolStripMenuItem.Text = "GDI Plus";
             // 
             // FigureDraw
             // 

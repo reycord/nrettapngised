@@ -52,6 +52,38 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Diagrams\ActivityDiagram.cs" />
+    <Compile Include="Diagrams\Condition\ADConditionShape.cs" />
+    <Compile Include="Diagrams\Condition\ConditionShape.cs" />
+    <Compile Include="Diagrams\Condition\DFDConditionShape.cs" />
+    <Compile Include="Diagrams\Condition\FCConditionShape.cs" />
+    <Compile Include="Diagrams\DataFlowDiagram.cs" />
+    <Compile Include="Diagrams\Diagram.cs" />
+    <Compile Include="Diagrams\End\ADEndShape.cs" />
+    <Compile Include="Diagrams\End\DFDEndShape.cs" />
+    <Compile Include="Diagrams\End\EndShape.cs" />
+    <Compile Include="Diagrams\End\FCEndShape.cs" />
+    <Compile Include="Diagrams\FlowChartDiagram.cs" />
+    <Compile Include="Diagrams\Input\ADInputShape.cs" />
+    <Compile Include="Diagrams\Input\DFDInputShape.cs" />
+    <Compile Include="Diagrams\Input\FCInputShape.cs" />
+    <Compile Include="Diagrams\Input\InputShape.cs" />
+    <Compile Include="Diagrams\Output\ADOutputShape.cs" />
+    <Compile Include="Diagrams\Output\DFDOutputShape.cs" />
+    <Compile Include="Diagrams\Output\FCOutputShape.cs" />
+    <Compile Include="Diagrams\Output\OutputShape.cs" />
+    <Compile Include="Diagrams\Process\ADProcessShape.cs" />
+    <Compile Include="Diagrams\Process\DFDProcessShape.cs" />
+    <Compile Include="Diagrams\Process\FCProcessShape.cs" />
+    <Compile Include="Diagrams\Process\ProcessShape.cs" />
+    <Compile Include="Diagrams\Start\ADStartShape.cs" />
+    <Compile Include="Diagrams\Start\DFDStartShape.cs" />
+    <Compile Include="Diagrams\Start\FCStartShape.cs" />
+    <Compile Include="Diagrams\Start\StartShape.cs" />
+    <Compile Include="Diagrams\Transition\ADTransitionShape.cs" />
+    <Compile Include="Diagrams\Transition\DFDTransitionShape.cs" />
+    <Compile Include="Diagrams\Transition\FCTransitionShape.cs" />
+    <Compile Include="Diagrams\Transition\TransitionShape.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

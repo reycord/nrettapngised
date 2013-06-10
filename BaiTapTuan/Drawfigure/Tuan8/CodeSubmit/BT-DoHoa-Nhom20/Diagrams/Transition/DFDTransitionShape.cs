@@ -7,5 +7,9 @@ namespace BT_DoHoa_Nhom20
 {
     public class DFDTransitionShape : TransitionShape
     {
+        public override void Draw()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

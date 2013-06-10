@@ -25,7 +25,7 @@ namespace BT_DoHoa_Nhom20
             //ve hinh ellipse
             myGraphic.DrawEclipse(x, y, width, height);
 
-            //ve chu start o giua
+            //ve chu end o giua
             myGraphic.DrawText("End", x + x * 2 / 5, y * 2);
         }
     }

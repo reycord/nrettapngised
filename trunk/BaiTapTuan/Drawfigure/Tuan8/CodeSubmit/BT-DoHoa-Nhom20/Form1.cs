@@ -55,7 +55,7 @@ namespace BT_DoHoa_Nhom20
 
         #endregion
 
-        #region xử lý menu
+        #region xử lý menu công cụ vẽ
         private void cairoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //check trên menu là cairo

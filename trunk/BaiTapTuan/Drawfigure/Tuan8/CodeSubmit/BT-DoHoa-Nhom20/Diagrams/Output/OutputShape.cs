@@ -7,6 +7,6 @@ namespace BT_DoHoa_Nhom20
 {
     public abstract class OutputShape : Shape.MyShape
     {
-        public virtual void Draw() { }
+        public abstract void Draw();
     }
 }

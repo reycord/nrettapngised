@@ -44,7 +44,7 @@ namespace BT_DoHoa_Nhom20.LibExtend
             throw new NotImplementedException();
         }
 
-        public override void DrawText()
+        public override void DrawText(string text, double x, double y)
         {
             throw new NotImplementedException();
         }

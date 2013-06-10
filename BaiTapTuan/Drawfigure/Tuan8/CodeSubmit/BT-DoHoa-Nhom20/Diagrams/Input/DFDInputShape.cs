@@ -7,5 +7,9 @@ namespace BT_DoHoa_Nhom20
 {
     public class DFDInputShape : InputShape
     {
+        public override void Draw()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

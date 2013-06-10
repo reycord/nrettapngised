@@ -50,28 +50,28 @@
             this.pnBackground = new System.Windows.Forms.Panel();
             this.pnMainPaint = new System.Windows.Forms.Panel();
             this.pnShape = new System.Windows.Forms.Panel();
-            this.btnHighLight = new System.Windows.Forms.Button();
-            this.btnShadow = new System.Windows.Forms.Button();
-            this.btnClear = new System.Windows.Forms.Button();
+            this.pnNomal = new System.Windows.Forms.Panel();
+            this.btnLine = new System.Windows.Forms.Button();
+            this.btnEclipse = new System.Windows.Forms.Button();
+            this.btnRectangle = new System.Windows.Forms.Button();
+            this.pnDiagram = new System.Windows.Forms.Panel();
+            this.btnStart = new System.Windows.Forms.Button();
+            this.btnInput = new System.Windows.Forms.Button();
+            this.btnProcess = new System.Windows.Forms.Button();
             this.btnEnd = new System.Windows.Forms.Button();
+            this.btnOutput = new System.Windows.Forms.Button();
             this.btnCondition = new System.Windows.Forms.Button();
             this.btnTransition = new System.Windows.Forms.Button();
-            this.btnOutput = new System.Windows.Forms.Button();
-            this.btnProcess = new System.Windows.Forms.Button();
-            this.btnInput = new System.Windows.Forms.Button();
-            this.btnStart = new System.Windows.Forms.Button();
-            this.btnRectangle = new System.Windows.Forms.Button();
-            this.btnEclipse = new System.Windows.Forms.Button();
-            this.btnLine = new System.Windows.Forms.Button();
             this.pnEffects = new System.Windows.Forms.Panel();
-            this.pnDiagram = new System.Windows.Forms.Panel();
-            this.pnNomal = new System.Windows.Forms.Panel();
+            this.btnShadow = new System.Windows.Forms.Button();
+            this.btnHighLight = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.pnBackground.SuspendLayout();
             this.pnShape.SuspendLayout();
-            this.pnEffects.SuspendLayout();
-            this.pnDiagram.SuspendLayout();
             this.pnNomal.SuspendLayout();
+            this.pnDiagram.SuspendLayout();
+            this.pnEffects.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -149,7 +149,7 @@
             // cairoToolStripMenuItem
             // 
             this.cairoToolStripMenuItem.Name = "cairoToolStripMenuItem";
-            this.cairoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cairoToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.cairoToolStripMenuItem.Text = "Cairo";
             this.cairoToolStripMenuItem.Click += new System.EventHandler(this.cairoToolStripMenuItem_Click);
             // 
@@ -158,7 +158,7 @@
             this.gDIPlusToolStripMenuItem.Checked = true;
             this.gDIPlusToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.gDIPlusToolStripMenuItem.Name = "gDIPlusToolStripMenuItem";
-            this.gDIPlusToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.gDIPlusToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.gDIPlusToolStripMenuItem.Text = "GDI Plus";
             this.gDIPlusToolStripMenuItem.Click += new System.EventHandler(this.gDIPlusToolStripMenuItem_Click);
             // 
@@ -214,7 +214,7 @@
             // enableToolStripMenuItem
             // 
             this.enableToolStripMenuItem.Name = "enableToolStripMenuItem";
-            this.enableToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.enableToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.enableToolStripMenuItem.Text = "Select Shape";
             this.enableToolStripMenuItem.Click += new System.EventHandler(this.enableToolStripMenuItem_Click);
             // 
@@ -259,32 +259,86 @@
             this.pnShape.Size = new System.Drawing.Size(90, 515);
             this.pnShape.TabIndex = 0;
             // 
-            // btnHighLight
+            // pnNomal
             // 
-            this.btnHighLight.Location = new System.Drawing.Point(6, 43);
-            this.btnHighLight.Name = "btnHighLight";
-            this.btnHighLight.Size = new System.Drawing.Size(65, 34);
-            this.btnHighLight.TabIndex = 12;
-            this.btnHighLight.Text = "HighLight";
-            this.btnHighLight.UseVisualStyleBackColor = true;
+            this.pnNomal.Controls.Add(this.btnLine);
+            this.pnNomal.Controls.Add(this.btnEclipse);
+            this.pnNomal.Controls.Add(this.btnRectangle);
+            this.pnNomal.Location = new System.Drawing.Point(9, 3);
+            this.pnNomal.Name = "pnNomal";
+            this.pnNomal.Size = new System.Drawing.Size(71, 96);
+            this.pnNomal.TabIndex = 15;
             // 
-            // btnShadow
+            // btnLine
             // 
-            this.btnShadow.Location = new System.Drawing.Point(6, 5);
-            this.btnShadow.Name = "btnShadow";
-            this.btnShadow.Size = new System.Drawing.Size(65, 32);
-            this.btnShadow.TabIndex = 11;
-            this.btnShadow.Text = "Shadow";
-            this.btnShadow.UseVisualStyleBackColor = true;
+            this.btnLine.Location = new System.Drawing.Point(3, 3);
+            this.btnLine.Name = "btnLine";
+            this.btnLine.Size = new System.Drawing.Size(65, 27);
+            this.btnLine.TabIndex = 0;
+            this.btnLine.Text = "Line";
+            this.btnLine.UseVisualStyleBackColor = true;
+            this.btnLine.Click += new System.EventHandler(this.btnLine_Click);
             // 
-            // btnClear
+            // btnEclipse
             // 
-            this.btnClear.Location = new System.Drawing.Point(9, 454);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(62, 52);
-            this.btnClear.TabIndex = 10;
-            this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnEclipse.Location = new System.Drawing.Point(3, 36);
+            this.btnEclipse.Name = "btnEclipse";
+            this.btnEclipse.Size = new System.Drawing.Size(64, 26);
+            this.btnEclipse.TabIndex = 1;
+            this.btnEclipse.Text = "Eclipse";
+            this.btnEclipse.UseVisualStyleBackColor = true;
+            this.btnEclipse.Click += new System.EventHandler(this.btnEclipse_Click);
+            // 
+            // btnRectangle
+            // 
+            this.btnRectangle.Location = new System.Drawing.Point(3, 68);
+            this.btnRectangle.Name = "btnRectangle";
+            this.btnRectangle.Size = new System.Drawing.Size(64, 25);
+            this.btnRectangle.TabIndex = 2;
+            this.btnRectangle.Text = "Rectangle";
+            this.btnRectangle.UseVisualStyleBackColor = true;
+            this.btnRectangle.Click += new System.EventHandler(this.btnRectangle_Click);
+            // 
+            // pnDiagram
+            // 
+            this.pnDiagram.Controls.Add(this.btnStart);
+            this.pnDiagram.Controls.Add(this.btnInput);
+            this.pnDiagram.Controls.Add(this.btnProcess);
+            this.pnDiagram.Controls.Add(this.btnEnd);
+            this.pnDiagram.Controls.Add(this.btnOutput);
+            this.pnDiagram.Controls.Add(this.btnCondition);
+            this.pnDiagram.Controls.Add(this.btnTransition);
+            this.pnDiagram.Location = new System.Drawing.Point(9, 102);
+            this.pnDiagram.Name = "pnDiagram";
+            this.pnDiagram.Size = new System.Drawing.Size(71, 219);
+            this.pnDiagram.TabIndex = 14;
+            // 
+            // btnStart
+            // 
+            this.btnStart.Location = new System.Drawing.Point(3, 5);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(64, 26);
+            this.btnStart.TabIndex = 3;
+            this.btnStart.Text = "Start";
+            this.btnStart.UseVisualStyleBackColor = true;
+            // 
+            // btnInput
+            // 
+            this.btnInput.Location = new System.Drawing.Point(3, 38);
+            this.btnInput.Name = "btnInput";
+            this.btnInput.Size = new System.Drawing.Size(64, 26);
+            this.btnInput.TabIndex = 4;
+            this.btnInput.Text = "Input";
+            this.btnInput.UseVisualStyleBackColor = true;
+            // 
+            // btnProcess
+            // 
+            this.btnProcess.Location = new System.Drawing.Point(3, 71);
+            this.btnProcess.Name = "btnProcess";
+            this.btnProcess.Size = new System.Drawing.Size(64, 24);
+            this.btnProcess.TabIndex = 5;
+            this.btnProcess.Text = "Process";
+            this.btnProcess.UseVisualStyleBackColor = true;
             // 
             // btnEnd
             // 
@@ -294,6 +348,15 @@
             this.btnEnd.TabIndex = 9;
             this.btnEnd.Text = "End";
             this.btnEnd.UseVisualStyleBackColor = true;
+            // 
+            // btnOutput
+            // 
+            this.btnOutput.Location = new System.Drawing.Point(3, 101);
+            this.btnOutput.Name = "btnOutput";
+            this.btnOutput.Size = new System.Drawing.Size(64, 24);
+            this.btnOutput.TabIndex = 6;
+            this.btnOutput.Text = "Output";
+            this.btnOutput.UseVisualStyleBackColor = true;
             // 
             // btnCondition
             // 
@@ -313,72 +376,6 @@
             this.btnTransition.Text = "Transition";
             this.btnTransition.UseVisualStyleBackColor = true;
             // 
-            // btnOutput
-            // 
-            this.btnOutput.Location = new System.Drawing.Point(3, 101);
-            this.btnOutput.Name = "btnOutput";
-            this.btnOutput.Size = new System.Drawing.Size(64, 24);
-            this.btnOutput.TabIndex = 6;
-            this.btnOutput.Text = "Output";
-            this.btnOutput.UseVisualStyleBackColor = true;
-            // 
-            // btnProcess
-            // 
-            this.btnProcess.Location = new System.Drawing.Point(3, 71);
-            this.btnProcess.Name = "btnProcess";
-            this.btnProcess.Size = new System.Drawing.Size(64, 24);
-            this.btnProcess.TabIndex = 5;
-            this.btnProcess.Text = "Process";
-            this.btnProcess.UseVisualStyleBackColor = true;
-            // 
-            // btnInput
-            // 
-            this.btnInput.Location = new System.Drawing.Point(3, 38);
-            this.btnInput.Name = "btnInput";
-            this.btnInput.Size = new System.Drawing.Size(64, 26);
-            this.btnInput.TabIndex = 4;
-            this.btnInput.Text = "Input";
-            this.btnInput.UseVisualStyleBackColor = true;
-            // 
-            // btnStart
-            // 
-            this.btnStart.Location = new System.Drawing.Point(3, 5);
-            this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(64, 26);
-            this.btnStart.TabIndex = 3;
-            this.btnStart.Text = "Start";
-            this.btnStart.UseVisualStyleBackColor = true;
-            // 
-            // btnRectangle
-            // 
-            this.btnRectangle.Location = new System.Drawing.Point(3, 68);
-            this.btnRectangle.Name = "btnRectangle";
-            this.btnRectangle.Size = new System.Drawing.Size(64, 25);
-            this.btnRectangle.TabIndex = 2;
-            this.btnRectangle.Text = "Rectangle";
-            this.btnRectangle.UseVisualStyleBackColor = true;
-            this.btnRectangle.Click += new System.EventHandler(this.btnRectangle_Click);
-            // 
-            // btnEclipse
-            // 
-            this.btnEclipse.Location = new System.Drawing.Point(3, 36);
-            this.btnEclipse.Name = "btnEclipse";
-            this.btnEclipse.Size = new System.Drawing.Size(64, 26);
-            this.btnEclipse.TabIndex = 1;
-            this.btnEclipse.Text = "Eclipse";
-            this.btnEclipse.UseVisualStyleBackColor = true;
-            this.btnEclipse.Click += new System.EventHandler(this.btnEclipse_Click);
-            // 
-            // btnLine
-            // 
-            this.btnLine.Location = new System.Drawing.Point(3, 3);
-            this.btnLine.Name = "btnLine";
-            this.btnLine.Size = new System.Drawing.Size(65, 27);
-            this.btnLine.TabIndex = 0;
-            this.btnLine.Text = "Line";
-            this.btnLine.UseVisualStyleBackColor = true;
-            this.btnLine.Click += new System.EventHandler(this.btnLine_Click);
-            // 
             // pnEffects
             // 
             this.pnEffects.Controls.Add(this.btnShadow);
@@ -388,29 +385,33 @@
             this.pnEffects.Size = new System.Drawing.Size(76, 83);
             this.pnEffects.TabIndex = 13;
             // 
-            // pnDiagram
+            // btnShadow
             // 
-            this.pnDiagram.Controls.Add(this.btnStart);
-            this.pnDiagram.Controls.Add(this.btnInput);
-            this.pnDiagram.Controls.Add(this.btnProcess);
-            this.pnDiagram.Controls.Add(this.btnEnd);
-            this.pnDiagram.Controls.Add(this.btnOutput);
-            this.pnDiagram.Controls.Add(this.btnCondition);
-            this.pnDiagram.Controls.Add(this.btnTransition);
-            this.pnDiagram.Location = new System.Drawing.Point(9, 102);
-            this.pnDiagram.Name = "pnDiagram";
-            this.pnDiagram.Size = new System.Drawing.Size(71, 219);
-            this.pnDiagram.TabIndex = 14;
+            this.btnShadow.Location = new System.Drawing.Point(6, 5);
+            this.btnShadow.Name = "btnShadow";
+            this.btnShadow.Size = new System.Drawing.Size(65, 32);
+            this.btnShadow.TabIndex = 11;
+            this.btnShadow.Text = "Shadow";
+            this.btnShadow.UseVisualStyleBackColor = true;
             // 
-            // pnNomal
+            // btnHighLight
             // 
-            this.pnNomal.Controls.Add(this.btnLine);
-            this.pnNomal.Controls.Add(this.btnEclipse);
-            this.pnNomal.Controls.Add(this.btnRectangle);
-            this.pnNomal.Location = new System.Drawing.Point(9, 3);
-            this.pnNomal.Name = "pnNomal";
-            this.pnNomal.Size = new System.Drawing.Size(71, 96);
-            this.pnNomal.TabIndex = 15;
+            this.btnHighLight.Location = new System.Drawing.Point(6, 43);
+            this.btnHighLight.Name = "btnHighLight";
+            this.btnHighLight.Size = new System.Drawing.Size(65, 34);
+            this.btnHighLight.TabIndex = 12;
+            this.btnHighLight.Text = "HighLight";
+            this.btnHighLight.UseVisualStyleBackColor = true;
+            // 
+            // btnClear
+            // 
+            this.btnClear.Location = new System.Drawing.Point(9, 454);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(62, 52);
+            this.btnClear.TabIndex = 10;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // FigureDraw
             // 
@@ -426,9 +427,9 @@
             this.menuStrip1.PerformLayout();
             this.pnBackground.ResumeLayout(false);
             this.pnShape.ResumeLayout(false);
-            this.pnEffects.ResumeLayout(false);
-            this.pnDiagram.ResumeLayout(false);
             this.pnNomal.ResumeLayout(false);
+            this.pnDiagram.ResumeLayout(false);
+            this.pnEffects.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -13,6 +13,7 @@ namespace BT_DoHoa_Nhom20
 {
     public partial class FigureDraw : Form
     {
+        #region constant
         public const int DIFREESTYPE = 1;
         public const int DIFLOWCHART = 2;
         public const int DIDATAFLOW = 3;
@@ -21,8 +22,14 @@ namespace BT_DoHoa_Nhom20
         public const int PNNORMAL = 1;
         public const int PNDIAGRAM = 2;
         public const int PNEFFECTS = 3;
-        private int currentPanel = 0;
 
+        public const int ShpLine      = 0;
+        public const int ShpRectangle = 1;
+        public const int ShpEclipse   = 2;
+        #endregion
+
+        private int currentPanel = PNNORMAL;
+        private int currentShape = ShpLine;
         GraphicLibExt glip;
         PaintEventArgs pe;
       
@@ -32,7 +39,7 @@ namespace BT_DoHoa_Nhom20
         double endY = 0;
 
         List<MyShape> myShape;
-        int typeofShape = 0;// 0 : line; 1 : Rectangle; 2 : eclipse
+        
 
         public FigureDraw()
         {
@@ -51,17 +58,17 @@ namespace BT_DoHoa_Nhom20
         #region Chọn Các Loại hình để vẽ
         private void btnLine_Click(object sender, EventArgs e)
         {
-            typeofShape = 0;
+            currentShape = 0;
         }
 
         private void btnEclipse_Click(object sender, EventArgs e)
         {
-            typeofShape = 2;
+            currentShape = 2;
         }
 
         private void btnRectangle_Click(object sender, EventArgs e)
         {
-            typeofShape = 1;
+            currentShape = 1;
         }
 
         #endregion
@@ -79,15 +86,15 @@ namespace BT_DoHoa_Nhom20
             endY = e.Y;
 
             MyShape Temp = null;
-            switch (typeofShape)
+            switch (currentShape)
             {
-                case 0:
+                case ShpLine:
                     Temp = new LineEx(beginX, beginY, endX, endY);
                     break;
-                case 1:
+                case ShpRectangle:
                     Temp = new RectangleEx(beginX, beginY, endX, endY);
                     break;
-                case 2:
+                case ShpEclipse:
                     Temp = new EclipseEx(beginX, beginY, endX, endY);
                     break;
                 default: break;
@@ -215,6 +222,12 @@ namespace BT_DoHoa_Nhom20
                     pnEffects.Enabled = true;
                     break;
             }
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            myShape.Clear();
+            pnMainPaint.Refresh();
         }
         #endregion
     }

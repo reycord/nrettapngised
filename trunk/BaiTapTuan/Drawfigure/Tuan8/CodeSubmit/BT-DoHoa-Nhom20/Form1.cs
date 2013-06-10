@@ -116,9 +116,26 @@ namespace BT_DoHoa_Nhom20
         }
         #endregion
 
-        protected override void OnPaint(PaintEventArgs e)
+        #region Xử lý  Diagram
+        private void freeStyleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-          
+
         }
+
+        private void flowChartToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void activityDiagramToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
     }
 }

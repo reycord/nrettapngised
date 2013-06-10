@@ -13,6 +13,6 @@ namespace BT_DoHoa_Nhom20
 
         public abstract void DrawArrow();
 
-        public abstract void DrawText();
+        public abstract void DrawText(string text, double x, double y);
     }
 }

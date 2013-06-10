@@ -13,6 +13,16 @@ namespace BT_DoHoa_Nhom20
 {
     public partial class FigureDraw : Form
     {
+        public const int DIFREESTYPE = 1;
+        public const int DIFLOWCHART = 2;
+        public const int DIDATAFLOW = 3;
+        public const int DIACTIVITY = 4;
+
+        public const int PNNORMAL = 1;
+        public const int PNDIAGRAM = 2;
+        public const int PNEFFECTS = 3;
+        private int currentPanel = 0;
+
         GraphicLibExt glip;
         PaintEventArgs pe;
       
@@ -29,7 +39,7 @@ namespace BT_DoHoa_Nhom20
             InitializeComponent();            
             glip = new GdiPlusExt(pnMainPaint.CreateGraphics()); //khởi tạo là gdi
             myShape = new List<MyShape>();
-            setEnable(1);
+            setEnable(PNNORMAL);
         }
 
         private void initCairo()
@@ -120,26 +130,26 @@ namespace BT_DoHoa_Nhom20
         #region Xử lý  Diagram
         private void freeStyleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            setEnable(1);
-            setCheckDiagramMenu(1);
+            setEnable(PNNORMAL);
+            setCheckDiagramMenu(DIFREESTYPE);
         }
 
         private void flowChartToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            setEnable(2);
-            setCheckDiagramMenu(2);
+            setEnable(PNDIAGRAM);
+            setCheckDiagramMenu(DIFLOWCHART);
         }
 
         private void dataToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            setEnable(2);
-            setCheckDiagramMenu(3);
+            setEnable(PNDIAGRAM);
+            setCheckDiagramMenu(DIDATAFLOW);
         }
 
         private void activityDiagramToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            setEnable(2);
-            setCheckDiagramMenu(4);
+            setEnable(PNDIAGRAM);
+            setCheckDiagramMenu(DIACTIVITY);
         }
         private void setCheckDiagramMenu(int CASE)
         {
@@ -148,17 +158,17 @@ namespace BT_DoHoa_Nhom20
             dataToolStripMenuItem.Checked = false;
             activityDiagramToolStripMenuItem.Checked = false;
             switch (CASE)
-            { 
-                case 1:
+            {
+                case DIFREESTYPE:
                     freeStyleToolStripMenuItem.Checked = true;
                     break;
-                case 2:
+                case DIFLOWCHART:
                     flowChartToolStripMenuItem.Checked = true;
                     break;
-                case 3:
+                case DIDATAFLOW:
                     dataToolStripMenuItem.Checked = true;
                     break;
-                case 4:
+                case DIACTIVITY:
                     activityDiagramToolStripMenuItem.Checked = true;
                     break;
             }
@@ -170,13 +180,13 @@ namespace BT_DoHoa_Nhom20
         {
             if (enableToolStripMenuItem.Checked == true)
             {
-                setEnable(1);
+                setEnable(currentPanel);
                 enableToolStripMenuItem.Checked = false;
             }
             else
             {
-                enableToolStripMenuItem.Checked = true; ;
-                setEnable(3);
+                enableToolStripMenuItem.Checked = true;
+                setEnable(PNEFFECTS);
             }
         }
         #endregion
@@ -185,20 +195,24 @@ namespace BT_DoHoa_Nhom20
         //xử lý các trường hợp cho phép bật tắt các panel
         private void setEnable(int CASE)
         {
+            
             pnDiagram.Enabled = false;
             pnEffects.Enabled = false;
             pnNomal.Enabled = false;
 
             switch (CASE)
             {
-                case 1:
+                case PNNORMAL:
                     pnNomal.Enabled = true;
+                    currentPanel = CASE;
                     break;
-                case 2:
+                case PNDIAGRAM:
                     pnDiagram.Enabled = true;
                     pnNomal.Enabled = true;
+                    currentPanel = CASE;
                     break;
-                case 3: pnEffects.Enabled = true;
+                case PNEFFECTS:
+                    pnEffects.Enabled = true;
                     break;
             }
         }

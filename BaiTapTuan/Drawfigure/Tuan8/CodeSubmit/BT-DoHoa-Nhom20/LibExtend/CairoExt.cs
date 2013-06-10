@@ -15,8 +15,8 @@ namespace BT_DoHoa_Nhom20.LibExtend
         public override void DrawLine(double x1, double y1, double x2, double y2)
         {
             c.Color = new Color(1,1,1);
-            c.MoveTo(10, 10);
-            c.LineTo(50, 70);
+            c.MoveTo(x1, y1);
+            c.LineTo(x2, y2);
             c.Stroke();
         }
 

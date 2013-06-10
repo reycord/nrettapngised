@@ -1,6 +1,7 @@
 ﻿using System;
 using Cairo;
 using Gtk;
+using BT_DoHoa_Nhom20;
 namespace BT_DoHoa_Nhom20.LibExtend
 {
     public class CairoExt : BT_DoHoa_Nhom20.GraphicLibExt 
@@ -20,14 +21,21 @@ namespace BT_DoHoa_Nhom20.LibExtend
             c.Stroke();
         }
 
-        public override void DrawEclipse(double x, double y, double width, double height)
+        public override void DrawEclipse(double x1, double y1, double x2, double y2)
         {
+            double cx = x1 + (Math.Abs(x2 - x1)) / 2;
+            double cy = y1 + (Math.Abs(y2 - y1)) / 2;
+            double width, height;
+            Utils.ConvertToLengthAndWidth(x1, y1, x2, y2, out width, out height);
+
             c.Save();
-            c.Color = new Color(1,1,1);
-            c.Scale(width, height);
-            c.Arc(2, 2, 0.02, 0, 2 * Math.PI);           
+            c.SetSourceRGBA(0.1, 0.1, 0.1, 0.1);
+            c.Translate(cx, cy);
+            c.Scale(width/2.0, height/2.0);
+            c.Arc(0.0, 0.0, 1.0, 0.0, 2 * Math.PI);     
             c.Stroke();
-            //c.ClosePath();
+            c.ClosePath();
+            c.StrokePreserve();
             c.Restore();
            
         }

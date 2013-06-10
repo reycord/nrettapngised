@@ -48,6 +48,9 @@
             this.btnRectangle = new System.Windows.Forms.Button();
             this.btnEclipse = new System.Windows.Forms.Button();
             this.btnLine = new System.Windows.Forms.Button();
+            this.flowChartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.activityDiagramToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -136,15 +139,19 @@
             this.gDIPlusToolStripMenuItem.Checked = true;
             this.gDIPlusToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.gDIPlusToolStripMenuItem.Name = "gDIPlusToolStripMenuItem";
-            this.gDIPlusToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.gDIPlusToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.gDIPlusToolStripMenuItem.Text = "GDI Plus";
             this.gDIPlusToolStripMenuItem.Click += new System.EventHandler(this.gDIPlusToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
+            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.flowChartToolStripMenuItem,
+            this.dataToolStripMenuItem,
+            this.activityDiagramToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.helpToolStripMenuItem.Text = "Help";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
+            this.helpToolStripMenuItem.Text = "Diagram";
             // 
             // informationToolStripMenuItem
             // 
@@ -217,6 +224,26 @@
             this.btnLine.UseVisualStyleBackColor = true;
             this.btnLine.Click += new System.EventHandler(this.btnLine_Click);
             // 
+            // flowChartToolStripMenuItem
+            // 
+            this.flowChartToolStripMenuItem.Checked = true;
+            this.flowChartToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.flowChartToolStripMenuItem.Name = "flowChartToolStripMenuItem";
+            this.flowChartToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.flowChartToolStripMenuItem.Text = "Flow Chart";
+            // 
+            // dataToolStripMenuItem
+            // 
+            this.dataToolStripMenuItem.Name = "dataToolStripMenuItem";
+            this.dataToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.dataToolStripMenuItem.Text = "Data Flow Diagram";
+            // 
+            // activityDiagramToolStripMenuItem
+            // 
+            this.activityDiagramToolStripMenuItem.Name = "activityDiagramToolStripMenuItem";
+            this.activityDiagramToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.activityDiagramToolStripMenuItem.Text = "Activity Diagram";
+            // 
             // FigureDraw
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -257,6 +284,9 @@
         private System.Windows.Forms.ToolStripMenuItem libSupportToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cairoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gDIPlusToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem flowChartToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dataToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem activityDiagramToolStripMenuItem;
 
     }
 }

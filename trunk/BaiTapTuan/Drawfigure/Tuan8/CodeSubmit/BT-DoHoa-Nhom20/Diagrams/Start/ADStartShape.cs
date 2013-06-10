@@ -7,5 +7,9 @@ namespace BT_DoHoa_Nhom20
 {
     public class ADStartShape : StartShape
     {
+        public override void Draw()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

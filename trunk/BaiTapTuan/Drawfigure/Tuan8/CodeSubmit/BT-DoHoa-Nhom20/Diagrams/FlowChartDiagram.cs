@@ -9,37 +9,37 @@ namespace BT_DoHoa_Nhom20
     {
         public override StartShape CreateStart()
         {
-            return base.CreateStart();
+            throw new NotImplementedException();
         }
 
         public override ConditionShape CreateCondition()
         {
-            return base.CreateCondition();
+            throw new NotImplementedException();
         }
 
         public override EndShape CreateEnd()
         {
-            return base.CreateEnd();
+            throw new NotImplementedException();
         }
 
         public override InputShape CreateInput()
         {
-            return base.CreateInput();
+            throw new NotImplementedException();
         }
 
         public override OutputShape CreateOutput()
         {
-            return base.CreateOutput();
+            throw new NotImplementedException();
         }
 
         public override ProcessShape CreateProcess()
         {
-            return base.CreateProcess();
+            throw new NotImplementedException();
         }
 
         public override TransitionShape CreateTransition()
         {
-            return base.CreateTransition();
+            throw new NotImplementedException();
         }
     }
 }

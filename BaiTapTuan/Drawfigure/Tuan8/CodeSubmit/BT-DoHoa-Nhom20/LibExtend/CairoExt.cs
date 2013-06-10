@@ -38,5 +38,15 @@ namespace BT_DoHoa_Nhom20.LibExtend
             c.Rectangle(x, y, width, height);
             c.Stroke();
         }
+
+        public override void DrawArrow()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void DrawText()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

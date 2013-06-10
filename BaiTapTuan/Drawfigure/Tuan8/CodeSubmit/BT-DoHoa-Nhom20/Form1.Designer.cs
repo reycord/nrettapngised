@@ -41,23 +41,29 @@
             this.cairoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gDIPlusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.flowChartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.activityDiagramToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.informationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnMainDraw = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnEnd = new System.Windows.Forms.Button();
+            this.btnCondition = new System.Windows.Forms.Button();
+            this.btnTransition = new System.Windows.Forms.Button();
+            this.btnOutput = new System.Windows.Forms.Button();
+            this.btnProcess = new System.Windows.Forms.Button();
+            this.btnInput = new System.Windows.Forms.Button();
+            this.btnStart = new System.Windows.Forms.Button();
             this.btnRectangle = new System.Windows.Forms.Button();
             this.btnEclipse = new System.Windows.Forms.Button();
             this.btnLine = new System.Windows.Forms.Button();
-            this.flowChartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.activityDiagramToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnStart = new System.Windows.Forms.Button();
-            this.btnInput = new System.Windows.Forms.Button();
-            this.btnProcess = new System.Windows.Forms.Button();
-            this.btnOutput = new System.Windows.Forms.Button();
-            this.btnTransition = new System.Windows.Forms.Button();
-            this.btnCondition = new System.Windows.Forms.Button();
-            this.btnEnd = new System.Windows.Forms.Button();
+            this.freeStyleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.eToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.enableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnShadow = new System.Windows.Forms.Button();
+            this.btnHighLight = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -69,10 +75,11 @@
             this.fileToolStripMenuItem,
             this.libSupportToolStripMenuItem,
             this.helpToolStripMenuItem,
+            this.eToolStripMenuItem,
             this.informationToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(732, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1052, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -92,37 +99,37 @@
             // newToolStripMenuItem
             // 
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.newToolStripMenuItem.Text = "New";
             // 
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.openToolStripMenuItem.Text = "Open";
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.saveToolStripMenuItem.Text = "Save";
             // 
             // saveAsToolStripMenuItem
             // 
             this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.saveAsToolStripMenuItem.Text = "Save as";
             // 
             // exportToolStripMenuItem
             // 
             this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
-            this.exportToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.exportToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.exportToolStripMenuItem.Text = "Export";
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             // 
             // libSupportToolStripMenuItem
@@ -153,12 +160,34 @@
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.freeStyleToolStripMenuItem,
             this.flowChartToolStripMenuItem,
             this.dataToolStripMenuItem,
             this.activityDiagramToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
             this.helpToolStripMenuItem.Text = "Diagram";
+            // 
+            // flowChartToolStripMenuItem
+            // 
+            this.flowChartToolStripMenuItem.Name = "flowChartToolStripMenuItem";
+            this.flowChartToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.flowChartToolStripMenuItem.Text = "Flow Chart";
+            this.flowChartToolStripMenuItem.Click += new System.EventHandler(this.flowChartToolStripMenuItem_Click);
+            // 
+            // dataToolStripMenuItem
+            // 
+            this.dataToolStripMenuItem.Name = "dataToolStripMenuItem";
+            this.dataToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.dataToolStripMenuItem.Text = "Data Flow Diagram";
+            this.dataToolStripMenuItem.Click += new System.EventHandler(this.dataToolStripMenuItem_Click);
+            // 
+            // activityDiagramToolStripMenuItem
+            // 
+            this.activityDiagramToolStripMenuItem.Name = "activityDiagramToolStripMenuItem";
+            this.activityDiagramToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.activityDiagramToolStripMenuItem.Text = "Activity Diagram";
+            this.activityDiagramToolStripMenuItem.Click += new System.EventHandler(this.activityDiagramToolStripMenuItem_Click);
             // 
             // informationToolStripMenuItem
             // 
@@ -175,7 +204,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 24);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(732, 408);
+            this.panel1.Size = new System.Drawing.Size(1052, 521);
             this.panel1.TabIndex = 1;
             // 
             // pnMainDraw
@@ -184,7 +213,7 @@
             this.pnMainDraw.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnMainDraw.Location = new System.Drawing.Point(91, 4);
             this.pnMainDraw.Name = "pnMainDraw";
-            this.pnMainDraw.Size = new System.Drawing.Size(638, 401);
+            this.pnMainDraw.Size = new System.Drawing.Size(958, 517);
             this.pnMainDraw.TabIndex = 1;
             this.pnMainDraw.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnMainDraw_MouseDown);
             this.pnMainDraw.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnMainDraw_MouseMove);
@@ -193,6 +222,9 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel2.Controls.Add(this.btnHighLight);
+            this.panel2.Controls.Add(this.btnShadow);
+            this.panel2.Controls.Add(this.btnClear);
             this.panel2.Controls.Add(this.btnEnd);
             this.panel2.Controls.Add(this.btnCondition);
             this.panel2.Controls.Add(this.btnTransition);
@@ -205,8 +237,71 @@
             this.panel2.Controls.Add(this.btnLine);
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(82, 402);
+            this.panel2.Size = new System.Drawing.Size(82, 515);
             this.panel2.TabIndex = 0;
+            // 
+            // btnEnd
+            // 
+            this.btnEnd.Location = new System.Drawing.Point(7, 295);
+            this.btnEnd.Name = "btnEnd";
+            this.btnEnd.Size = new System.Drawing.Size(64, 23);
+            this.btnEnd.TabIndex = 9;
+            this.btnEnd.Text = "End";
+            this.btnEnd.UseVisualStyleBackColor = true;
+            // 
+            // btnCondition
+            // 
+            this.btnCondition.Location = new System.Drawing.Point(7, 265);
+            this.btnCondition.Name = "btnCondition";
+            this.btnCondition.Size = new System.Drawing.Size(64, 24);
+            this.btnCondition.TabIndex = 8;
+            this.btnCondition.Text = "Condition";
+            this.btnCondition.UseVisualStyleBackColor = true;
+            // 
+            // btnTransition
+            // 
+            this.btnTransition.Location = new System.Drawing.Point(7, 235);
+            this.btnTransition.Name = "btnTransition";
+            this.btnTransition.Size = new System.Drawing.Size(64, 24);
+            this.btnTransition.TabIndex = 7;
+            this.btnTransition.Text = "Transition";
+            this.btnTransition.UseVisualStyleBackColor = true;
+            // 
+            // btnOutput
+            // 
+            this.btnOutput.Location = new System.Drawing.Point(7, 205);
+            this.btnOutput.Name = "btnOutput";
+            this.btnOutput.Size = new System.Drawing.Size(64, 24);
+            this.btnOutput.TabIndex = 6;
+            this.btnOutput.Text = "Output";
+            this.btnOutput.UseVisualStyleBackColor = true;
+            // 
+            // btnProcess
+            // 
+            this.btnProcess.Location = new System.Drawing.Point(7, 175);
+            this.btnProcess.Name = "btnProcess";
+            this.btnProcess.Size = new System.Drawing.Size(64, 24);
+            this.btnProcess.TabIndex = 5;
+            this.btnProcess.Text = "Process";
+            this.btnProcess.UseVisualStyleBackColor = true;
+            // 
+            // btnInput
+            // 
+            this.btnInput.Location = new System.Drawing.Point(7, 142);
+            this.btnInput.Name = "btnInput";
+            this.btnInput.Size = new System.Drawing.Size(64, 26);
+            this.btnInput.TabIndex = 4;
+            this.btnInput.Text = "Input";
+            this.btnInput.UseVisualStyleBackColor = true;
+            // 
+            // btnStart
+            // 
+            this.btnStart.Location = new System.Drawing.Point(7, 109);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(64, 26);
+            this.btnStart.TabIndex = 3;
+            this.btnStart.Text = "Start";
+            this.btnStart.UseVisualStyleBackColor = true;
             // 
             // btnRectangle
             // 
@@ -238,94 +333,61 @@
             this.btnLine.UseVisualStyleBackColor = true;
             this.btnLine.Click += new System.EventHandler(this.btnLine_Click);
             // 
-            // flowChartToolStripMenuItem
+            // freeStyleToolStripMenuItem
             // 
-            this.flowChartToolStripMenuItem.Checked = true;
-            this.flowChartToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.flowChartToolStripMenuItem.Name = "flowChartToolStripMenuItem";
-            this.flowChartToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
-            this.flowChartToolStripMenuItem.Text = "Flow Chart";
+            this.freeStyleToolStripMenuItem.Checked = true;
+            this.freeStyleToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.freeStyleToolStripMenuItem.Name = "freeStyleToolStripMenuItem";
+            this.freeStyleToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.freeStyleToolStripMenuItem.Text = "Free Style";
+            this.freeStyleToolStripMenuItem.Click += new System.EventHandler(this.freeStyleToolStripMenuItem_Click);
             // 
-            // dataToolStripMenuItem
+            // btnClear
             // 
-            this.dataToolStripMenuItem.Name = "dataToolStripMenuItem";
-            this.dataToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
-            this.dataToolStripMenuItem.Text = "Data Flow Diagram";
+            this.btnClear.Location = new System.Drawing.Point(9, 454);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(62, 52);
+            this.btnClear.TabIndex = 10;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
             // 
-            // activityDiagramToolStripMenuItem
+            // eToolStripMenuItem
             // 
-            this.activityDiagramToolStripMenuItem.Name = "activityDiagramToolStripMenuItem";
-            this.activityDiagramToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
-            this.activityDiagramToolStripMenuItem.Text = "Activity Diagram";
+            this.eToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.enableToolStripMenuItem});
+            this.eToolStripMenuItem.Name = "eToolStripMenuItem";
+            this.eToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
+            this.eToolStripMenuItem.Text = "Effects";
             // 
-            // btnStart
+            // enableToolStripMenuItem
             // 
-            this.btnStart.Location = new System.Drawing.Point(7, 109);
-            this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(64, 26);
-            this.btnStart.TabIndex = 3;
-            this.btnStart.Text = "Start";
-            this.btnStart.UseVisualStyleBackColor = true;
+            this.enableToolStripMenuItem.Name = "enableToolStripMenuItem";
+            this.enableToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.enableToolStripMenuItem.Text = "Select Shape";
             // 
-            // btnInput
+            // btnShadow
             // 
-            this.btnInput.Location = new System.Drawing.Point(7, 142);
-            this.btnInput.Name = "btnInput";
-            this.btnInput.Size = new System.Drawing.Size(64, 26);
-            this.btnInput.TabIndex = 4;
-            this.btnInput.Text = "Input";
-            this.btnInput.UseVisualStyleBackColor = true;
+            this.btnShadow.Location = new System.Drawing.Point(7, 335);
+            this.btnShadow.Name = "btnShadow";
+            this.btnShadow.Size = new System.Drawing.Size(65, 32);
+            this.btnShadow.TabIndex = 11;
+            this.btnShadow.Text = "Shadow";
+            this.btnShadow.UseVisualStyleBackColor = true;
             // 
-            // btnProcess
+            // btnHighLight
             // 
-            this.btnProcess.Location = new System.Drawing.Point(7, 175);
-            this.btnProcess.Name = "btnProcess";
-            this.btnProcess.Size = new System.Drawing.Size(64, 24);
-            this.btnProcess.TabIndex = 5;
-            this.btnProcess.Text = "Process";
-            this.btnProcess.UseVisualStyleBackColor = true;
-            // 
-            // btnOutput
-            // 
-            this.btnOutput.Location = new System.Drawing.Point(7, 205);
-            this.btnOutput.Name = "btnOutput";
-            this.btnOutput.Size = new System.Drawing.Size(64, 24);
-            this.btnOutput.TabIndex = 6;
-            this.btnOutput.Text = "Output";
-            this.btnOutput.UseVisualStyleBackColor = true;
-            // 
-            // btnTransition
-            // 
-            this.btnTransition.Location = new System.Drawing.Point(7, 235);
-            this.btnTransition.Name = "btnTransition";
-            this.btnTransition.Size = new System.Drawing.Size(64, 24);
-            this.btnTransition.TabIndex = 7;
-            this.btnTransition.Text = "Transition";
-            this.btnTransition.UseVisualStyleBackColor = true;
-            // 
-            // btnCondition
-            // 
-            this.btnCondition.Location = new System.Drawing.Point(7, 265);
-            this.btnCondition.Name = "btnCondition";
-            this.btnCondition.Size = new System.Drawing.Size(64, 24);
-            this.btnCondition.TabIndex = 8;
-            this.btnCondition.Text = "Condition";
-            this.btnCondition.UseVisualStyleBackColor = true;
-            // 
-            // btnEnd
-            // 
-            this.btnEnd.Location = new System.Drawing.Point(7, 295);
-            this.btnEnd.Name = "btnEnd";
-            this.btnEnd.Size = new System.Drawing.Size(64, 23);
-            this.btnEnd.TabIndex = 9;
-            this.btnEnd.Text = "End";
-            this.btnEnd.UseVisualStyleBackColor = true;
+            this.btnHighLight.Location = new System.Drawing.Point(7, 373);
+            this.btnHighLight.Name = "btnHighLight";
+            this.btnHighLight.Size = new System.Drawing.Size(65, 38);
+            this.btnHighLight.TabIndex = 12;
+            this.btnHighLight.Text = "HighLight";
+            this.btnHighLight.UseVisualStyleBackColor = true;
             // 
             // FigureDraw
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(732, 432);
+            this.ClientSize = new System.Drawing.Size(1052, 545);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -371,6 +433,12 @@
         private System.Windows.Forms.Button btnProcess;
         private System.Windows.Forms.Button btnInput;
         private System.Windows.Forms.Button btnStart;
+        private System.Windows.Forms.ToolStripMenuItem freeStyleToolStripMenuItem;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.ToolStripMenuItem eToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem enableToolStripMenuItem;
+        private System.Windows.Forms.Button btnShadow;
+        private System.Windows.Forms.Button btnHighLight;
 
     }
 }

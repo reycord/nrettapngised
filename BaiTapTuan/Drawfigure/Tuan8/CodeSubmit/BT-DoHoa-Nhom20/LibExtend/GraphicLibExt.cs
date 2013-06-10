@@ -10,5 +10,9 @@ namespace BT_DoHoa_Nhom20
         public abstract void DrawEclipse(double x, double y, double width, double height);
 
         public abstract void DrawRectangle(double x, double y, double width, double height);
+
+        public abstract void DrawArrow();
+
+        public abstract void DrawText();
     }
 }

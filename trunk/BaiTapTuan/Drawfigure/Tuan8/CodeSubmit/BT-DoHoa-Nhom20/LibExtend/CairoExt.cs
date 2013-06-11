@@ -12,6 +12,7 @@ namespace BT_DoHoa_Nhom20.LibExtend
         {
             s = new Win32Surface(hdc);
             c = new Context(s);
+        
         }
         public override void DrawLine(double x1, double y1, double x2, double y2)
         {
@@ -23,21 +24,19 @@ namespace BT_DoHoa_Nhom20.LibExtend
 
         public override void DrawEclipse(double x1, double y1, double x2, double y2)
         {
+            c.SetSourceRGB(1, 1, 1);  
             double cx = x1 + (Math.Abs(x2 - x1)) / 2;
             double cy = y1 + (Math.Abs(y2 - y1)) / 2;
             double width, height;
             Utils.ConvertToLengthAndWidth(x1, y1, x2, y2, out width, out height);
-
             c.Save();
-            c.SetSourceRGBA(0.1, 0.1, 0.1, 0.1);
+            c.LineWidth = 0.02;
             c.Translate(cx, cy);
             c.Scale(width/2.0, height/2.0);
-            c.Arc(0.0, 0.0, 1.0, 0.0, 2 * Math.PI);     
+            c.Arc(0.0, 0.0, 1.0, 0.0, 2 * Math.PI);
             c.Stroke();
-            c.ClosePath();
-            c.StrokePreserve();
-            c.Restore();
-           
+            c.ClosePath();            
+            c.Restore();           
         }
 
         public override void DrawRectangle(double x, double y, double width, double height)

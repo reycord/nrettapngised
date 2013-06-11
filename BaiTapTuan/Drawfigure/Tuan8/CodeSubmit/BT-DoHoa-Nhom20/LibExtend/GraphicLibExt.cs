@@ -22,5 +22,7 @@ namespace BT_DoHoa_Nhom20
         public abstract void DrawPentagonal(double x, double y, double width, double height); //vẽ hình có 5 cạnh
 
         public abstract void FillCircle(double x, double y, double width, double height);// to hinh tron
+
+        public abstract void DrawCircle(double x, double y, double width); // ve hinh tron
     }
 }

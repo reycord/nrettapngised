@@ -78,5 +78,10 @@ namespace BT_DoHoa_Nhom20.LibExtend
         {
             throw new NotImplementedException();
         }
+
+        public override void DrawCircle(double x, double y, double width)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

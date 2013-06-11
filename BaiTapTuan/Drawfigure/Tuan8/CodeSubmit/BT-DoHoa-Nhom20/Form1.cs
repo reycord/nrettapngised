@@ -233,12 +233,12 @@ namespace BT_DoHoa_Nhom20
         private void showChartToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Diagram temp = new FlowChart();
-            StartShape s1 = temp.CreateStart(10, 50, 60, 50);
+            StartShape s1 = temp.CreateStart(10, 50, 90, 120);
             OutputShape s2 = temp.CreateOutput(100, 100, 60, 40);
             ProcessShape s3 = temp.CreateProcess(200, 150, 60, 50);
             InputShape s4 = temp.CreateInput(300, 200, 60, 40);
             TransitionShape s5 = temp.CreateTransition(400, 50, 10, 100);
-            EndShape s6 = temp.CreateEnd(500, 250, 60, 50);
+            EndShape s6 = temp.CreateEnd(500, 250, 330, 200);
             ConditionShape s7 = temp.CreateCondition(600, 10, 60, 50);
            
             if(cairoToolStripMenuItem.Checked == true)

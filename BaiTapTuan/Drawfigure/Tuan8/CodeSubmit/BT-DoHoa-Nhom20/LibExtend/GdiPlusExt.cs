@@ -50,7 +50,7 @@ namespace BT_DoHoa_Nhom20.LibExtend
 
         public override void DrawText(string text, double x, double y)
         {
-            Font font = new Font("Arial", 12);
+            Font font = new Font("Arial", 10);
             g.DrawString(text, font, b, (int)x, (int)y);
         }
 
@@ -81,7 +81,12 @@ namespace BT_DoHoa_Nhom20.LibExtend
 
         public override void FillCircle(double x, double y, double width, double height)
         {
-            throw new NotImplementedException();
+            g.FillEllipse(Brushes.Black, (int)x, (int)y, (int)width, (int)width);
+        }
+
+        public override void DrawCircle(double x, double y, double width)
+        {
+            g.DrawEllipse(p, (int)x, (int)y, (int)width, (int)width);
         }
     }
 }

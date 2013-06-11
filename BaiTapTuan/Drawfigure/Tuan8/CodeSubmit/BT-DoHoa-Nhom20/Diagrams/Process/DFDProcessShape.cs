@@ -21,7 +21,7 @@ namespace BT_DoHoa_Nhom20
         }
         public override void Draw(GraphicLibExt myGraphic)
         {
-            myGraphic.DrawEclipse(x, y, width, height);         
+            myGraphic.DrawCircle(x, y, width);
         }
     }
 }

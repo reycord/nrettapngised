@@ -7,10 +7,9 @@ namespace BT_DoHoa_Nhom20
 {
     public class ADEndShape : EndShape
     {
-       private double x;
+        private double x;
         private double y;
         private double width;
-        private double height;
 
         public ADEndShape(double X, double Y, double WIDTH, double width)
         {
@@ -20,8 +19,8 @@ namespace BT_DoHoa_Nhom20
         }
         public override void Draw(GraphicLibExt myGraphic)
         {
-            myGraphic.DrawEclipse(x, y, width,width);
-            myGraphic.DrawEclipse(x+width*0.3, y+width*0.3, width*0.4, width*0.4);
+            myGraphic.DrawCircle(x, y, width);
+            myGraphic.FillCircle(x + width * 0.3, y + width * 0.3, width * 0.4, width * 0.4);
         }
     }
 }

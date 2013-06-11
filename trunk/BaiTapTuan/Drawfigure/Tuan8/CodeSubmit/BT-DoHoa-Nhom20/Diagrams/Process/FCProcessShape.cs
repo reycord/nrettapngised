@@ -16,11 +16,14 @@ namespace BT_DoHoa_Nhom20
         {
             this.x = X1;
             this.y = Y1;
-            Utils.ConvertToLengthAndWidth(X1, Y1, X2, Y2,out width,out height);
+            width = X2;
+            height = Y2;
         }
         public override void Draw(GraphicLibExt myGraphic)
         {
-            myGraphic.DrawRectangle(x, y, width, height);
+            myGraphic.DrawLine(x,y,x,y+height);
+            myGraphic.DrawLine(x, y + height,x+width,y+height);
+            myGraphic.DrawLine(x + width, y + height,x+width,y);
         }
     }
 }

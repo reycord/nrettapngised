@@ -17,7 +17,7 @@ namespace BT_DoHoa_Nhom20
 
         public abstract void DrawRhomb(double x, double y, double width, double height);// vẽ hình thoi
 
-        public abstract void DrawParallelogram(double x1, double y1, double x2, double y2); // vẽ hình bình hành
+        public abstract void DrawParallelogram(double x, double y, double width, double height); // vẽ hình bình hành
 
         public abstract void DrawPentagonal(double x, double y, double width, double height); //vẽ hình có 5 cạnh
 

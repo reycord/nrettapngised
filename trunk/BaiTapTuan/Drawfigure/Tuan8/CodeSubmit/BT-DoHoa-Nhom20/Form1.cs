@@ -48,13 +48,26 @@ namespace BT_DoHoa_Nhom20
         double endY = 0;
 
         List<MyShape> myShape;
-        
+        List<InputShape> ListInputShape;
+        List<OutputShape> ListOutputShape;
+        List<StartShape> ListStartShape;
+        List<EndShape> ListEndShape;
+        List<TransitionShape> ListTransitionShape;
+        List<ProcessShape> ListProcessShape;
+        List<ConditionShape> ListConditionShape;
 
         public FigureDraw()
         {
             InitializeComponent();            
             glip = new GdiPlusExt(pnMainPaint.CreateGraphics()); //khởi tạo là gdi
             myShape = new List<MyShape>();
+            ListInputShape = new List<InputShape>();
+            ListOutputShape = new List<OutputShape>();
+            ListStartShape = new List<StartShape>();
+            ListEndShape = new List<EndShape>();
+            ListTransitionShape = new List<TransitionShape>();
+            ListProcessShape = new List<ProcessShape>();
+            ListConditionShape = new List<ConditionShape>();
             setEnable(PNNORMAL);
         }
 
@@ -122,44 +135,78 @@ namespace BT_DoHoa_Nhom20
             endY = e.Y;
 
             MyShape Temp = null;
+            StartShape s1 = null;
+            OutputShape s2 = null;
+            ProcessShape s3 = null;
+            InputShape s4 = null;
+            TransitionShape s5 = null;
+            EndShape s6 = null;
+            ConditionShape s7 = null;
             switch (currentShape)
             {
                 case ShpLine:
                     Temp = new LineEx(beginX, beginY, endX, endY);
+                    if (Temp != null)
+                        myShape.Add(Temp);                   
                     break;
                 case ShpRectangle:
                     Temp = new RectangleEx(beginX, beginY, endX, endY);
+                    if (Temp != null)
+                        myShape.Add(Temp);
                     break;
                 case ShpEclipse:
                     Temp = new EclipseEx(beginX, beginY, endX, endY);
+                    if (Temp != null)
+                        myShape.Add(Temp);
                     break;
                 case ShpStart:
-                    Temp = diagram.CreateStart(beginX, beginY, Math.Abs(beginX - endX), Math.Abs(beginY - endY));
+                    s1 = diagram.CreateStart(beginX, beginY, Math.Abs(beginX - endX), Math.Abs(beginY - endY));
+                    if (s1 != null)
+                        ListStartShape.Add(s1);
                     break;
                 case ShpTransition:
+                    s5 = diagram.CreateTransition(beginX, beginY, endX, endY);
+                    if(s5!=null)
+                        ListTransitionShape.Add(s5);
                     break;
                 case ShpProcess:
+                    s3 = diagram.CreateProcess(beginX, beginY, Math.Abs(beginX - endX), Math.Abs(beginY - endY));
+                    if (s3 != null)
+                        ListProcessShape.Add(s3);
                     break;
                 case ShpOutput:
+                    s2 = diagram.CreateOutput(beginX, beginY, Math.Abs(beginX - endX), Math.Abs(beginY - endY));
+                    if (s2 != null)
+                        ListOutputShape.Add(s2);
                     break;
                 case ShpInput:
+                    s4 = diagram.CreateInput(beginX, beginY, Math.Abs(beginX - endX), Math.Abs(beginY - endY));
+                    if (s4 != null)
+                        ListInputShape.Add(s4);
                     break;
                 case ShpCondition:
+                    s7 = diagram.CreateCondition(beginX, beginY, Math.Abs(beginX - endX), Math.Abs(beginY - endY));
+                    if (s7 != null)
+                        ListConditionShape.Add(s7);
                     break;
                 case ShpEnd:
+                    s6 = diagram.CreateEnd(beginX, beginY, Math.Abs(beginX - endX), Math.Abs(beginY - endY));
+                    if (s6 != null)
+                        ListEndShape.Add(s6);
                     break;
                 default: break;
             }
 
-            if (Temp != null)
-            {
-                myShape.Add(Temp);
-            }
+            
         }
 
         private void pnMainDraw_MouseMove(object sender, MouseEventArgs e)
         {
             foreach (MyShape shap in myShape)
+            {
+                shap.Draw(glip);
+            }
+            foreach (StartShape shap in ListStartShape)
             {
                 shap.Draw(glip);
             }

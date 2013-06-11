@@ -26,13 +26,22 @@ namespace BT_DoHoa_Nhom20
         public const int ShpLine      = 0;
         public const int ShpRectangle = 1;
         public const int ShpEclipse   = 2;
+
+        public const int ShpStart = 3;
+        public const int ShpEnd =9 ;
+        public const int ShpCondition = 8;
+        public const int ShpProcess = 5;
+        public const int ShpTransition = 7;
+        public const int ShpInput = 4;
+        public const int ShpOutput = 6;
         #endregion
 
         private int currentPanel = PNNORMAL;
         private int currentShape = ShpLine;
         GraphicLibExt glip;
         PaintEventArgs pe;
-      
+        Diagram diagram;
+
         double beginX = 0;
         double beginY = 0;
         double endX = 0;
@@ -70,7 +79,34 @@ namespace BT_DoHoa_Nhom20
         {
             currentShape = 1;
         }
-
+        private void btnStart_Click(object sender, EventArgs e)
+        {
+            currentShape = 3;
+        }
+        private void btnInput_Click(object sender, EventArgs e)
+        {
+            currentShape = 4;
+        }
+        private void btnProcess_Click(object sender, EventArgs e)
+        {
+            currentShape = 5;
+        }
+        private void btnOutput_Click(object sender, EventArgs e)
+        {
+            currentShape = 6;
+        }
+        private void btnTransition_Click(object sender, EventArgs e)
+        {
+            currentShape = 7;
+        }
+        private void btnCondition_Click(object sender, EventArgs e)
+        {
+            currentShape = 8;
+        }
+        private void btnEnd_Click(object sender, EventArgs e)
+        {
+            currentShape = 9;
+        }
         #endregion
 
         #region xử lý chuột
@@ -96,6 +132,21 @@ namespace BT_DoHoa_Nhom20
                     break;
                 case ShpEclipse:
                     Temp = new EclipseEx(beginX, beginY, endX, endY);
+                    break;
+                case ShpStart:
+                    Temp = diagram.CreateStart(beginX, beginY, Math.Abs(beginX - endX), Math.Abs(beginY - endY));
+                    break;
+                case ShpTransition:
+                    break;
+                case ShpProcess:
+                    break;
+                case ShpOutput:
+                    break;
+                case ShpInput:
+                    break;
+                case ShpCondition:
+                    break;
+                case ShpEnd:
                     break;
                 default: break;
             }
@@ -170,12 +221,15 @@ namespace BT_DoHoa_Nhom20
                     break;
                 case DIFLOWCHART:
                     flowChartToolStripMenuItem.Checked = true;
+                    diagram = new FlowChart();
                     break;
                 case DIDATAFLOW:
                     dataToolStripMenuItem.Checked = true;
+                    diagram = new DataFlowDiagram();
                     break;
                 case DIACTIVITY:
                     activityDiagramToolStripMenuItem.Checked = true;
+                    diagram =new ActivityDiagram();
                     break;
             }
         }
@@ -230,9 +284,25 @@ namespace BT_DoHoa_Nhom20
         }
         #endregion
 
+       
+
+        
+
+       
+
+        
+
+        
+
+
+       
+        /*
         private void showChartToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Diagram temp = new FlowChart();
+            Diagram temp;
+            //temp= new FlowChart();
+            //temp = new ActivityDiagram();
+            temp = new DataFlowDiagram();
             StartShape s1 = temp.CreateStart(10, 50, 90, 120);
             OutputShape s2 = temp.CreateOutput(100, 100, 60, 40);
             ProcessShape s3 = temp.CreateProcess(200, 150, 60, 50);
@@ -252,7 +322,7 @@ namespace BT_DoHoa_Nhom20
             s5.Draw(glip);
             s6.Draw(glip);
             s7.Draw(glip);
-        }
+        }*/
 
     }
 }

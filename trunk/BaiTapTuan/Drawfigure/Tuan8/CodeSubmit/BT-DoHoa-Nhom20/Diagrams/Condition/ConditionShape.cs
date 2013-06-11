@@ -7,6 +7,5 @@ namespace BT_DoHoa_Nhom20
 {
     public abstract class ConditionShape : Shape.MyShape
     {
-        public abstract void Draw(GraphicLibExt myGraphic);
     }
 }

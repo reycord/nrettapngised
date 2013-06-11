@@ -48,26 +48,26 @@ namespace BT_DoHoa_Nhom20
         double endY = 0;
 
         List<MyShape> myShape;
-        List<InputShape> ListInputShape;
-        List<OutputShape> ListOutputShape;
-        List<StartShape> ListStartShape;
-        List<EndShape> ListEndShape;
-        List<TransitionShape> ListTransitionShape;
-        List<ProcessShape> ListProcessShape;
-        List<ConditionShape> ListConditionShape;
+        //List<InputShape> ListInputShape;
+        //List<OutputShape> ListOutputShape;
+        //List<StartShape> ListStartShape;
+        //List<EndShape> ListEndShape;
+        //List<TransitionShape> ListTransitionShape;
+        //List<ProcessShape> ListProcessShape;
+        //List<ConditionShape> ListConditionShape;
 
         public FigureDraw()
         {
             InitializeComponent();            
             glip = new GdiPlusExt(pnMainPaint.CreateGraphics()); //khởi tạo là gdi
             myShape = new List<MyShape>();
-            ListInputShape = new List<InputShape>();
-            ListOutputShape = new List<OutputShape>();
-            ListStartShape = new List<StartShape>();
-            ListEndShape = new List<EndShape>();
-            ListTransitionShape = new List<TransitionShape>();
-            ListProcessShape = new List<ProcessShape>();
-            ListConditionShape = new List<ConditionShape>();
+            //ListInputShape = new List<InputShape>();
+            //ListOutputShape = new List<OutputShape>();
+            //ListStartShape = new List<StartShape>();
+            //ListEndShape = new List<EndShape>();
+            //ListTransitionShape = new List<TransitionShape>();
+            //ListProcessShape = new List<ProcessShape>();
+            //ListConditionShape = new List<ConditionShape>();
             setEnable(PNNORMAL);
         }
 
@@ -146,8 +146,7 @@ namespace BT_DoHoa_Nhom20
             {
                 case ShpLine:
                     Temp = new LineEx(beginX, beginY, endX, endY);
-                    if (Temp != null)
-                        myShape.Add(Temp);                   
+                                  
                     break;
                 case ShpRectangle:
                     Temp = new RectangleEx(beginX, beginY, endX, endY);
@@ -162,41 +161,47 @@ namespace BT_DoHoa_Nhom20
                 case ShpStart:
                     s1 = diagram.CreateStart(beginX, beginY, Math.Abs(beginX - endX), Math.Abs(beginY - endY));
                     if (s1 != null)
-                        ListStartShape.Add(s1);
+                        //ListStartShape.Add(s1);
+                        myShape.Add(s1);
                     break;
                 case ShpTransition:
                     s5 = diagram.CreateTransition(beginX, beginY, endX, endY);
-                    if(s5!=null)
-                        ListTransitionShape.Add(s5);
+                    if (s5 != null)
+                        //ListTransitionShape.Add(s5);
+                        myShape.Add(s5);
                     break;
                 case ShpProcess:
                     s3 = diagram.CreateProcess(beginX, beginY, Math.Abs(beginX - endX), Math.Abs(beginY - endY));
                     if (s3 != null)
-                        ListProcessShape.Add(s3);
+                        //ListProcessShape.Add(s3);
+                        myShape.Add(s3);
                     break;
                 case ShpOutput:
                     s2 = diagram.CreateOutput(beginX, beginY, Math.Abs(beginX - endX), Math.Abs(beginY - endY));
                     if (s2 != null)
-                        ListOutputShape.Add(s2);
+                        //ListOutputShape.Add(s2);
+                        myShape.Add(s2);
                     break;
                 case ShpInput:
                     s4 = diagram.CreateInput(beginX, beginY, Math.Abs(beginX - endX), Math.Abs(beginY - endY));
                     if (s4 != null)
-                        ListInputShape.Add(s4);
+                        //ListInputShape.Add(s4);
+                        myShape.Add(s4);
                     break;
                 case ShpCondition:
                     s7 = diagram.CreateCondition(beginX, beginY, Math.Abs(beginX - endX), Math.Abs(beginY - endY));
                     if (s7 != null)
-                        ListConditionShape.Add(s7);
+                        //ListConditionShape.Add(s7);
+                        myShape.Add(s7);
                     break;
                 case ShpEnd:
                     s6 = diagram.CreateEnd(beginX, beginY, Math.Abs(beginX - endX), Math.Abs(beginY - endY));
                     if (s6 != null)
-                        ListEndShape.Add(s6);
+                        //ListEndShape.Add(s6);
+                        myShape.Add(s6);
                     break;
                 default: break;
             }
-
             
         }
 
@@ -206,10 +211,10 @@ namespace BT_DoHoa_Nhom20
             {
                 shap.Draw(glip);
             }
-            foreach (StartShape shap in ListStartShape)
-            {
-                shap.Draw(glip);
-            }
+            //foreach (StartShape shap in ListStartShape)
+            //{
+            //    shap.Draw(glip);
+            //}
         }
         #endregion
 
@@ -351,7 +356,9 @@ namespace BT_DoHoa_Nhom20
             //temp = new ActivityDiagram();
             temp = new DataFlowDiagram();
             StartShape s1 = temp.CreateStart(10, 50, 90, 120);
+            myShape.Add(s1);
             OutputShape s2 = temp.CreateOutput(100, 100, 60, 40);
+            myShape.Add(s2);
             ProcessShape s3 = temp.CreateProcess(200, 150, 60, 50);
             InputShape s4 = temp.CreateInput(300, 200, 60, 40);
             TransitionShape s5 = temp.CreateTransition(400, 50, 10, 100);

@@ -7,6 +7,6 @@ namespace BT_DoHoa_Nhom20
 {
     public abstract class StartShape : Shape.MyShape
     {
-        public abstract void Draw(GraphicLibExt myGraphic);
+        
     }
 }

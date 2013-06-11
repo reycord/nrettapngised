@@ -54,7 +54,10 @@ namespace BT_DoHoa_Nhom20.LibExtend
 
         public override void DrawText(string text, double x, double y)
         {
-            throw new NotImplementedException();
+            c.SelectFontFace("Arial", FontSlant.Normal, FontWeight.Normal);
+            c.SetFontSize(12);
+            c.MoveTo(x, y);
+            c.ShowText(text);
         }
     }
 }

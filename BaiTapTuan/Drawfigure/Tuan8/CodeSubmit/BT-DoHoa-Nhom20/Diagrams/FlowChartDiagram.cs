@@ -7,39 +7,39 @@ namespace BT_DoHoa_Nhom20
 {
     public class FlowChart: Diagram
     {
-        public override StartShape CreateStart()
+        public override StartShape CreateStart(double X, double Y, double WIDTH, double HEIGHT)
         {
-            throw new NotImplementedException();
+            return null;
         }
 
-        public override ConditionShape CreateCondition()
+        public override ConditionShape CreateCondition(double X, double Y, double WIDTH, double HEIGHT)
         {
-            throw new NotImplementedException();
+            return null;
         }
 
-        public override EndShape CreateEnd()
+        public override EndShape CreateEnd(double X, double Y, double WIDTH, double HEIGHT)
         {
-            throw new NotImplementedException();
+            return null;
         }
 
-        public override InputShape CreateInput()
+        public override InputShape CreateInput(double X, double Y, double WIDTH, double HEIGHT)
         {
-            throw new NotImplementedException();
+            return null;
         }
 
-        public override OutputShape CreateOutput()
+        public override OutputShape CreateOutput(double X, double Y, double WIDTH, double HEIGHT)
         {
-            throw new NotImplementedException();
+            return null;
         }
 
-        public override ProcessShape CreateProcess()
+        public override ProcessShape CreateProcess(double X, double Y, double WIDTH, double HEIGHT)
         {
-            throw new NotImplementedException();
+            return null;
         }
 
-        public override TransitionShape CreateTransition()
+        public override TransitionShape CreateTransition(double X1, double Y1, double X2, double Y2)
         {
-            throw new NotImplementedException();
+            return null;
         }
     }
 }

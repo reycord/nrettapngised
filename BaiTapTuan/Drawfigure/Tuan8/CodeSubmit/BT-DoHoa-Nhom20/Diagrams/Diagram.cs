@@ -7,18 +7,18 @@ namespace BT_DoHoa_Nhom20
 {
     public abstract class Diagram
     {
-        public abstract StartShape CreateStart();
+        public abstract StartShape CreateStart(double X, double Y, double WIDTH, double HEIGHT);
 
-        public abstract InputShape CreateInput();
+        public abstract InputShape CreateInput(double X, double Y, double WIDTH, double HEIGHT);
 
-        public abstract OutputShape CreateOutput();
+        public abstract OutputShape CreateOutput(double X, double Y, double WIDTH, double HEIGHT);
 
-        public abstract ProcessShape CreateProcess();
+        public abstract ProcessShape CreateProcess(double X, double Y, double WIDTH, double HEIGHT);
 
-        public abstract EndShape CreateEnd();
+        public abstract EndShape CreateEnd(double X, double Y, double WIDTH, double HEIGHT);
 
-        public abstract TransitionShape CreateTransition() ;
+        public abstract TransitionShape CreateTransition(double X1, double Y1, double X2, double Y2);
 
-        public abstract ConditionShape CreateCondition() ;
+        public abstract ConditionShape CreateCondition(double X, double Y, double WIDTH, double HEIGHT);
     }
 }

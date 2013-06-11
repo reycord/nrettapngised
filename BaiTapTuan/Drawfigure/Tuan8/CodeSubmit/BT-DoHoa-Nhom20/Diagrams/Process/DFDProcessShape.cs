@@ -7,9 +7,21 @@ namespace BT_DoHoa_Nhom20
 {
     public class DFDProcessShape : ProcessShape
     {
-        public override void Draw()
+        private double x;
+        private double y;
+        private double width;
+        private double height;
+
+        public DFDProcessShape(double X, double Y, double WIDTH, double HEIGHT)
         {
-            throw new NotImplementedException();
+            this.x = X;
+            this.y = Y;
+            this.width = WIDTH;
+            this.height = HEIGHT;
+        }
+        public override void Draw(GraphicLibExt myGraphic)
+        {
+            myGraphic.DrawEclipse(x, y, width, height);         
         }
     }
 }

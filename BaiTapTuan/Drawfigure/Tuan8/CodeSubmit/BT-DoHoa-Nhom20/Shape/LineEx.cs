@@ -24,7 +24,7 @@ namespace BT_DoHoa_Nhom20.Shape
             this.y1 = Y1;
             this.y2 = Y2;
         }
-        public override void Draw()
+        public override void Draw(GraphicLibExt myGraphic)
         {
             myGraphic.DrawLine(x1, y1, x2, y2);
         }

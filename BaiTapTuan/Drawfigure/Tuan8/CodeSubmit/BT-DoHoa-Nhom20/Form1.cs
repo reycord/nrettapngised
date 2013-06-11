@@ -111,7 +111,7 @@ namespace BT_DoHoa_Nhom20
         {
             foreach (MyShape shap in myShape)
             {
-                shap.Draw();
+                shap.Draw(glip);
             }
         }
         #endregion
@@ -230,5 +230,30 @@ namespace BT_DoHoa_Nhom20
             pnMainPaint.Refresh();
         }
         #endregion
+
+        private void showChartToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Diagram temp = new ActivityDiagram();
+            StartShape s1 = temp.CreateStart(10, 50, 60, 50);
+            OutputShape s2 = temp.CreateOutput(100, 100, 60, 40);
+            ProcessShape s3 = temp.CreateProcess(200, 150, 60, 50);
+            InputShape s4 = temp.CreateInput(300, 200, 60, 40);
+            TransitionShape s5 = temp.CreateTransition(400, 50, 10, 100);
+            EndShape s6 = temp.CreateEnd(500, 250, 60, 50);
+            ConditionShape s7 = temp.CreateCondition(600, 10, 60, 50);
+           
+            if(cairoToolStripMenuItem.Checked == true)
+                initCairo();
+            if(gDIPlusToolStripMenuItem.Checked == true)           
+                glip = new GdiPlusExt(pnMainPaint.CreateGraphics());
+            s1.Draw(glip);
+            s2.Draw(glip);
+            s3.Draw(glip);
+            s4.Draw(glip);
+            s5.Draw(glip);
+            s6.Draw(glip);
+            s7.Draw(glip);
+        }
+
     }
 }

@@ -48,26 +48,12 @@ namespace BT_DoHoa_Nhom20
         double endY = 0;
 
         List<MyShape> myShape;
-        //List<InputShape> ListInputShape;
-        //List<OutputShape> ListOutputShape;
-        //List<StartShape> ListStartShape;
-        //List<EndShape> ListEndShape;
-        //List<TransitionShape> ListTransitionShape;
-        //List<ProcessShape> ListProcessShape;
-        //List<ConditionShape> ListConditionShape;
 
         public FigureDraw()
         {
             InitializeComponent();            
             glip = new GdiPlusExt(pnMainPaint.CreateGraphics()); //khởi tạo là gdi
             myShape = new List<MyShape>();
-            //ListInputShape = new List<InputShape>();
-            //ListOutputShape = new List<OutputShape>();
-            //ListStartShape = new List<StartShape>();
-            //ListEndShape = new List<EndShape>();
-            //ListTransitionShape = new List<TransitionShape>();
-            //ListProcessShape = new List<ProcessShape>();
-            //ListConditionShape = new List<ConditionShape>();
             setEnable(PNNORMAL);
         }
 
@@ -146,7 +132,8 @@ namespace BT_DoHoa_Nhom20
             {
                 case ShpLine:
                     Temp = new LineEx(beginX, beginY, endX, endY);
-                                  
+                    if (Temp != null)
+                        myShape.Add(Temp);             
                     break;
                 case ShpRectangle:
                     Temp = new RectangleEx(beginX, beginY, endX, endY);

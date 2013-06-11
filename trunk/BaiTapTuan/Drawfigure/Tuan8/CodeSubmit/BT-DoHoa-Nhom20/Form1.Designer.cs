@@ -66,6 +66,7 @@
             this.btnShadow = new System.Windows.Forms.Button();
             this.btnHighLight = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
+            this.showChartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.pnBackground.SuspendLayout();
             this.pnShape.SuspendLayout();
@@ -81,7 +82,8 @@
             this.libSupportToolStripMenuItem,
             this.helpToolStripMenuItem,
             this.eToolStripMenuItem,
-            this.informationToolStripMenuItem});
+            this.informationToolStripMenuItem,
+            this.showChartToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1052, 24);
@@ -413,6 +415,13 @@
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
+            // showChartToolStripMenuItem
+            // 
+            this.showChartToolStripMenuItem.Name = "showChartToolStripMenuItem";
+            this.showChartToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
+            this.showChartToolStripMenuItem.Text = "Show Chart";
+            this.showChartToolStripMenuItem.Click += new System.EventHandler(this.showChartToolStripMenuItem_Click);
+            // 
             // FigureDraw
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -475,6 +484,7 @@
         private System.Windows.Forms.Panel pnEffects;
         private System.Windows.Forms.Panel pnDiagram;
         private System.Windows.Forms.Panel pnNomal;
+        private System.Windows.Forms.ToolStripMenuItem showChartToolStripMenuItem;
 
     }
 }

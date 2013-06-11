@@ -7,6 +7,6 @@ namespace BT_DoHoa_Nhom20
 {
     public abstract class EndShape : Shape.MyShape
     {
-        public abstract void Draw();
+        public abstract void Draw(GraphicLibExt myGraphic);
     }
 }

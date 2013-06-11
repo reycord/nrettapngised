@@ -7,39 +7,39 @@ namespace BT_DoHoa_Nhom20
 {
     public class DataFlowDiagram : Diagram
     {
-        public override StartShape CreateStart()
+        public override StartShape CreateStart(double X, double Y, double WIDTH, double HEIGHT)
         {
-            throw new NotImplementedException();
+            return new DFDStartShape(X, Y, WIDTH, HEIGHT);
         }
 
-        public override ConditionShape CreateCondition()
+        public override ConditionShape CreateCondition(double X, double Y, double WIDTH, double HEIGHT)
         {
-            throw new NotImplementedException();
+            return null;
         }
 
-        public override EndShape CreateEnd()
+        public override EndShape CreateEnd(double X, double Y, double WIDTH, double HEIGHT)
         {
-            throw new NotImplementedException();
+            return new DFDEndShape(X,Y,WIDTH,HEIGHT);
         }
 
-        public override InputShape CreateInput()
+        public override InputShape CreateInput(double X, double Y, double WIDTH, double HEIGHT)
         {
-            throw new NotImplementedException();
+            return new DFDInputShape(X, Y, WIDTH, HEIGHT);
         }
 
-        public override OutputShape CreateOutput()
+        public override OutputShape CreateOutput(double X, double Y, double WIDTH, double HEIGHT)
         {
-            throw new NotImplementedException();
+            return new DFDOutputShape(X,Y,WIDTH,HEIGHT);
         }
 
-        public override ProcessShape CreateProcess()
+        public override ProcessShape CreateProcess(double X, double Y, double WIDTH, double HEIGHT)
         {
-            throw new NotImplementedException();
+            return new DFDProcessShape(X, Y, WIDTH, HEIGHT);
         }
 
-        public override TransitionShape CreateTransition()
+        public override TransitionShape CreateTransition(double X1, double Y1, double X2, double Y2)
         {
-            throw new NotImplementedException();
+            return new DFDTransitionShape(X1, Y1, X2, Y2);
         }
     }
 }

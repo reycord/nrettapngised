@@ -20,7 +20,7 @@ namespace BT_DoHoa_Nhom20
             this.height = HEIGHT;
         }
 
-        public override void Draw()
+        public override void Draw(GraphicLibExt myGraphic)
         {
             //ve hinh ellipse
             myGraphic.DrawEclipse(x, y, width, height);

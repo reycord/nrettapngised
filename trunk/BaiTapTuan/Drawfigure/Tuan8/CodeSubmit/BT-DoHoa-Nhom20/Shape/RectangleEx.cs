@@ -18,7 +18,7 @@ namespace BT_DoHoa_Nhom20.Shape
             this.y = Y1;
             Utils.ConvertToLengthAndWidth(X1, Y1, X2, Y2,out width,out height);
         }
-        public override void Draw()
+        public override void Draw(GraphicLibExt myGraphic)
         {
             myGraphic.DrawRectangle(x, y, width, height);
         }

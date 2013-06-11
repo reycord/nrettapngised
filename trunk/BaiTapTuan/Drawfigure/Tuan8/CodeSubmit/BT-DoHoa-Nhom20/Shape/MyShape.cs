@@ -12,6 +12,6 @@ namespace BT_DoHoa_Nhom20.Shape
         public GraphicLibExt MyGraphic{
             set { myGraphic = value; }
         }
-        public virtual void Draw() { }
+        public virtual void Draw(GraphicLibExt myGraphic) { }
     }
 }

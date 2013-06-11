@@ -5,8 +5,8 @@ using System.Text;
 
 namespace BT_DoHoa_Nhom20.Shape
 {
-    public class MyShape
+    public abstract class MyShape
     {
-        public virtual void Draw(GraphicLibExt myGraphic) { }
+        public abstract void Draw(GraphicLibExt myGraphic);
     }
 }

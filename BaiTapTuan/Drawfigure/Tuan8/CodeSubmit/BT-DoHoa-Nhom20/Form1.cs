@@ -102,7 +102,6 @@ namespace BT_DoHoa_Nhom20
 
             if (Temp != null)
             {
-                Temp.MyGraphic = glip;
                 myShape.Add(Temp);
             }
         }

@@ -21,7 +21,11 @@ namespace BT_DoHoa_Nhom20.LibExtend
 
         public override void DrawEclipse(double x1, double y1, double x2, double y2)
         {
-            g.DrawEllipse(p, (int)x1, (int)y1, (int)x2, (int)y2);
+            double width =0;
+            double height = 0;
+            Utils.ConvertToLengthAndWidth(x1,y1,x2,y2,out height, out width);
+            Rectangle rec = new Rectangle((int)x1, (int)y1, (int)width, (int)height);
+            g.DrawEllipse(p,rec);
         }
 
         public override void DrawRectangle(double x, double y, double width, double height)

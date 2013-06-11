@@ -19,12 +19,10 @@ namespace BT_DoHoa_Nhom20
             this.width = WIDTH;
             this.height = HEIGHT;
         }
+
         public override void Draw(GraphicLibExt myGraphic)
         {
-            myGraphic.DrawLine(x, y + height / 2, x + width / 2, y);
-            myGraphic.DrawLine(x, y + height / 2, x + width / 2, y+height);
-            myGraphic.DrawLine(x+width, y + height / 2, x + width / 2, y);
-            myGraphic.DrawLine(x+width, y + height / 2, x + width / 2, y + height);
+            myGraphic.DrawRhomb(x, y, width, height);
         }
     }
 }

@@ -33,15 +33,52 @@ namespace BT_DoHoa_Nhom20.LibExtend
             g.DrawRectangle(p, (int)x, (int)y, (int)width, (int)height);
         }
 
-        public override void DrawArrow()
+        public override void DrawArrow(double x1, double y1, double x2, double y2)
         {
-            
+            g.DrawLine(p, (int)x1, (int)y1, (int)x2, (int)y2);
+
+            double rx = ((x1 - x2) * 50) / Utils.distance(x1, y1, x2, y2);
+            double ry = ((y1 - y2) * 50) / Utils.distance(x1, y1, x2, y2);
+            double t1 = (rx - (ry * 0.5)) / 3;
+            double t2 = ((rx * 0.5) + ry) / 3;
+
+            g.DrawLine(p,(int)(t1 + x2), (int)(t2 + y2),(int)x2, (int)y2);
+            t1 = ((rx + (ry * 0.5)) / 3);
+            t2 = ((-1 * (rx * 0.5) + ry) / 3);
+            g.DrawLine(p, (int)(x2 + t1),(int) (y2 + t2),(int)x2, (int)y2);
         }
 
         public override void DrawText(string text, double x, double y)
         {
             Font font = new Font("Arial", 12);
             g.DrawString(text, font, b, (int)x, (int)y);
+        }
+
+        public override void DrawRhomb(double x, double y, double width, double height)
+        {
+            g.DrawLine(p,(int)x, (int)(y + height / 2),(int) (x + width / 2), (int)y);
+            g.DrawLine(p, (int)x, (int)(y + height / 2), (int)(x + width / 2), (int)(y + height));
+            g.DrawLine(p, (int)(x + width),(int) (y + height / 2), (int)(x + width / 2), (int)y);
+            g.DrawLine(p, (int)(x + width), (int)(y + height / 2), (int)(x + width / 2), (int)(y + height));
+        }
+
+        public override void DrawParallelogram(double x1, double y1, double x2, double y2)
+        {
+            //DrawLine(x1,y1, )
+        }
+
+        public override void DrawPentagonal(double x, double y, double width, double height)
+        {
+            DrawLine(x, y, x + width, y);
+            DrawLine(x, y, x, y + height);
+            DrawLine(x + width, y, x + width, y + 0.8 * height);
+            DrawLine(x, y + height, x + width * 0.8, y + height);
+            DrawLine(x + width, y + 0.8 * height, x + width * 0.8, y + height);
+        }
+
+        public override void FillCircle(double x, double y, double width, double height)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -47,7 +47,7 @@ namespace BT_DoHoa_Nhom20.LibExtend
             c.Stroke();
         }
 
-        public override void DrawArrow()
+        public override void DrawArrow(double x1, double y1, double x2, double y2)
         {
             throw new NotImplementedException();
         }
@@ -58,6 +58,26 @@ namespace BT_DoHoa_Nhom20.LibExtend
             c.SetFontSize(12);
             c.MoveTo(x, y);
             c.ShowText(text);
+        }
+
+        public override void DrawRhomb(double x, double y, double width, double height)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void DrawParallelogram(double x1, double y1, double x2, double y2)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void DrawPentagonal(double x, double y, double width, double height)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void FillCircle(double x, double y, double width, double height)
+        {
+            throw new NotImplementedException();
         }
     }
 }

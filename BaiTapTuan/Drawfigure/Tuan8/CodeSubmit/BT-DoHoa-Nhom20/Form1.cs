@@ -232,7 +232,7 @@ namespace BT_DoHoa_Nhom20
 
         private void showChartToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Diagram temp = new ActivityDiagram();
+            Diagram temp = new FlowChart();
             StartShape s1 = temp.CreateStart(10, 50, 60, 50);
             OutputShape s2 = temp.CreateOutput(100, 100, 60, 40);
             ProcessShape s3 = temp.CreateProcess(200, 150, 60, 50);

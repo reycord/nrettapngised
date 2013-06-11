@@ -66,7 +66,6 @@
             this.btnShadow = new System.Windows.Forms.Button();
             this.btnHighLight = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
-            this.showChartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.pnBackground.SuspendLayout();
             this.pnShape.SuspendLayout();
@@ -82,8 +81,7 @@
             this.libSupportToolStripMenuItem,
             this.helpToolStripMenuItem,
             this.eToolStripMenuItem,
-            this.informationToolStripMenuItem,
-            this.showChartToolStripMenuItem});
+            this.informationToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1052, 24);
@@ -323,6 +321,7 @@
             this.btnStart.TabIndex = 3;
             this.btnStart.Text = "Start";
             this.btnStart.UseVisualStyleBackColor = true;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // btnInput
             // 
@@ -332,6 +331,7 @@
             this.btnInput.TabIndex = 4;
             this.btnInput.Text = "Input";
             this.btnInput.UseVisualStyleBackColor = true;
+            this.btnInput.Click += new System.EventHandler(this.btnInput_Click);
             // 
             // btnProcess
             // 
@@ -341,6 +341,7 @@
             this.btnProcess.TabIndex = 5;
             this.btnProcess.Text = "Process";
             this.btnProcess.UseVisualStyleBackColor = true;
+            this.btnProcess.Click += new System.EventHandler(this.btnProcess_Click);
             // 
             // btnEnd
             // 
@@ -350,6 +351,7 @@
             this.btnEnd.TabIndex = 9;
             this.btnEnd.Text = "End";
             this.btnEnd.UseVisualStyleBackColor = true;
+            this.btnEnd.Click += new System.EventHandler(this.btnEnd_Click);
             // 
             // btnOutput
             // 
@@ -359,6 +361,7 @@
             this.btnOutput.TabIndex = 6;
             this.btnOutput.Text = "Output";
             this.btnOutput.UseVisualStyleBackColor = true;
+            this.btnOutput.Click += new System.EventHandler(this.btnOutput_Click);
             // 
             // btnCondition
             // 
@@ -368,6 +371,7 @@
             this.btnCondition.TabIndex = 8;
             this.btnCondition.Text = "Condition";
             this.btnCondition.UseVisualStyleBackColor = true;
+            this.btnCondition.Click += new System.EventHandler(this.btnCondition_Click);
             // 
             // btnTransition
             // 
@@ -377,6 +381,7 @@
             this.btnTransition.TabIndex = 7;
             this.btnTransition.Text = "Transition";
             this.btnTransition.UseVisualStyleBackColor = true;
+            this.btnTransition.Click += new System.EventHandler(this.btnTransition_Click);
             // 
             // pnEffects
             // 
@@ -414,13 +419,6 @@
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
-            // 
-            // showChartToolStripMenuItem
-            // 
-            this.showChartToolStripMenuItem.Name = "showChartToolStripMenuItem";
-            this.showChartToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
-            this.showChartToolStripMenuItem.Text = "Show Chart";
-            this.showChartToolStripMenuItem.Click += new System.EventHandler(this.showChartToolStripMenuItem_Click);
             // 
             // FigureDraw
             // 
@@ -484,7 +482,6 @@
         private System.Windows.Forms.Panel pnEffects;
         private System.Windows.Forms.Panel pnDiagram;
         private System.Windows.Forms.Panel pnNomal;
-        private System.Windows.Forms.ToolStripMenuItem showChartToolStripMenuItem;
 
     }
 }

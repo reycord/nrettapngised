@@ -21,9 +21,7 @@ namespace BT_DoHoa_Nhom20
         }
         public override void Draw(GraphicLibExt myGraphic)
         {
-            myGraphic.DrawLine(x,y,x,y+height);
-            myGraphic.DrawLine(x, y + height,x+width,y+height);
-            myGraphic.DrawLine(x + width, y + height,x+width,y);
+            myGraphic.DrawRectangle(x, y, width, height);
         }
     }
 }

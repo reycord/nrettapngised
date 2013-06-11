@@ -11,8 +11,16 @@ namespace BT_DoHoa_Nhom20
 
         public abstract void DrawRectangle(double x, double y, double width, double height);
 
-        public abstract void DrawArrow();
+        public abstract void DrawArrow(double x1, double y1, double x2, double y2);// vẽ hình mũi tên
 
-        public abstract void DrawText(string text, double x, double y);
+        public abstract void DrawText(string text, double x, double y); // chữ trong hình
+
+        public abstract void DrawRhomb(double x, double y, double width, double height);// vẽ hình thoi
+
+        public abstract void DrawParallelogram(double x1, double y1, double x2, double y2); // vẽ hình bình hành
+
+        public abstract void DrawPentagonal(double x, double y, double width, double height); //vẽ hình có 5 cạnh
+
+        public abstract void FillCircle(double x, double y, double width, double height);// to hinh tron
     }
 }

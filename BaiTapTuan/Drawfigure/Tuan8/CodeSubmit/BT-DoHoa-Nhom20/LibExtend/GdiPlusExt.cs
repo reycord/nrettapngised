@@ -62,9 +62,12 @@ namespace BT_DoHoa_Nhom20.LibExtend
             g.DrawLine(p, (int)(x + width), (int)(y + height / 2), (int)(x + width / 2), (int)(y + height));
         }
 
-        public override void DrawParallelogram(double x1, double y1, double x2, double y2)
+        public override void DrawParallelogram(double x, double y, double width, double height)
         {
-            //DrawLine(x1,y1, )
+            DrawLine(x, y + height, x + width, y + height);
+            DrawLine(x, y + height, x + width * 0.15, y);
+            DrawLine(x + width, y + height, x + width + width * 0.15, y);
+            DrawLine(x + width * 0.15, y, x + width + width * 0.15, y);
         }
 
         public override void DrawPentagonal(double x, double y, double width, double height)

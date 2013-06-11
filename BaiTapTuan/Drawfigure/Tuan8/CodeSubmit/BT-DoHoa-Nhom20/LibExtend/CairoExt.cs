@@ -65,7 +65,7 @@ namespace BT_DoHoa_Nhom20.LibExtend
             throw new NotImplementedException();
         }
 
-        public override void DrawParallelogram(double x1, double y1, double x2, double y2)
+        public override void DrawParallelogram(double x, double y, double width, double height)
         {
             throw new NotImplementedException();
         }

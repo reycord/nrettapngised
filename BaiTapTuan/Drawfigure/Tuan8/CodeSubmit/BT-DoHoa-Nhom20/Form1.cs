@@ -146,7 +146,7 @@ namespace BT_DoHoa_Nhom20
                         myShape.Add(Temp);
                     break;
                 case ShpStart:
-                    s1 = diagram.CreateStart(beginX, beginY, Math.Abs(beginX - endX), Math.Abs(beginY - endY));
+                    s1 = diagram.CreateStart(beginX, beginY, endX, endY);
                     if (s1 != null)
                         //ListStartShape.Add(s1);
                         myShape.Add(s1);
@@ -182,7 +182,7 @@ namespace BT_DoHoa_Nhom20
                         myShape.Add(s7);
                     break;
                 case ShpEnd:
-                    s6 = diagram.CreateEnd(beginX, beginY, Math.Abs(beginX - endX), Math.Abs(beginY - endY));
+                    s6 = diagram.CreateEnd(beginX, beginY, endX, endY);
                     if (s6 != null)
                         //ListEndShape.Add(s6);
                         myShape.Add(s6);

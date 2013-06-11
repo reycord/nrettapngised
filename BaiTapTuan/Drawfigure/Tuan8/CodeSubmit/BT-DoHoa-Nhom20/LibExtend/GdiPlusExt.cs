@@ -24,7 +24,7 @@ namespace BT_DoHoa_Nhom20.LibExtend
             double width =0;
             double height = 0;
             Utils.ConvertToLengthAndWidth(x1,y1,x2,y2,out height, out width);
-            Rectangle rec = new Rectangle((int)x1, (int)y1, (int)width, (int)height);
+            Rectangle rec = new Rectangle((int)x1, (int)y1, (int)height, (int)width);
             g.DrawEllipse(p,rec);
         }
 

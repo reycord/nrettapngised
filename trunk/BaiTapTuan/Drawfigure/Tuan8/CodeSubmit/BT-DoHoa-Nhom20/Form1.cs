@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using BT_DoHoa_Nhom20.LibExtend;
 using BT_DoHoa_Nhom20.Shape;
+using System.Drawing.Imaging;
 
 namespace BT_DoHoa_Nhom20
 {
@@ -337,47 +338,42 @@ namespace BT_DoHoa_Nhom20
         }
         #endregion
 
-       
-
-        
-
-       
-
-        
-
-        
-
-
-       
-        /*
-        private void showChartToolStripMenuItem_Click(object sender, EventArgs e)
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Diagram temp;
-            //temp= new FlowChart();
-            //temp = new ActivityDiagram();
-            temp = new DataFlowDiagram();
-            StartShape s1 = temp.CreateStart(10, 50, 90, 120);
-            myShape.Add(s1);
-            OutputShape s2 = temp.CreateOutput(100, 100, 60, 40);
-            myShape.Add(s2);
-            ProcessShape s3 = temp.CreateProcess(200, 150, 60, 50);
-            InputShape s4 = temp.CreateInput(300, 200, 60, 40);
-            TransitionShape s5 = temp.CreateTransition(400, 50, 10, 100);
-            EndShape s6 = temp.CreateEnd(500, 250, 330, 200);
-            ConditionShape s7 = temp.CreateCondition(600, 10, 60, 50);
+            dialogsave dlgsave = new dialogsave();
+            dlgsave.ShowDialog();
            
-            if(cairoToolStripMenuItem.Checked == true)
-                initCairo();
-            if(gDIPlusToolStripMenuItem.Checked == true)           
-                glip = new GdiPlusExt(pnMainPaint.CreateGraphics());
-            s1.Draw(glip);
-            s2.Draw(glip);
-            s3.Draw(glip);
-            s4.Draw(glip);
-            s5.Draw(glip);
-            s6.Draw(glip);
-            s7.Draw(glip);
-        }*/
-
+            String name = dlgsave.NameOfFile;
+            String type = dlgsave.TypeOfFile;
+            if (!String.IsNullOrEmpty(name))
+            {
+                Image img;
+                if (type.Equals(".png"))
+                {
+                    img = new Bitmap(1024, 768);
+                    Graphics g = Graphics.FromImage(img);
+                    GraphicLibExt temp = new GdiPlusExt(g);
+                    foreach (MyShape shap in myShape)
+                    {
+                        shap.Draw(temp);
+                    }
+                    img.Save(name + type,ImageFormat.Png);
+                }
+                else if (type.Equals(".jpg"))
+                {
+                    img = new Bitmap(1024, 768);
+                    Graphics g = Graphics.FromImage(img);
+                    GraphicLibExt temp = new GdiPlusExt(g);
+                    foreach (MyShape shap in myShape)
+                    {
+                        shap.Draw(temp);
+                    }
+                    img.Save(name + type,ImageFormat.Jpeg);
+                }
+                else {
+                    MessageBox.Show("Chưa Hỗ Trợ Chức Năng Lưu SVG");
+                }
+            }
+        }  
     }
 }

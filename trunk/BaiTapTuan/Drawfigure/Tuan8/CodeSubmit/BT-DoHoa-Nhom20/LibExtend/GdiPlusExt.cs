@@ -11,8 +11,8 @@ namespace BT_DoHoa_Nhom20.LibExtend
         public GdiPlusExt(Graphics graphics)
         {
             g = graphics;
-            p = new Pen(Brushes.AntiqueWhite);
-            b = new SolidBrush(Color.White);
+            p = new Pen(Brushes.OrangeRed);
+            b = new SolidBrush(Color.Red);
         }
         public override void DrawLine(double x1, double y1, double x2, double y2)
         {

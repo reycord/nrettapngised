@@ -12,11 +12,11 @@ namespace BT_DoHoa_Nhom20.LibExtend
         {
             s = new Win32Surface(hdc);
             c = new Context(s);
-        
+            c.SetSourceRGB(1, 0, 0.6);
         }
         public override void DrawLine(double x1, double y1, double x2, double y2)
         {
-            c.Color = new Color(1,1,1);
+            c.Color = new Color(1,0,0.6);
             c.MoveTo(x1, y1);
             c.LineTo(x2, y2);
             c.Stroke();
@@ -41,7 +41,7 @@ namespace BT_DoHoa_Nhom20.LibExtend
 
         public override void DrawRectangle(double x, double y, double width, double height)
         {
-            c.Color = new Color(1, 1, 1);
+            c.Color = new Color(1, 0, 0.6);
             c.Rectangle(x, y, width, height);
             c.Stroke();
         }
@@ -98,7 +98,7 @@ namespace BT_DoHoa_Nhom20.LibExtend
         public override void FillCircle(double x, double y, double width, double height)
         {
             c.Save();
-            c.Color = new Color(0, 0, 0);
+            c.Color = new Color(1, 0, 0.6);
             c.Arc(x - width * 0.8, y - width * 0.8, width / 4.0, 0, 2 * Math.PI);
             c.FillPreserve();
             c.Stroke();
@@ -108,7 +108,7 @@ namespace BT_DoHoa_Nhom20.LibExtend
         public override void DrawCircle(double x, double y, double width)
         {
             c.Save();
-            c.Color = new Color(1, 1, 1);
+            c.Color = new Color(1, 0, 0.6);
             c.Arc(x, y, width / 4.0, 0, 2 * Math.PI);
             c.Stroke();
             c.Restore();

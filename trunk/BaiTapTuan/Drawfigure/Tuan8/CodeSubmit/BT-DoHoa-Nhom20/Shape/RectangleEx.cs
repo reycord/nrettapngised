@@ -11,7 +11,10 @@ namespace BT_DoHoa_Nhom20.Shape
         private double y;
         private double width;
         private double height;
-
+        public override Shape.MyShape Clone(Diagram myDiagram)
+        {
+            return null;
+        }
         public RectangleEx(double X1, double Y1, double X2, double Y2)
         {
             this.x = X1;

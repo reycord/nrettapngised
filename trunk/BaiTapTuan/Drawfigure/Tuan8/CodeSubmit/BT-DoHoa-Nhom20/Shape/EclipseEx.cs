@@ -10,7 +10,11 @@ namespace BT_DoHoa_Nhom20.Shape
         private double x;
         private double y;
         private double width;
-        private double height;  
+        private double height;
+        public override Shape.MyShape Clone(Diagram myDiagram)
+        {
+            return null;
+        }
         public EclipseEx(double X, double Y, double WIDTH, double HEIGHT) {
             this.x = X;
             this.y = Y;

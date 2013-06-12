@@ -11,7 +11,10 @@ namespace BT_DoHoa_Nhom20.Shape
         private double x2;
         private double y1;
         private double y2;
-        
+        public override Shape.MyShape Clone(Diagram myDiagram)
+        {
+            return null;
+        }
         public LineEx() {
             x1 = 0;
             y1 = 0;

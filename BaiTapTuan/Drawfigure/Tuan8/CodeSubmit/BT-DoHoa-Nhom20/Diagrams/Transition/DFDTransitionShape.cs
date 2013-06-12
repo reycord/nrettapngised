@@ -18,7 +18,10 @@ namespace BT_DoHoa_Nhom20
             this.y1 = Y1;
             this.y2 = Y2;
         }
-        
+        public override Shape.MyShape Clone(Diagram myDiagram)
+        {
+            return myDiagram.CreateTransition(x1, y1, x2, y2);
+        }
         public override void Draw(GraphicLibExt myGraphic)
         {
             //myGraphic.DrawLine(x1, y1, x2, y2);

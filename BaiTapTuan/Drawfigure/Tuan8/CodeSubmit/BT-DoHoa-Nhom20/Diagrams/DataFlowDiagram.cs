@@ -14,7 +14,7 @@ namespace BT_DoHoa_Nhom20
 
         public override ConditionShape CreateCondition(double X, double Y, double WIDTH, double HEIGHT)
         {
-            return null;
+            return new DFDConditionShape(X,Y,WIDTH,HEIGHT);
         }
 
         public override EndShape CreateEnd(double X, double Y, double WIDTH, double HEIGHT)

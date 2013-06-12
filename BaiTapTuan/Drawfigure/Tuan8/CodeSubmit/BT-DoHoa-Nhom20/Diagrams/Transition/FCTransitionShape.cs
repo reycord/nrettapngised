@@ -11,6 +11,10 @@ namespace BT_DoHoa_Nhom20
         private double x2;
         private double y1;
         private double y2;
+        public override Shape.MyShape Clone(Diagram myDiagram)
+        {
+            return myDiagram.CreateTransition(x1, y1, x2, y2);
+        }
         public FCTransitionShape(double X1, double Y1, double X2, double Y2) 
         {
             this.x1 = X1;

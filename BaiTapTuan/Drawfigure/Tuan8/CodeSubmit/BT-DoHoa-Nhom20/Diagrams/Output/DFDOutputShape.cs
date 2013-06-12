@@ -11,7 +11,10 @@ namespace BT_DoHoa_Nhom20
         private double y;
         private double width;
         private double height;
-
+        public override Shape.MyShape Clone(Diagram myDiagram)
+        {
+            return myDiagram.CreateOutput(x, y, width, height);
+        }
         public DFDOutputShape(double X, double Y, double WIDTH, double HEIGHT)
         {
             this.x = X;

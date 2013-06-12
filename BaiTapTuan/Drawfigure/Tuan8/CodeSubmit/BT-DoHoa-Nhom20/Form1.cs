@@ -191,7 +191,16 @@ namespace BT_DoHoa_Nhom20
             }
             
         }
-
+        private void Convert(Diagram diagram)
+        {
+            for (int i = 0; i < myShape.Count;i++ )
+            {
+                MyShape temp = myShape[i].Clone(diagram);
+                if (temp != null)
+                    myShape[i] = temp;
+            }
+            pnMainPaint.Refresh();
+        }
         private void pnMainDraw_MouseMove(object sender, MouseEventArgs e)
         {
             foreach (MyShape shap in myShape)
@@ -261,17 +270,22 @@ namespace BT_DoHoa_Nhom20
                 case DIFLOWCHART:
                     flowChartToolStripMenuItem.Checked = true;
                     diagram = new FlowChart();
+                    Convert(diagram);
                     break;
                 case DIDATAFLOW:
                     dataToolStripMenuItem.Checked = true;
                     diagram = new DataFlowDiagram();
+                    Convert(diagram);
                     break;
                 case DIACTIVITY:
                     activityDiagramToolStripMenuItem.Checked = true;
                     diagram =new ActivityDiagram();
+                    Convert(diagram);
                     break;
             }
         }
+
+        
         #endregion
 
         #region Xử lý effects

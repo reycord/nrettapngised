@@ -98,6 +98,7 @@
             this.Name = "dialogsave";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Save file";
+            this.Load += new System.EventHandler(this.dialogsave_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

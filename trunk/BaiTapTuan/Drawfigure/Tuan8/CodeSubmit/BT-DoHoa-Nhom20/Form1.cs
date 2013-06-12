@@ -35,10 +35,15 @@ namespace BT_DoHoa_Nhom20
         public const int ShpTransition = 7;
         public const int ShpInput = 4;
         public const int ShpOutput = 6;
+
+        public const int LIBCAIRO = 2;
+        public const int LIBGDI = 1;
         #endregion
 
         private int currentPanel = PNNORMAL;
         private int currentShape = ShpLine;
+        private int currentLib = LIBGDI;
+
         GraphicLibExt glip;
         PaintEventArgs pe;
         Diagram diagram;
@@ -58,11 +63,6 @@ namespace BT_DoHoa_Nhom20
             setEnable(PNNORMAL);
         }
 
-        private void initCairo()
-        {
-            pe = new PaintEventArgs(pnMainPaint.CreateGraphics(), this.DisplayRectangle);
-            glip = new CairoExt(pe.Graphics.GetHdc()); 
-        }
 
         #region Chọn Các Loại hình để vẽ
         private void btnLine_Click(object sender, EventArgs e)
@@ -221,6 +221,7 @@ namespace BT_DoHoa_Nhom20
             //check trên menu là cairo
             cairoToolStripMenuItem.Checked = true;
             gDIPlusToolStripMenuItem.Checked = false;
+            currentLib = LIBCAIRO;
             initCairo();
         }
 
@@ -230,6 +231,7 @@ namespace BT_DoHoa_Nhom20
             cairoToolStripMenuItem.Checked = false;
             gDIPlusToolStripMenuItem.Checked = true;
             glip = new GdiPlusExt(pnMainPaint.CreateGraphics());
+            currentLib = LIBGDI;
         }
         #endregion       
 
@@ -305,6 +307,44 @@ namespace BT_DoHoa_Nhom20
         }
         #endregion
 
+        #region Sự kiện Lưu - Mở File
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dialogsave dlgsave = new dialogsave();
+            dlgsave.ShowDialog();
+            String name = dlgsave.NameOfFile;
+            String type = dlgsave.TypeOfFile;
+            if (!String.IsNullOrEmpty(name))
+            {
+                if (type.Equals(".png") || type.Equals(".jpg"))
+                {
+                    Image img;
+                    img = new Bitmap(1024, 768);
+                    Graphics g = Graphics.FromImage(img);
+                    GraphicLibExt temp;
+                    if (currentLib == LIBGDI)
+                        temp = new GdiPlusExt(g);
+                    else 
+                        temp = new CairoExt(g.GetHdc());
+                    
+                    foreach (MyShape shap in myShape)
+                    {
+                        shap.Draw(temp);
+                    }
+                    if (type.Equals(".png"))
+                        img.Save(name + type, ImageFormat.Png);
+                    if (type.Equals(".jpg"))
+                        img.Save(name + type, ImageFormat.Jpeg);
+
+                }
+                else
+                {
+                    MessageBox.Show("Chưa Hỗ Trợ Chức Năng Lưu SVG");
+                }
+            }
+        }
+        #endregion
+
         #region Xử lý chung
         //xử lý các trường hợp cho phép bật tắt các panel
         private void setEnable(int CASE)
@@ -336,44 +376,13 @@ namespace BT_DoHoa_Nhom20
             myShape.Clear();
             pnMainPaint.Refresh();
         }
+
+        private void initCairo()
+        {
+            pe = new PaintEventArgs(pnMainPaint.CreateGraphics(), this.DisplayRectangle);
+            glip = new CairoExt(pe.Graphics.GetHdc());
+        }
         #endregion
 
-        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            dialogsave dlgsave = new dialogsave();
-            dlgsave.ShowDialog();
-           
-            String name = dlgsave.NameOfFile;
-            String type = dlgsave.TypeOfFile;
-            if (!String.IsNullOrEmpty(name))
-            {
-                Image img;
-                if (type.Equals(".png"))
-                {
-                    img = new Bitmap(1024, 768);
-                    Graphics g = Graphics.FromImage(img);
-                    GraphicLibExt temp = new GdiPlusExt(g);
-                    foreach (MyShape shap in myShape)
-                    {
-                        shap.Draw(temp);
-                    }
-                    img.Save(name + type,ImageFormat.Png);
-                }
-                else if (type.Equals(".jpg"))
-                {
-                    img = new Bitmap(1024, 768);
-                    Graphics g = Graphics.FromImage(img);
-                    GraphicLibExt temp = new GdiPlusExt(g);
-                    foreach (MyShape shap in myShape)
-                    {
-                        shap.Draw(temp);
-                    }
-                    img.Save(name + type,ImageFormat.Jpeg);
-                }
-                else {
-                    MessageBox.Show("Chưa Hỗ Trợ Chức Năng Lưu SVG");
-                }
-            }
-        }  
     }
 }

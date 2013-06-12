@@ -40,5 +40,10 @@ namespace BT_DoHoa_Nhom20
         {
             this.Hide();
         }
+
+        private void dialogsave_Load(object sender, EventArgs e)
+        {
+            comboBox1.SelectedIndex = 0;
+        }
     }
 }

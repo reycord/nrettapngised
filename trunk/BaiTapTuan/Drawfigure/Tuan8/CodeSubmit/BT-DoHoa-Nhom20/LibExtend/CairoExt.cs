@@ -24,7 +24,7 @@ namespace BT_DoHoa_Nhom20.LibExtend
 
         public override void DrawEclipse(double x1, double y1, double x2, double y2)
         {
-            c.SetSourceRGB(1, 1, 1);  
+            c.SetSourceRGB(1, 0, 0.6);  
             double cx = x1 + (Math.Abs(x2 - x1)) / 2;
             double cy = y1 + (Math.Abs(y2 - y1)) / 2;
             double width, height;

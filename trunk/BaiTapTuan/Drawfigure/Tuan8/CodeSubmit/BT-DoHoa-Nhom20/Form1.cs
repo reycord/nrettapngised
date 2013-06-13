@@ -38,6 +38,8 @@ namespace BT_DoHoa_Nhom20
 
         public const int LIBCAIRO = 2;
         public const int LIBGDI = 1;
+        public const int NODRAW = -1;
+
         #endregion
 
         private int currentPanel = PNNORMAL;
@@ -54,6 +56,9 @@ namespace BT_DoHoa_Nhom20
         double endY = 0;
 
         List<MyShape> myShape;
+        bool isShadow;
+        bool isHighlight;
+        bool isBorder = false;
 
         public FigureDraw()
         {
@@ -131,6 +136,32 @@ namespace BT_DoHoa_Nhom20
             ConditionShape s7 = null;
             switch (currentShape)
             {
+                case NODRAW:
+                    foreach (MyShape shape in myShape)
+                    {
+                        if (isSelected(shape))
+                        {
+                            shape.attachEffect(new BorderEffectShape());
+                            //Kiểm tra và add effect 
+                            if (isShadow)
+                            {
+                                shape.attachEffect(new ShadowEffectShape());
+                            }
+                            else
+                            {
+                                shape.detachEffect(new ShadowEffectShape());
+                            }
+                            if (isHighlight)
+                            {
+                                shape.attachEffect(new HighlightEffectShape());
+                            }
+                            else
+                            {
+                                shape.detachEffect(new HighlightEffectShape());
+                            }
+                        }
+                    }
+                    break;
                 case ShpLine:
                     Temp = new LineEx(beginX, beginY, endX, endY);
                     if (Temp != null)
@@ -204,9 +235,10 @@ namespace BT_DoHoa_Nhom20
         }
         private void pnMainDraw_MouseMove(object sender, MouseEventArgs e)
         {
-            foreach (MyShape shap in myShape)
+            foreach (MyShape shape in myShape)
             {
-                shap.Draw(glip);
+                //Vẽ hình (bao gồm vẽ effect)
+                shape.Draw(glip);
             }
             //foreach (StartShape shap in ListStartShape)
             //{
@@ -298,11 +330,76 @@ namespace BT_DoHoa_Nhom20
             {
                 setEnable(currentPanel);
                 enableToolStripMenuItem.Checked = false;
+                currentShape = 1;
             }
             else
             {
                 enableToolStripMenuItem.Checked = true;
                 setEnable(PNEFFECTS);
+                currentShape = -1;
+            }
+        }
+
+        //Chọn được 1 hình
+        public bool isSelected(MyShape shape)
+        {
+            double mouseX = pnMainPaint.PointToClient(Cursor.Position).X;
+            double mouseY = pnMainPaint.PointToClient(Cursor.Position).Y;
+            double x1, y1, x2, y2, w, h;
+            switch (shape.ToString())
+            {
+                case "line":
+                    LineEx temp = (LineEx)shape;
+                    x1 = temp.GetLeft();
+                    x2 = temp.GetRight();
+                    y1 = temp.GetTop();
+                    y2 = temp.GetBottom();
+                    w = temp.GetWidth();
+                    h = temp.GetHeight();
+                    return WithinShapeBound(mouseX, mouseY, x1, y1, x2, y2);
+                case "rect":
+                    RectangleEx tempRect = (RectangleEx)shape;
+                    x1 = tempRect.GetLeft();
+                    x2 = tempRect.GetRight();
+                    y1 = tempRect.GetTop();
+                    y2 = tempRect.GetBottom();
+                    w = tempRect.GetWidth();
+                    h = tempRect.GetHeight();
+                    return WithinShapeBound(mouseX, mouseY, x1, y1, x2, y2);
+                case "eclipse":
+                    return (mouseX >= beginX && mouseX <= endX && mouseY <= endY && mouseY >= beginY);
+                default:
+                    return false;
+            }
+        }
+
+        private static bool WithinShapeBound(double mouseX, double mouseY, double x1, double y1, double x2, double y2)
+        {
+            if (x1 < x2)
+            {
+                // Hướng từ top-left xuống bottom-right
+                if (y1 > y2)
+                {
+                    return (x1 <= mouseX && mouseX <= x2 && y1 >= mouseY && mouseY >= y2);
+                }
+                // Hướng từ bottom-left lên top-right
+                else
+                {
+                    return (x1 <= mouseX && mouseX <= x2 && y1 <= mouseY && mouseY <= y2);
+                }
+            }
+            else
+            {
+                // Hướng từ top-right xuống bottom-left                    
+                if (y1 > y2)
+                {
+                    return (x2 <= mouseX && mouseX <= x1 && y1 >= mouseY && mouseY >= y2);
+                }
+                // Hướng từ bottom-right lên top-left
+                else
+                {
+                    return (x1 >= mouseX && mouseX >= x2 && y1 <= mouseY && mouseY <= y2);
+                }
             }
         }
         #endregion
@@ -383,6 +480,22 @@ namespace BT_DoHoa_Nhom20
             glip = new CairoExt(pe.Graphics.GetHdc());
         }
         #endregion
+
+        private void cbShadow_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbShadow.Checked)
+                isShadow = true;
+            else
+                isShadow = false;
+        }
+
+        private void cbHighlight_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbHighlight.Checked)
+                isHighlight = true;
+            else
+                isHighlight = false;
+        }
 
     }
 }

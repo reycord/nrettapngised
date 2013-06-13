@@ -61,7 +61,9 @@
             this.btnCondition = new System.Windows.Forms.Button();
             this.btnTransition = new System.Windows.Forms.Button();
             this.pnEffects = new System.Windows.Forms.Panel();
+            this.cbHighlight = new System.Windows.Forms.CheckBox();
             this.btnShadow = new System.Windows.Forms.Button();
+            this.cbShadow = new System.Windows.Forms.CheckBox();
             this.btnHighLight = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
@@ -100,26 +102,26 @@
             // newToolStripMenuItem
             // 
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.newToolStripMenuItem.Text = "New";
             // 
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.openToolStripMenuItem.Text = "Open";
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             // 
             // libSupportToolStripMenuItem
@@ -370,12 +372,25 @@
             // 
             // pnEffects
             // 
+            this.pnEffects.Controls.Add(this.cbHighlight);
             this.pnEffects.Controls.Add(this.btnShadow);
+            this.pnEffects.Controls.Add(this.cbShadow);
             this.pnEffects.Controls.Add(this.btnHighLight);
             this.pnEffects.Location = new System.Drawing.Point(4, 327);
             this.pnEffects.Name = "pnEffects";
-            this.pnEffects.Size = new System.Drawing.Size(76, 83);
+            this.pnEffects.Size = new System.Drawing.Size(76, 121);
             this.pnEffects.TabIndex = 13;
+            // 
+            // cbHighlight
+            // 
+            this.cbHighlight.AutoSize = true;
+            this.cbHighlight.Location = new System.Drawing.Point(8, 101);
+            this.cbHighlight.Name = "cbHighlight";
+            this.cbHighlight.Size = new System.Drawing.Size(67, 17);
+            this.cbHighlight.TabIndex = 1;
+            this.cbHighlight.Text = "Highlight";
+            this.cbHighlight.UseVisualStyleBackColor = true;
+            this.cbHighlight.CheckedChanged += new System.EventHandler(this.cbHighlight_CheckedChanged);
             // 
             // btnShadow
             // 
@@ -385,6 +400,17 @@
             this.btnShadow.TabIndex = 11;
             this.btnShadow.Text = "Shadow";
             this.btnShadow.UseVisualStyleBackColor = true;
+            // 
+            // cbShadow
+            // 
+            this.cbShadow.AutoSize = true;
+            this.cbShadow.Location = new System.Drawing.Point(8, 83);
+            this.cbShadow.Name = "cbShadow";
+            this.cbShadow.Size = new System.Drawing.Size(65, 17);
+            this.cbShadow.TabIndex = 0;
+            this.cbShadow.Text = "Shadow";
+            this.cbShadow.UseVisualStyleBackColor = true;
+            this.cbShadow.CheckedChanged += new System.EventHandler(this.cbShadow_CheckedChanged);
             // 
             // btnHighLight
             // 
@@ -422,6 +448,7 @@
             this.pnNomal.ResumeLayout(false);
             this.pnDiagram.ResumeLayout(false);
             this.pnEffects.ResumeLayout(false);
+            this.pnEffects.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -465,6 +492,8 @@
         private System.Windows.Forms.Panel pnEffects;
         private System.Windows.Forms.Panel pnDiagram;
         private System.Windows.Forms.Panel pnNomal;
+        private System.Windows.Forms.CheckBox cbHighlight;
+        private System.Windows.Forms.CheckBox cbShadow;
 
     }
 }

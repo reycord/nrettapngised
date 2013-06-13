@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BT_DoHoa_Nhom20.Shape
 {
-    class LineEx:MyShape
+    class LineEx:MyShape, CanApplyEffectShape
     {
         private double x1;
         private double x2;
@@ -29,7 +29,54 @@ namespace BT_DoHoa_Nhom20.Shape
         }
         public override void Draw(GraphicLibExt myGraphic)
         {
+            //Vẽ tất cả các effect ra 
+            foreach (EffectShape effect in effects)
+            {
+                effect.ApplyEffect(this, this.GetDescription(), myGraphic);
+            }
+            myGraphic.SetPenWidth(2);
+            myGraphic.SetPenColor(0, 0, 0);
             myGraphic.DrawLine(x1, y1, x2, y2);
+        }
+        
+        public double GetTop()
+        {
+            return y1;
+        }
+
+        public double GetLeft()
+        {
+            return x1;
+        }
+
+        public double GetWidth()
+        {
+            return Math.Abs(x1 - x2);
+        }
+
+        public double GetHeight()
+        {
+            return Math.Abs(y1 - y2);
+        }
+
+        public string GetDescription()
+        {
+            return "Line";
+        }
+
+        public double GetBottom()
+        {
+            return y2;
+        }
+
+        public double GetRight()
+        {
+            return x2;
+        }
+
+        public override string ToString()
+        {
+            return "line";
         }
     }
 }

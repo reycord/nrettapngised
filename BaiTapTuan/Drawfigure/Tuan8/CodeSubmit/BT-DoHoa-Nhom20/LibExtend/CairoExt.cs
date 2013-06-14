@@ -16,15 +16,24 @@ namespace BT_DoHoa_Nhom20.LibExtend
         }
         public override void DrawLine(double x1, double y1, double x2, double y2)
         {
-            c.Color = new Color(1,0,0.6);
+            //c.Color = new Color(1,0,0.6);
             c.MoveTo(x1, y1);
             c.LineTo(x2, y2);
-            c.Stroke();
+            c.Stroke();           
         }
 
         public override void DrawEclipse(double x1, double y1, double x2, double y2)
         {
-            c.SetSourceRGB(1, 0, 0.6);  
+            if(x1>=x2 && y1<=y2)
+            {
+                double temp = x1;
+                x1 = x2;
+                x2 = temp;
+                temp = y1;
+                y1 = y2;
+                y2 = temp;
+            }
+            //c.SetSourceRGB(1, 0, 0.6);  
             double cx = x1 + (Math.Abs(x2 - x1)) / 2;
             double cy = y1 + (Math.Abs(y2 - y1)) / 2;
             double width, height;
@@ -33,15 +42,19 @@ namespace BT_DoHoa_Nhom20.LibExtend
             c.LineWidth = 0.02;
             c.Translate(cx, cy);
             c.Scale(width/2.0, height/2.0);
+            //c.Arc(0.0, 0.0, 1.0, 0.0, 2 * Math.PI);
+            //c.Stroke();
+            //c.ClosePath();            
+            //c.Restore();           
             c.Arc(0.0, 0.0, 1.0, 0.0, 2 * Math.PI);
-            c.Stroke();
-            c.ClosePath();            
+            //c.ClosePath();
+            c.Stroke();            
             c.Restore();           
         }
 
         public override void DrawRectangle(double x, double y, double width, double height)
         {
-            c.Color = new Color(1, 0, 0.6);
+            //c.Color = new Color(1, 0, 0.6);
             c.Rectangle(x, y, width, height);
             c.Stroke();
         }
@@ -98,7 +111,7 @@ namespace BT_DoHoa_Nhom20.LibExtend
         public override void FillCircle(double x, double y, double width, double height)
         {
             c.Save();
-            c.Color = new Color(1, 0, 0.6);
+            //c.Color = new Color(1, 0, 0.6);
             c.Arc(x - width * 0.8, y - width * 0.8, width / 4.0, 0, 2 * Math.PI);
             c.FillPreserve();
             c.Stroke();
@@ -108,7 +121,7 @@ namespace BT_DoHoa_Nhom20.LibExtend
         public override void DrawCircle(double x, double y, double width)
         {
             c.Save();
-            c.Color = new Color(1, 0, 0.6);
+            //c.Color = new Color(1, 0, 0.6);
             c.Arc(x, y, width / 4.0, 0, 2 * Math.PI);
             c.Stroke();
             c.Restore();
@@ -116,16 +129,19 @@ namespace BT_DoHoa_Nhom20.LibExtend
 
         public override void SetBrushColor(int r, int g, int b)
         {
-            c.Color = new Color(r, g, b);
+            c.SetSourceRGB(r, g, b);
+            //c.Color = new Color(r, g, b);
         }
 
         public override void SetPenColor(int r, int g, int b)
         {
+            c.SetSourceRGB(r, g, b);           
             c.Color = new Color(r, g, b);
         }
 
         public override void SetPenWidth(int w)
         {
+            c.LineWidth = 1;            
             c.LineWidth = w;
         }
 

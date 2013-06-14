@@ -108,5 +108,19 @@ namespace BT_DoHoa_Nhom20.LibExtend
         {
             return "gdi";
         }
+
+        public override void FillEclipse(double x1, double y1, double x2, double y2)
+        {
+            double width = 0;
+            double height = 0;
+            Utils.ConvertToLengthAndWidth(x1, y1, x2, y2, out height, out width);
+            Rectangle rec = new Rectangle((int)x1, (int)y1, (int)height, (int)width);
+            g.FillEllipse(b, rec);
+        }
+
+        public override void FillRectangle(double x, double y, double width, double height)
+        {
+            g.FillRectangle(b, (int)x, (int)y, (int)width, (int)height);
+        }
     }
 }

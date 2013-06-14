@@ -34,29 +34,35 @@ namespace BT_DoHoa_Nhom20
                     y2 = ((RectangleEx)shape).GetBottom();
                     w = ((RectangleEx)shape).GetWidth();
                     h = ((RectangleEx)shape).GetHeight();
-                    myGraphic.SetPenColor(185, 185, 185);
-                    myGraphic.SetPenWidth(2);
+                    //myGraphic.SetPenColor(185, 185, 185);
+                    //myGraphic.SetPenWidth(2);
+                    myGraphic.SetBrushColor(185, 185, 185);
                     //Xét hướng của hcn để vẽ highlight cho chính xác
                     if (x1 < x2)    //Vẽ từ trái qua phải
                     {
                         if (y1 < y2)
                         {
-                            myGraphic.DrawRectangle(x1 + 5, y1 + 5, w, h);
+                            //myGraphic.DrawRectangle(x1 + 5, y1 + 5, w, h);
+                            myGraphic.FillRectangle(x1 + 5, y1 + 5, w, h);
                         }
                         else
                         {
-                            myGraphic.DrawRectangle(x1 + 5, y2 + 5, w, h);
+                            //myGraphic.DrawRectangle(x1 + 5, y2 + 5, w, h);
+                            myGraphic.FillRectangle(x1 + 5, y2 + 5, w, h);
                         }
                     }
                     else
                     {
                         if (y1 < y2)
                         {
-                            myGraphic.DrawRectangle(x2 + 5, y1 + 5, w, h);
+                            //myGraphic.DrawRectangle(x2 + 5, y1 + 5, w, h);
+                            myGraphic.FillRectangle(x2 + 5, y1 + 5, w, h);
+                            
                         }
                         else
                         {
-                            myGraphic.DrawRectangle(x2 + 5, y2 + 5, w, h);
+                            //myGraphic.DrawRectangle(x2 + 5, y2 + 5, w, h);
+                            myGraphic.FillRectangle(x2 + 5, y2 + 5, w, h);
                         }
                     }
                     break;
@@ -66,9 +72,10 @@ namespace BT_DoHoa_Nhom20
                     y1 = ((EclipseEx)shape).GetTop();
                     x2 = ((EclipseEx)shape).GetWidth();
                     y2 = ((EclipseEx)shape).GetHeight();
-                    myGraphic.SetPenColor(185, 185, 185);
-                    myGraphic.SetPenWidth(2);
-                    myGraphic.DrawEclipse(x1 + 5, y1 + 5, x2 + 5, y2 + 5);
+                    //myGraphic.SetPenColor(185, 185, 185);
+                    //myGraphic.SetPenWidth(2);
+                    myGraphic.SetBrushColor(185, 185, 185);
+                    myGraphic.FillEclipse(x1 + 5, y1 + 5, x2 + 5, y2 + 5);
                     break;
             }
         }

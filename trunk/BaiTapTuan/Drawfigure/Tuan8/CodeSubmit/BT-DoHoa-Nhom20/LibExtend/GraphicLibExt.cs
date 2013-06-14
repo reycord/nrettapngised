@@ -8,8 +8,10 @@ namespace BT_DoHoa_Nhom20
         public abstract void DrawLine(double x1, double y1, double x2, double y2);
 
         public abstract void DrawEclipse(double x1, double y1, double x2, double y2);
+        public abstract void FillEclipse(double x1, double y1, double x2, double y2);
 
         public abstract void DrawRectangle(double x, double y, double width, double height);
+        public abstract void FillRectangle(double x, double y, double width, double height);
 
         public abstract void DrawArrow(double x1, double y1, double x2, double y2);// vẽ hình mũi tên
 

@@ -56,5 +56,25 @@ namespace BT_DoHoa_Nhom20.LibExtend
         {
             throw new NotImplementedException();
         }
+
+        public override void SetBrushColor(int r, int g, int b)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void SetPenColor(int r, int g, int b)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void SetPenWidth(int w)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override string GetDescription()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -88,5 +88,25 @@ namespace BT_DoHoa_Nhom20.LibExtend
         {
             g.DrawEllipse(p, (int)x, (int)y, (int)width, (int)width);
         }
+
+        public override void SetBrushColor(int _r, int _g, int _b)
+        {
+            b.Color = Color.FromArgb(_r, _g, _b);
+        }
+
+        public override void SetPenColor(int _r, int _g, int _b)
+        {
+            p.Color = Color.FromArgb(_r, _g, _b);
+        }
+
+        public override void SetPenWidth(int w)
+        {
+            p.Width = w;
+        }
+
+        public override string GetDescription()
+        {
+            return "gdi";
+        }
     }
 }

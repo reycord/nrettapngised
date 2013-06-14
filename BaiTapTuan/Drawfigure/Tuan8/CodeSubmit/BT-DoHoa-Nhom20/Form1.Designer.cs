@@ -64,8 +64,9 @@
             this.cbHighlight = new System.Windows.Forms.CheckBox();
             this.btnShadow = new System.Windows.Forms.Button();
             this.cbShadow = new System.Windows.Forms.CheckBox();
-            this.btnHighLight = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
+            this.btnHighLight = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.pnBackground.SuspendLayout();
             this.pnShape.SuspendLayout();
@@ -372,10 +373,11 @@
             // 
             // pnEffects
             // 
+            this.pnEffects.Controls.Add(this.label1);
+            this.pnEffects.Controls.Add(this.btnHighLight);
             this.pnEffects.Controls.Add(this.cbHighlight);
             this.pnEffects.Controls.Add(this.btnShadow);
             this.pnEffects.Controls.Add(this.cbShadow);
-            this.pnEffects.Controls.Add(this.btnHighLight);
             this.pnEffects.Location = new System.Drawing.Point(4, 327);
             this.pnEffects.Name = "pnEffects";
             this.pnEffects.Size = new System.Drawing.Size(76, 121);
@@ -384,7 +386,7 @@
             // cbHighlight
             // 
             this.cbHighlight.AutoSize = true;
-            this.cbHighlight.Location = new System.Drawing.Point(8, 101);
+            this.cbHighlight.Location = new System.Drawing.Point(14, 44);
             this.cbHighlight.Name = "cbHighlight";
             this.cbHighlight.Size = new System.Drawing.Size(67, 17);
             this.cbHighlight.TabIndex = 1;
@@ -394,32 +396,24 @@
             // 
             // btnShadow
             // 
-            this.btnShadow.Location = new System.Drawing.Point(6, 5);
+            this.btnShadow.Location = new System.Drawing.Point(6, 86);
             this.btnShadow.Name = "btnShadow";
             this.btnShadow.Size = new System.Drawing.Size(65, 32);
             this.btnShadow.TabIndex = 11;
             this.btnShadow.Text = "Shadow";
             this.btnShadow.UseVisualStyleBackColor = true;
+            this.btnShadow.Visible = false;
             // 
             // cbShadow
             // 
             this.cbShadow.AutoSize = true;
-            this.cbShadow.Location = new System.Drawing.Point(8, 83);
+            this.cbShadow.Location = new System.Drawing.Point(14, 21);
             this.cbShadow.Name = "cbShadow";
             this.cbShadow.Size = new System.Drawing.Size(65, 17);
             this.cbShadow.TabIndex = 0;
             this.cbShadow.Text = "Shadow";
             this.cbShadow.UseVisualStyleBackColor = true;
             this.cbShadow.CheckedChanged += new System.EventHandler(this.cbShadow_CheckedChanged);
-            // 
-            // btnHighLight
-            // 
-            this.btnHighLight.Location = new System.Drawing.Point(6, 43);
-            this.btnHighLight.Name = "btnHighLight";
-            this.btnHighLight.Size = new System.Drawing.Size(65, 34);
-            this.btnHighLight.TabIndex = 12;
-            this.btnHighLight.Text = "HighLight";
-            this.btnHighLight.UseVisualStyleBackColor = true;
             // 
             // btnClear
             // 
@@ -430,6 +424,25 @@
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // btnHighLight
+            // 
+            this.btnHighLight.Location = new System.Drawing.Point(6, 67);
+            this.btnHighLight.Name = "btnHighLight";
+            this.btnHighLight.Size = new System.Drawing.Size(65, 34);
+            this.btnHighLight.TabIndex = 13;
+            this.btnHighLight.Text = "HighLight";
+            this.btnHighLight.UseVisualStyleBackColor = true;
+            this.btnHighLight.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(5, 5);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(74, 13);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Choose Effect";
             // 
             // FigureDraw
             // 
@@ -488,12 +501,13 @@
         private System.Windows.Forms.ToolStripMenuItem eToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem enableToolStripMenuItem;
         private System.Windows.Forms.Button btnShadow;
-        private System.Windows.Forms.Button btnHighLight;
         private System.Windows.Forms.Panel pnEffects;
         private System.Windows.Forms.Panel pnDiagram;
         private System.Windows.Forms.Panel pnNomal;
         private System.Windows.Forms.CheckBox cbHighlight;
         private System.Windows.Forms.CheckBox cbShadow;
+        private System.Windows.Forms.Button btnHighLight;
+        private System.Windows.Forms.Label label1;
 
     }
 }

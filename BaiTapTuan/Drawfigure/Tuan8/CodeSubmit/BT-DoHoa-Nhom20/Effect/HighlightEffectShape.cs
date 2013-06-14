@@ -39,40 +39,45 @@ namespace BT_DoHoa_Nhom20
                     y2 = ((RectangleEx)shape).GetBottom();
                     w = ((RectangleEx)shape).GetWidth();
                     h = ((RectangleEx)shape).GetHeight();
-                    myGraphic.SetPenColor(185, 185, 185);
-                    myGraphic.SetPenWidth(2);
+                    myGraphic.SetBrushColor(185, 185, 185);
+                    //myGraphic.SetPenWidth(2);
                     //Xét hướng của hcn để vẽ highlight cho chính xác
                     if (x1 < x2)    //Vẽ từ trái qua phải
                     {
                         if (y1 < y2)
                         {
-                            myGraphic.DrawRectangle(x1 - 3, y1 - 3, w + 6, h + 6);
+                            //myGraphic.DrawRectangle(x1 - 3, y1 - 3, w + 6, h + 6);
+                            myGraphic.FillRectangle(x1 - 3, y1 - 3, w + 6, h + 6);
                         }
                         else
                         {
-                            myGraphic.DrawRectangle(x1 - 3, y2 - 3, w + 6, h + 6);
+                            //myGraphic.DrawRectangle(x1 - 3, y2 - 3, w + 6, h + 6);
+                            myGraphic.FillRectangle(x1 - 3, y2 - 3, w + 6, h + 6);
                         }
                     }
                     else
                     {
                         if (y1 < y2)
                         {
-                            myGraphic.DrawRectangle(x2 - 3, y1 - 3, w + 6, h + 6);
+                            //myGraphic.DrawRectangle(x2 - 3, y1 - 3, w + 6, h + 6);
+                            myGraphic.FillRectangle(x2 - 3, y1 - 3, w + 6, h + 6);
                         }
                         else
                         {
-                            myGraphic.DrawRectangle(x2 - 3, y2 - 3, w + 6, h + 6);
+                            //myGraphic.DrawRectangle(x2 - 3, y2 - 3, w + 6, h + 6);
+                            myGraphic.FillRectangle(x2 - 3, y1 - 3, w + 6, h + 6);
                         }
                     }
                     break;
                 case "eclipse":
-                    myGraphic.SetPenColor(185, 185, 185);
-                    myGraphic.SetPenWidth(2);
+                    //myGraphic.SetPenColor(185, 185, 185);
+                    //myGraphic.SetPenWidth(2);
+                    myGraphic.SetBrushColor(185, 185, 185);
                     x1 = ((EclipseEx)shape).GetLeft();
                     x2 = ((EclipseEx)shape).GetWidth();
                     y1 = ((EclipseEx)shape).GetTop();
                     y2 = ((EclipseEx)shape).GetHeight();
-                    myGraphic.DrawEclipse(x1 - 3, y1 - 3, x2 + 3, y2 + 3);
+                    myGraphic.FillEclipse(x1 - 3, y1 - 3, x2 + 3, y2 + 3);
                     break;
             }
         }

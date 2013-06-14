@@ -29,9 +29,10 @@ namespace BT_DoHoa_Nhom20.Shape
             {
                 effect.ApplyEffect(this, this.ToString(), myGraphic);
             }
-            myGraphic.SetPenWidth(2);
-            myGraphic.SetPenColor(0, 0, 0);
-            myGraphic.DrawEclipse(x, y, width, height);
+            //myGraphic.SetPenWidth(2);
+            //myGraphic.SetPenColor(0, 0, 0);
+            myGraphic.SetBrushColor(0, 0, 0);
+            myGraphic.FillEclipse(x, y, width, height);
             //Xét hướng hcn để vẽ cho đúng
             //if (x < width)
             //{

@@ -31,20 +31,23 @@ namespace BT_DoHoa_Nhom20.Shape
             {
                 effect.ApplyEffect(this, this.ToString(), myGraphic);
             }
-            myGraphic.SetPenWidth(2);
-            myGraphic.SetPenColor(0, 0, 0);
+            //myGraphic.SetPenWidth(2);
+            //myGraphic.SetPenColor(0, 0, 0);
+            myGraphic.SetBrushColor(0, 0, 0);
             //Xét hướng hcn để vẽ cho đúng
             if (x < x2)
             {
                 if (y < y2)
                 {
                     //Từ trái trên xuống phải dưới
-                    myGraphic.DrawRectangle(x, y, width, height);
+                    //myGraphic.DrawRectangle(x, y, width, height);
+                    myGraphic.FillRectangle(x, y, width, height);
                 }
                 else
                 {
                     //Trừ trái dưới lên phải trên
-                    myGraphic.DrawRectangle(x, y2, width, height);
+                    //myGraphic.DrawRectangle(x, y2, width, height);
+                    myGraphic.FillRectangle(x, y2, width, height);
                 }
             }
             else
@@ -52,12 +55,14 @@ namespace BT_DoHoa_Nhom20.Shape
                 if (y < y2)
                 {
                     //Từ phải trên xuống trái dưới
-                    myGraphic.DrawRectangle(x2, y, width, height);
+                    //myGraphic.DrawRectangle(x2, y, width, height);
+                    myGraphic.FillRectangle(x2, y, width, height);
                 }
                 else
                 {
                     //Từ phải dưới lên trái trên
-                    myGraphic.DrawRectangle(x2, y2, width, height);
+                    //myGraphic.DrawRectangle(x2, y2, width, height);
+                    myGraphic.FillRectangle(x2, y2, width, height);
                 }
             }
         }

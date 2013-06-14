@@ -23,6 +23,7 @@ namespace BT_DoHoa_Nhom20
         public const int PNNORMAL = 1;
         public const int PNDIAGRAM = 2;
         public const int PNEFFECTS = 3;
+        public const int MIEFFECTSHAPE = 4;
 
         public const int ShpLine      = 0;
         public const int ShpRectangle = 1;
@@ -66,6 +67,7 @@ namespace BT_DoHoa_Nhom20
             glip = new GdiPlusExt(pnMainPaint.CreateGraphics()); //khởi tạo là gdi
             myShape = new List<MyShape>();
             setEnable(PNNORMAL);
+            setEnable(MIEFFECTSHAPE);
         }
 
 
@@ -263,14 +265,15 @@ namespace BT_DoHoa_Nhom20
             cairoToolStripMenuItem.Checked = false;
             gDIPlusToolStripMenuItem.Checked = true;
             glip = new GdiPlusExt(pnMainPaint.CreateGraphics());
-            currentLib = LIBGDI;
+            currentLib = LIBGDI;            
         }
         #endregion       
 
         #region Xử lý  Diagram
         private void freeStyleToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+        {           
             setEnable(PNNORMAL);
+            setEnable(MIEFFECTSHAPE);
             setCheckDiagramMenu(DIFREESTYPE);
         }
 
@@ -443,13 +446,15 @@ namespace BT_DoHoa_Nhom20
         #endregion
 
         #region Xử lý chung
-        //xử lý các trường hợp cho phép bật tắt các panel
+        //xử lý các trường hợp cho phép bật tắt các panel..và effect-->selectshape
         private void setEnable(int CASE)
         {
             
             pnDiagram.Enabled = false;
             pnEffects.Enabled = false;
             pnNomal.Enabled = false;
+            enableToolStripMenuItem.Enabled = false;
+            enableToolStripMenuItem.Checked = false;
 
             switch (CASE)
             {
@@ -464,6 +469,10 @@ namespace BT_DoHoa_Nhom20
                     break;
                 case PNEFFECTS:
                     pnEffects.Enabled = true;
+                    break;
+                case MIEFFECTSHAPE:
+                    enableToolStripMenuItem.Enabled = true;                    
+                    pnNomal.Enabled = true;
                     break;
             }
         }

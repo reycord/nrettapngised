@@ -336,9 +336,9 @@ namespace BT_DoHoa_Nhom20
                 currentShape = 1;
             }
             else
-            {
-                enableToolStripMenuItem.Checked = true;
+            {                
                 setEnable(PNEFFECTS);
+                enableToolStripMenuItem.Checked = true;
                 currentShape = -1;
             }
         }
@@ -469,6 +469,7 @@ namespace BT_DoHoa_Nhom20
                     break;
                 case PNEFFECTS:
                     pnEffects.Enabled = true;
+                    enableToolStripMenuItem.Enabled = true;                    
                     break;
                 case MIEFFECTSHAPE:
                     enableToolStripMenuItem.Enabled = true;                    

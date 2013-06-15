@@ -370,7 +370,15 @@ namespace BT_DoHoa_Nhom20
                     h = tempRect.GetHeight();
                     return WithinShapeBound(mouseX, mouseY, x1, y1, x2, y2);
                 case "eclipse":
-                    return (mouseX >= beginX && mouseX <= endX && mouseY <= endY && mouseY >= beginY);
+                    EclipseEx tempEclipse = (EclipseEx)shape;
+                    x1 = tempEclipse.GetLeft();
+                    
+                    y1 = tempEclipse.GetTop();
+                    
+                    w = tempEclipse.GetWidth();
+                    h = tempEclipse.GetHeight();
+                    //return (mouseX >= beginX && mouseX <= endX && mouseY <= endY && mouseY >= beginY);
+                    return WithinShapeBound(mouseX, mouseY, x1, y1, w, h);
                 default:
                     return false;
             }

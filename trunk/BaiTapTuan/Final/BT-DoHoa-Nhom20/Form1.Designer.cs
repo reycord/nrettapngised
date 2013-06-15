@@ -62,9 +62,7 @@
             this.btnTransition = new System.Windows.Forms.Button();
             this.pnEffects = new System.Windows.Forms.Panel();
             this.cbHighlight = new System.Windows.Forms.CheckBox();
-            this.btnShadow = new System.Windows.Forms.Button();
             this.cbShadow = new System.Windows.Forms.CheckBox();
-            this.btnHighLight = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.pnBackground.SuspendLayout();
@@ -373,9 +371,7 @@
             // pnEffects
             // 
             this.pnEffects.Controls.Add(this.cbHighlight);
-            this.pnEffects.Controls.Add(this.btnShadow);
             this.pnEffects.Controls.Add(this.cbShadow);
-            this.pnEffects.Controls.Add(this.btnHighLight);
             this.pnEffects.Location = new System.Drawing.Point(4, 327);
             this.pnEffects.Name = "pnEffects";
             this.pnEffects.Size = new System.Drawing.Size(76, 121);
@@ -384,7 +380,7 @@
             // cbHighlight
             // 
             this.cbHighlight.AutoSize = true;
-            this.cbHighlight.Location = new System.Drawing.Point(8, 101);
+            this.cbHighlight.Location = new System.Drawing.Point(3, 35);
             this.cbHighlight.Name = "cbHighlight";
             this.cbHighlight.Size = new System.Drawing.Size(67, 17);
             this.cbHighlight.TabIndex = 1;
@@ -392,34 +388,16 @@
             this.cbHighlight.UseVisualStyleBackColor = true;
             this.cbHighlight.CheckedChanged += new System.EventHandler(this.cbHighlight_CheckedChanged);
             // 
-            // btnShadow
-            // 
-            this.btnShadow.Location = new System.Drawing.Point(6, 5);
-            this.btnShadow.Name = "btnShadow";
-            this.btnShadow.Size = new System.Drawing.Size(65, 32);
-            this.btnShadow.TabIndex = 11;
-            this.btnShadow.Text = "Shadow";
-            this.btnShadow.UseVisualStyleBackColor = true;
-            // 
             // cbShadow
             // 
             this.cbShadow.AutoSize = true;
-            this.cbShadow.Location = new System.Drawing.Point(8, 83);
+            this.cbShadow.Location = new System.Drawing.Point(5, 12);
             this.cbShadow.Name = "cbShadow";
             this.cbShadow.Size = new System.Drawing.Size(65, 17);
             this.cbShadow.TabIndex = 0;
             this.cbShadow.Text = "Shadow";
             this.cbShadow.UseVisualStyleBackColor = true;
             this.cbShadow.CheckedChanged += new System.EventHandler(this.cbShadow_CheckedChanged);
-            // 
-            // btnHighLight
-            // 
-            this.btnHighLight.Location = new System.Drawing.Point(6, 43);
-            this.btnHighLight.Name = "btnHighLight";
-            this.btnHighLight.Size = new System.Drawing.Size(65, 34);
-            this.btnHighLight.TabIndex = 12;
-            this.btnHighLight.Text = "HighLight";
-            this.btnHighLight.UseVisualStyleBackColor = true;
             // 
             // btnClear
             // 
@@ -487,8 +465,6 @@
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.ToolStripMenuItem eToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem enableToolStripMenuItem;
-        private System.Windows.Forms.Button btnShadow;
-        private System.Windows.Forms.Button btnHighLight;
         private System.Windows.Forms.Panel pnEffects;
         private System.Windows.Forms.Panel pnDiagram;
         private System.Windows.Forms.Panel pnNomal;

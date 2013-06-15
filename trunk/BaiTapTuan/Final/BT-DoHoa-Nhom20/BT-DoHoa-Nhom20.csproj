@@ -106,6 +106,7 @@
     <Compile Include="LibExtend\CairoExt.cs" />
     <Compile Include="LibExtend\GdiPlusExt.cs" />
     <Compile Include="Effect\MyEffect.cs" />
+    <Compile Include="LibExtend\SvgGraphics.cs" />
     <Compile Include="Shape\CanApplyEffectShape.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

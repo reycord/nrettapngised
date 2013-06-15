@@ -24,7 +24,7 @@ namespace BT_DoHoa_Nhom20
                     x2 = ((LineEx)shape).GetRight();
                     y1 = ((LineEx)shape).GetTop();
                     y2 = ((LineEx)shape).GetBottom();
-                    myGraphic.SetPenColor(185, 185, 185);
+                    myGraphic.SetPenColor(255, 69, 0);
                     myGraphic.SetPenWidth(2);
                     myGraphic.DrawLine(x1, y1 + 3, x2, y2 + 3);
                     myGraphic.DrawLine(x1, y1 - 3, x2, y2 - 3);
@@ -39,7 +39,7 @@ namespace BT_DoHoa_Nhom20
                     y2 = ((RectangleEx)shape).GetBottom();
                     w = ((RectangleEx)shape).GetWidth();
                     h = ((RectangleEx)shape).GetHeight();
-                    myGraphic.SetBrushColor(185, 185, 185);
+                    myGraphic.SetBrushColor(255, 69, 0);
                     //myGraphic.SetPenWidth(2);
                     //Xét hướng của hcn để vẽ highlight cho chính xác
                     if (x1 < x2)    //Vẽ từ trái qua phải
@@ -81,7 +81,7 @@ namespace BT_DoHoa_Nhom20
                     y2 = h;
                     //myGraphic.SetPenColor(185, 185, 185);
                     //myGraphic.SetPenWidth(2);
-                    myGraphic.SetBrushColor(185, 185, 185);
+                    myGraphic.SetBrushColor(255, 69, 0);
                     if (x1 < x2)    //Vẽ từ trái qua phải
                     {
                         if (y1 < y2)

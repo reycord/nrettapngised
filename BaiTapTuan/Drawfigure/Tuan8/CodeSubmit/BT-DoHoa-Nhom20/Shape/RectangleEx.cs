@@ -27,13 +27,12 @@ namespace BT_DoHoa_Nhom20.Shape
         }
         public override void Draw(GraphicLibExt myGraphic)
         {
+            myGraphic.SetBrushColor(255, 69, 0);
             foreach (EffectShape effect in effects)
             {
                 effect.ApplyEffect(this, this.ToString(), myGraphic);
             }
-            //myGraphic.SetPenWidth(2);
-            //myGraphic.SetPenColor(0, 0, 0);
-            myGraphic.SetBrushColor(0, 0, 0);
+            myGraphic.SetBrushColor(0, 255, 0);
             //Xét hướng hcn để vẽ cho đúng
             if (x < x2)
             {

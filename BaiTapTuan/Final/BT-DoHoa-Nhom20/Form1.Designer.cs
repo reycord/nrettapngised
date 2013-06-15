@@ -380,7 +380,7 @@
             // cbHighlight
             // 
             this.cbHighlight.AutoSize = true;
-            this.cbHighlight.Location = new System.Drawing.Point(3, 35);
+            this.cbHighlight.Location = new System.Drawing.Point(5, 35);
             this.cbHighlight.Name = "cbHighlight";
             this.cbHighlight.Size = new System.Drawing.Size(67, 17);
             this.cbHighlight.TabIndex = 1;

@@ -65,7 +65,7 @@ namespace BT_DoHoa_Nhom20
                         else
                         {
                             //myGraphic.DrawRectangle(x2 - 3, y2 - 3, w + 6, h + 6);
-                            myGraphic.FillRectangle(x2 - 3, y1 - 3, w + 6, h + 6);
+                            myGraphic.FillRectangle(x2 - 3, y2 - 3, w + 6, h + 6);
                         }
                     }
                     break;

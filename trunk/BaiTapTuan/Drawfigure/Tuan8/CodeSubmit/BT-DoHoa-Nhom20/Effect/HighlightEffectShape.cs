@@ -70,14 +70,45 @@ namespace BT_DoHoa_Nhom20
                     }
                     break;
                 case "eclipse":
+                    EclipseEx tempEclipse = (EclipseEx)shape;
+                    x1 = tempEclipse.GetLeft();
+                    y1 = tempEclipse.GetTop();
+                    //x2 = tempEclipse.GetRight();
+                    //y2 = tempEclipse.GetBottom();
+                    w = tempEclipse.GetWidth();
+                    h = tempEclipse.GetHeight();
+                    x2 = w;
+                    y2 = h;
                     //myGraphic.SetPenColor(185, 185, 185);
                     //myGraphic.SetPenWidth(2);
                     myGraphic.SetBrushColor(185, 185, 185);
-                    x1 = ((EclipseEx)shape).GetLeft();
-                    x2 = ((EclipseEx)shape).GetWidth();
-                    y1 = ((EclipseEx)shape).GetTop();
-                    y2 = ((EclipseEx)shape).GetHeight();
-                    myGraphic.FillEclipse(x1 - 3, y1 - 3, x2 + 3, y2 + 3);
+                    if (x1 < x2)    //Vẽ từ trái qua phải
+                    {
+                        if (y1 < y2)
+                        {
+                            myGraphic.FillEclipse(x1 - 3, y1 - 3, x2 + 3, y2 + 3);
+                        }
+                        else
+                        {
+                            myGraphic.FillEclipse(x1 - 3, y2 - 3, x2 + 3, y1 + 3);
+                        }
+                    }
+                    else
+                    {
+                        if (y1 < y2)
+                        {
+                            myGraphic.FillEclipse(x2 - 3, y1 - 3, x1 + 3, y2 + 3);
+                        }
+                        else
+                        {
+                            myGraphic.FillEclipse(x2 - 3, y2 - 3, x1 + 3, y1 + 3);
+                        }
+                    }
+                    //x1 = ((EclipseEx)shape).GetLeft();
+                    //x2 = ((EclipseEx)shape).GetWidth();
+                    //y1 = ((EclipseEx)shape).GetTop();
+                    //y2 = ((EclipseEx)shape).GetHeight();
+                    //myGraphic.FillEclipse(x1 - 3, y1 - 3, x2 + 3, y2 + 3);
                     break;
             }
         }

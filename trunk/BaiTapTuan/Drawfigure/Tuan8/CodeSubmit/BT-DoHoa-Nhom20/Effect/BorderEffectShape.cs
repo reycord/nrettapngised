@@ -78,6 +78,8 @@ namespace BT_DoHoa_Nhom20
                     //y2 = tempEclipse.GetBottom();
                     w = tempEclipse.GetWidth();
                     h = tempEclipse.GetHeight();
+                    x2 = w;
+                    y2 = h;
 
                     //Chỉ áp dụng được trên hình vẽ từ trên trái sang phải dưới
                     myGraphic.DrawCircle(x1, y1, 5);
@@ -85,42 +87,42 @@ namespace BT_DoHoa_Nhom20
                     myGraphic.DrawCircle(w, h, 5);
                     myGraphic.DrawCircle(w, y1, 5);
 
-                    myGraphic.DrawRectangle(x1 + Math.Abs(x1 - w) / 2, y1, 5, 5);
-                    myGraphic.DrawRectangle(x1 + Math.Abs(x1 - w) / 2, h, 5, 5);
-                    myGraphic.DrawRectangle(x1, y1 + Math.Abs(h - y1) / 2, 5, 5);
-                    myGraphic.DrawRectangle(w, y1 + Math.Abs(h - y1) / 2, 5, 5);
+                    //myGraphic.DrawRectangle(x1 + Math.Abs(x1 - w) / 2, y1, 5, 5);
+                    //myGraphic.DrawRectangle(x1 + Math.Abs(x1 - w) / 2, h, 5, 5);
+                    //myGraphic.DrawRectangle(x1, y1 + Math.Abs(h - y1) / 2, 5, 5);
+                    //myGraphic.DrawRectangle(w, y1 + Math.Abs(h - y1) / 2, 5, 5);
 
-                    ////Xét hướng vẽ của hình để vẽ các trung điểm chính xác = hình vuông
-                    //if (x1 < x2)    //Vẽ từ trái qua phải
-                    //{
-                    //    myGraphic.DrawRectangle(x1 + w / 2, y1, 5, 5);
-                    //    myGraphic.DrawRectangle(x1 + w / 2, y2, 5, 5);
-                    //    if (y1 < y2)
-                    //    {
-                    //        myGraphic.DrawRectangle(x1, y1 + h / 2, 5, 5);
-                    //        myGraphic.DrawRectangle(x2, y1 + h / 2, 5, 5);
-                    //    }
-                    //    else
-                    //    {
-                    //        myGraphic.DrawRectangle(x1, y2 + h / 2, 5, 5);
-                    //        myGraphic.DrawRectangle(x2, y2 + h / 2, 5, 5);
-                    //    }
-                    //}
-                    //else
-                    //{
-                    //    myGraphic.DrawRectangle(x2 + w / 2, y1, 5, 5);
-                    //    myGraphic.DrawRectangle(x2 + w / 2, y2, 5, 5);
-                    //    if (y1 < y2)
-                    //    {
-                    //        myGraphic.DrawRectangle(x1, y1 + h / 2, 5, 5);
-                    //        myGraphic.DrawRectangle(x2, y1 + h / 2, 5, 5);
-                    //    }
-                    //    else
-                    //    {
-                    //        myGraphic.DrawRectangle(x1, y2 + h / 2, 5, 5);
-                    //        myGraphic.DrawRectangle(x2, y2 + h / 2, 5, 5);
-                    //    }
-                    //}
+                    //Xét hướng vẽ của hình để vẽ các trung điểm chính xác = hình vuông
+                    if (x1 < x2)    //Vẽ từ trái qua phải
+                    {
+                        myGraphic.DrawRectangle((x1 + w) / 2, y1, 5, 5);
+                        myGraphic.DrawRectangle((x1 + w) / 2, y2, 5, 5);
+                        if (y1 < y2)
+                        {
+                            myGraphic.DrawRectangle(x1, (y1 + h)/ 2, 5, 5);
+                            myGraphic.DrawRectangle(x2, (y1 + h)/ 2, 5, 5);
+                        }
+                        else
+                        {
+                            myGraphic.DrawRectangle(x1, (y1 + h) / 2, 5, 5);
+                            myGraphic.DrawRectangle(x2, (y1 + h) / 2, 5, 5);
+                        }
+                    }
+                    else
+                    {
+                        myGraphic.DrawRectangle((x2 + w )/ 2, y1, 5, 5);
+                        myGraphic.DrawRectangle((x2 + w )/ 2, y2, 5, 5);
+                        if (y1 < y2)
+                        {
+                            myGraphic.DrawRectangle(x1, (y1 + h) / 2, 5, 5);
+                            myGraphic.DrawRectangle(x2, (y1 + h) / 2, 5, 5);
+                        }
+                        else
+                        {
+                            myGraphic.DrawRectangle(x1, (y2 + h) / 2, 5, 5);
+                            myGraphic.DrawRectangle(x2, (y2 + h) / 2, 5, 5);
+                        }
+                    }
                     break;
             }
         }

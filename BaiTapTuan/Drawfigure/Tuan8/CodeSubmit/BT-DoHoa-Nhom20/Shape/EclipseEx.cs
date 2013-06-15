@@ -32,34 +32,34 @@ namespace BT_DoHoa_Nhom20.Shape
             //myGraphic.SetPenWidth(2);
             //myGraphic.SetPenColor(0, 0, 0);
             myGraphic.SetBrushColor(0, 0, 0);
-            myGraphic.FillEclipse(x, y, width, height);
+            //myGraphic.FillEclipse(x, y, width, height);
             //Xét hướng hcn để vẽ cho đúng
-            //if (x < width)
-            //{
-            //    if (y < height)
-            //    {
-            //        //Từ trái trên xuống phải dưới
-            //        myGraphic.DrawEclipse(x, y, width, height);
-            //    }
-            //    else
-            //    {
-            //        //Trừ trái dưới lên phải trên
-            //        myGraphic.DrawEclipse(x, y2, width, height);
-            //    }
-            //}
-            //else
-            //{
-            //    if (y < y2)
-            //    {
-            //        //Từ phải trên xuống trái dưới
-            //        myGraphic.DrawEclipse(x2, y, width, height);
-            //    }
-            //    else
-            //    {
-            //        //Từ phải dưới lên trái trên
-            //        myGraphic.DrawEclipse(x2, y2, width, height);
-            //    }
-            //}
+            if (x < width)
+            {
+                if (y < height)
+                {
+                    //Từ trái trên xuống phải dưới
+                    myGraphic.FillEclipse(x, y, width, height);
+                }
+                else
+                {
+                    //Trừ trái dưới lên phải trên
+                    myGraphic.FillEclipse(x, height, width, y);
+                }
+            }
+            else
+            {
+                if (y < height)
+                {
+                    //Từ phải trên xuống trái dưới
+                    myGraphic.FillEclipse(width, y, x, height);                    
+                }
+                else
+                {
+                    //Từ phải dưới lên trái trên
+                    myGraphic.FillEclipse(width, height, x, y);
+                }
+            }
         }
 
         public override string ToString()

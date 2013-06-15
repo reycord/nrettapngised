@@ -24,15 +24,15 @@ namespace BT_DoHoa_Nhom20.LibExtend
 
         public override void DrawEclipse(double x1, double y1, double x2, double y2)
         {
-            if(x1>=x2 && y1<=y2)
-            {
-                double temp = x1;
-                x1 = x2;
-                x2 = temp;
-                temp = y1;
-                y1 = y2;
-                y2 = temp;
-            }
+            //if(x1>=x2 && y1<=y2)
+            //{
+            //    double temp = x1;
+            //    x1 = x2;
+            //    x2 = temp;
+            //    temp = y1;
+            //    y1 = y2;
+            //    y2 = temp;
+            //}
             //c.SetSourceRGB(1, 0, 0.6);  
             double cx = x1 + (Math.Abs(x2 - x1)) / 2;
             double cy = y1 + (Math.Abs(y2 - y1)) / 2;
@@ -140,8 +140,7 @@ namespace BT_DoHoa_Nhom20.LibExtend
         }
 
         public override void SetPenWidth(int w)
-        {
-            c.LineWidth = 1;            
+        {                    
             c.LineWidth = w;
         }
 

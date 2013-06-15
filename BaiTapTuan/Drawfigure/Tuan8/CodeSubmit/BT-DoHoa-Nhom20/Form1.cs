@@ -460,6 +460,7 @@ namespace BT_DoHoa_Nhom20
             {
                 case PNNORMAL:
                     pnNomal.Enabled = true;
+                    enableToolStripMenuItem.Enabled = true;
                     currentPanel = CASE;
                     break;
                 case PNDIAGRAM:

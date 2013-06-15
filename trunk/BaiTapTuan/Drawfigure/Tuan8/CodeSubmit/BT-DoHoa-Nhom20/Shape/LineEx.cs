@@ -30,12 +30,13 @@ namespace BT_DoHoa_Nhom20.Shape
         public override void Draw(GraphicLibExt myGraphic)
         {
             //Vẽ tất cả các effect ra 
+            myGraphic.SetPenColor(255, 69, 0);
             foreach (EffectShape effect in effects)
             {
                 effect.ApplyEffect(this, this.GetDescription(), myGraphic);
             }
             myGraphic.SetPenWidth(2);
-            myGraphic.SetPenColor(0, 0, 0);
+            myGraphic.SetPenColor(0, 255, 0);
             myGraphic.DrawLine(x1, y1, x2, y2);
         }
         
